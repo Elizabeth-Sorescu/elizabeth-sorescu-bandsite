@@ -6,25 +6,24 @@
 }
 
 @font-face {
-  font-family: "avenir";
-  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
-  font-style: normal;
+  font-family: "Avenir-Regular";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf), url(../../assets/Font/Alternative-files/AvenirNextLTPro.ttf) format("ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: "avenir";
-  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
-  font-style: normal;
+  font-family: "Avenir-Demi";
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf) format("ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: "avenir";
-  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
-  font-style: normal;
+  font-family: "Avenir-Bold";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf) format("ttf");
   font-weight: 700;
 }
 body {
-  font-family: avenir;
+  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
+  font-family: "Avenir-Regular";
 }
 
 .nav {
@@ -54,6 +53,7 @@ body {
   text-align: left;
   font-size: 60px;
   line-height: 68px;
+  font-style: "Avenir-Bold";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
   padding-right: 1rem;
