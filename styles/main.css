@@ -1,0 +1,204 @@
+/*320px;*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "avenir";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "avenir";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+}
+body {
+  font-family: avenir;
+}
+
+.nav {
+  background-color: #323232;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav {
+    display: inline-flex;
+    width: 100vw;
+    vertical-align: auto;
+    padding-bottom: 1.09rem;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav {
+    display: inline-flex;
+    width: 100vw;
+    vertical-align: auto;
+    padding-bottom: 1.09rem;
+    padding-top: 2rem;
+  }
+}
+
+.nav__header {
+  text-align: left;
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: normal; /*bold 700*/
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav__header {
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    width: default;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: fit-content;
+  }
+}
+@media (min-width: 1280px) {
+  .nav__header {
+    width: 26%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: fit-content;
+  }
+}
+
+.nav__header__link {
+  text-decoration: none;
+  color: #e1e1e1;
+}
+
+.nav__menu {
+  text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__menu {
+    width: fit-content;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav__menu {
+    width: fit-content;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.nav__menu__list__item {
+  display: inline-flex;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav__menu__list__item {
+    width: 49%;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500; /*600*/
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__menu__list__item {
+    width: fit-content;
+    padding: 0rem 3rem;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500; /*600*/
+  }
+}
+@media (min-width: 1280px) {
+  .nav__menu__list__item {
+    width: fit-content;
+    padding: 0rem 3rem;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500; /*600*/
+  }
+}
+
+.nav__menu__list__item__link-style {
+  text-decoration: none; /*remove underline inside link*/
+  color: #e1e1e1;
+}
+
+.nav__menu__list__item--active-page {
+  font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav__menu__list__item--active-page {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ffffff;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__menu__list__item--active-page {
+    text-decoration: 4px underline #ffffff;
+    text-underline-offset: 43px;
+  }
+}
+@media (min-width: 1280px) {
+  .nav__menu__list__item--active-page {
+    text-decoration: 4px underline #ffffff;
+    text-underline-offset: 43px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav__menu__list__item:hover {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ffffff;
+    text-decoration: none;
+    text-underline-offset: unset;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__menu__list__item:hover {
+    text-decoration: 4px underline #ffffff;
+    text-underline-offset: 43px;
+  }
+}
+@media (min-width: 1280px) {
+  .nav__menu__list__item:hover {
+    text-decoration: 4px underline #ffffff;
+    text-underline-offset: 43px;
+  }
+}
+
+.hero--image {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero--image {
+    padding: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+@mixin navigation-large-screen-style {
+  display: inline-flex;
+  width: 100vw;
+  vertical-align: auto;
+  padding-bottom: 1.09rem;
+  padding-top: 2rem;
+  //   border: 1px solid red;
+}
+@mixin navigation-large-screen-menu-style {
+  width: fit-content;
+  text-align: left;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+@mixin navigation-large-screen-active-hover-page-style {
+  text-decoration: 4px underline $primary-three;
+  text-underline-offset: 43px;
+}
+@mixin mobile {
+  @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+// @mixin tablet-landscape {
+//   @media (min-width: $tablet-min-landscape-width) {
+//     @content;
+//   }
+// }
