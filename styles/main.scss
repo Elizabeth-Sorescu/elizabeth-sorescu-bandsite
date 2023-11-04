@@ -5,6 +5,7 @@
 .nav {
   background-color: $primary-one;
   padding-top: 1rem;
+  // border: 1px solid yellow;
   @include tablet {
     @include navigation-large-screen-style;
     // display: inline-flex;
@@ -25,15 +26,15 @@
   text-align: left;
   font-size: 60px;
   line-height: 68px;
-  font-style: "Avenir-Bold";
+  font-style: "Avenir 700";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
   padding-right: 1rem;
-  //   border: 1px solid yellow;
+  // border: 1px solid yellow;
   @include mobile {
     text-align: center;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 36px;
     width: default;
     // border: 1px solid yellow;
     // background-color: orange;
@@ -42,13 +43,14 @@
     padding-left: 2rem;
     padding-right: 2rem;
     width: fit-content;
-    // border: 1px solid yellow;
+    border: 1px solid yellow;
   }
   @include desktop {
     width: 26%;
     padding-left: 4rem;
     padding-right: 4rem;
     width: fit-content;
+    border: 1px solid orange;
   }
 }
 .nav__header__link {
@@ -64,10 +66,6 @@
   }
   @include desktop {
     @include navigation-large-screen-menu-style;
-    // width: fit-content;
-    // text-align: left;
-    // padding-top: 1rem;
-    // padding-left: 1rem;
   }
 }
 .nav__menu__list__item {
@@ -75,15 +73,16 @@
   display: inline-flex;
 
   @include mobile {
+    padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: 500; /*600*/
   }
   @include tablet {
     width: fit-content;
-    padding: 0rem 3rem;
+    padding: 0rem 3rem; //
     font-size: 24px;
     line-height: 32px;
     font-weight: 500; /*600*/
@@ -91,7 +90,7 @@
 
   @include desktop {
     width: fit-content;
-    padding: 0rem 3rem;
+    padding: 0rem 3rem; //
     font-size: 24px;
     line-height: 32px;
     font-weight: 500; /*600*/
@@ -101,7 +100,9 @@
 .nav__menu__list__item__link-style {
   text-decoration: none; /*remove underline inside link*/
   color: $secondary-two;
-  //   border: 1px solid red;
+  padding-bottom: 2rem; //
+  // border: 1px solid red;
+  // padding-bottom: 2rem; //
 }
 
 .nav__menu__list__item--active-page {
@@ -111,19 +112,19 @@
     border-bottom: 3px solid $primary-three;
   }
   @include tablet {
-    @include navigation-large-screen-active-hover-page-style;
-    // text-decoration: 4px underline $primary-three;
-    // text-underline-offset: 43px;
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 4px underline $primary-three;
+    text-underline-offset: 2.4rem;
   }
   @include desktop {
-    @include navigation-large-screen-active-hover-page-style;
-    // text-decoration: 4px underline $primary-three;
-    // text-underline-offset: 43px;
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 4px underline $primary-three;
+    text-underline-offset: 2.4rem;
   }
 }
 .nav__menu__list__item:hover {
-  //   text-decoration: 4px underline $primary-three;
-  //   text-underline-offset: 43px;
+  text-decoration: 4px underline $primary-three;
+  text-underline-offset: 43px;
   @include mobile {
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $primary-three;
@@ -131,28 +132,63 @@
     text-underline-offset: unset;
   }
   @include tablet {
-    @include navigation-large-screen-active-hover-page-style;
-    // text-decoration: 4px underline $primary-three;
-    // text-underline-offset: 43px;
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 4px underline $primary-three;
+    text-underline-offset: 2.4rem;
   }
   @include desktop {
-    @include navigation-large-screen-active-hover-page-style;
-    // text-decoration: 4px underline $primary-three;
-    // text-underline-offset: 43px;
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 4px underline $primary-three;
+    text-underline-offset: 2.4rem;
   }
 }
 // HERO SECTION
-.hero--image {
+
+.hero-img {
   background-image: url(../assets/Images/hero-bio.jpg);
+  height: 100vh; //??
   width: 100%;
-  height: 50vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: auto;
+  position: relative;
+  // border: 1px solid yellow;
+  @include mobile {
+    // background-size: contain; //must have h;to be removed later
+    // height: 32rem; //to fit 320, must have h:13rem;to be removed later
+  }
   @include tablet {
-    padding: 5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // height: 50rem;
+    // padding: 5rem;
+    // background-size: cover;
+  }
+}
+
+.hero-img--overlay {
+  background-color: $primary-one;
+  opacity: 70%;
+}
+.hero-img__description {
+  // border: 1px solid yellow;
+  margin: auto;
+  width: 100vw;
+  color: $primary-three;
+  font-size: 60px;
+  line-height: 68px;
+  font-style: "Avenir 700";
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  @include mobile {
+    border: 1px solid orange;
+    font-size: 60px;
+    line-height: 60px;
+    top: 42%;
+    font-style: "Avenir 700";
+    font-weight: bold;
+  }
+  @include tablet {
   }
 }

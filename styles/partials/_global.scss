@@ -2,29 +2,30 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 @font-face {
-  font-family: "Avenir-Regular";
+  font-family: "Avenir 400";
   src: url(../../assets/Font/AvenirNextLTPro-Regular.otf),
     url(../../assets/Font/Alternative-files/AvenirNextLTPro.ttf) format("ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir-Demi";
+  font-family: "Avenir 600";
   src: url(../../assets/Font/AvenirNextLTPro-Demi.otf),
     url(../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf)
       format("ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir 700";
   src: url(../../assets/Font/AvenirNextLTPro-Bold.otf),
     url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf)
       format("ttf");
   font-weight: 700;
 }
 body {
-  font-family: "Avenir-Bold";
-  font-family: "Avenir-Demi";
-  font-family: "Avenir-Regular";
+  font-family: "Avenir 700";
+  font-family: "Avenir 600";
+  font-family: "Avenir 400";
 }

@@ -4,7 +4,7 @@
   display: inline-flex;
   width: 100vw;
   vertical-align: auto;
-  padding-bottom: 1.09rem;
+  // padding-bottom: 1.09rem;
   padding-top: 2rem;
   //   border: 1px solid red;
 }
@@ -14,10 +14,15 @@
   padding-top: 1rem;
   padding-left: 1rem;
 }
-@mixin navigation-large-screen-active-hover-page-style {
-  text-decoration: 4px underline $primary-three;
-  text-underline-offset: 43px;
-}
+// @mixin navigation-large-screen-active-hover-page-style {
+//   text-decoration: 4px underline $primary-three;
+//   text-underline-offset: 43px; //covered by hero-padding
+// }
+// @mixin mobile {
+//   @media (max-width: $mobile-max-width) {
+//     @content;
+//   }
+// }
 @mixin mobile {
   @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
     @content;
@@ -28,7 +33,6 @@
     @content;
   }
 }
-
 @mixin desktop {
   @media (min-width: $desktop-min-width) {
     @content;

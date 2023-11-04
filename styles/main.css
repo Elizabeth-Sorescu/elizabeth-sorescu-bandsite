@@ -3,39 +3,39 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 @font-face {
-  font-family: "Avenir-Regular";
+  font-family: "Avenir 400";
   src: url(../../assets/Font/AvenirNextLTPro-Regular.otf), url(../../assets/Font/Alternative-files/AvenirNextLTPro.ttf) format("ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir-Demi";
+  font-family: "Avenir 600";
   src: url(../../assets/Font/AvenirNextLTPro-Demi.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf) format("ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir 700";
   src: url(../../assets/Font/AvenirNextLTPro-Bold.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf) format("ttf");
   font-weight: 700;
 }
 body {
-  font-family: "Avenir-Bold";
-  font-family: "Avenir-Demi";
-  font-family: "Avenir-Regular";
+  font-family: "Avenir 700";
+  font-family: "Avenir 600";
+  font-family: "Avenir 400";
 }
 
 .nav {
   background-color: #323232;
   padding-top: 1rem;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav {
     display: inline-flex;
     width: 100vw;
     vertical-align: auto;
-    padding-bottom: 1.09rem;
     padding-top: 2rem;
   }
 }
@@ -44,7 +44,6 @@ body {
     display: inline-flex;
     width: 100vw;
     vertical-align: auto;
-    padding-bottom: 1.09rem;
     padding-top: 2rem;
   }
 }
@@ -53,7 +52,7 @@ body {
   text-align: left;
   font-size: 60px;
   line-height: 68px;
-  font-style: "Avenir-Bold";
+  font-style: "Avenir 700";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
   padding-right: 1rem;
@@ -61,16 +60,17 @@ body {
 @media (min-width: 320px) and (max-width: 767px) {
   .nav__header {
     text-align: center;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 36px;
     width: default;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__header {
     padding-left: 2rem;
     padding-right: 2rem;
     width: fit-content;
+    border: 1px solid yellow;
   }
 }
 @media (min-width: 1280px) {
@@ -79,6 +79,7 @@ body {
     padding-left: 4rem;
     padding-right: 4rem;
     width: fit-content;
+    border: 1px solid orange;
   }
 }
 
@@ -90,7 +91,7 @@ body {
 .nav__menu {
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu {
     width: fit-content;
     text-align: left;
@@ -112,14 +113,15 @@ body {
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .nav__menu__list__item {
+    padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: 500; /*600*/
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item {
     width: fit-content;
     padding: 0rem 3rem;
@@ -141,6 +143,7 @@ body {
 .nav__menu__list__item__link-style {
   text-decoration: none; /*remove underline inside link*/
   color: #e1e1e1;
+  padding-bottom: 2rem;
 }
 
 .nav__menu__list__item--active-page {
@@ -152,19 +155,23 @@ body {
     border-bottom: 3px solid #ffffff;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item--active-page {
     text-decoration: 4px underline #ffffff;
-    text-underline-offset: 43px;
+    text-underline-offset: 2.4rem;
   }
 }
 @media (min-width: 1280px) {
   .nav__menu__list__item--active-page {
     text-decoration: 4px underline #ffffff;
-    text-underline-offset: 43px;
+    text-underline-offset: 2.4rem;
   }
 }
 
+.nav__menu__list__item:hover {
+  text-decoration: 4px underline #ffffff;
+  text-underline-offset: 43px;
+}
 @media (min-width: 320px) and (max-width: 767px) {
   .nav__menu__list__item:hover {
     padding-bottom: 0.5rem;
@@ -173,32 +180,53 @@ body {
     text-underline-offset: unset;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item:hover {
     text-decoration: 4px underline #ffffff;
-    text-underline-offset: 43px;
+    text-underline-offset: 2.4rem;
   }
 }
 @media (min-width: 1280px) {
   .nav__menu__list__item:hover {
     text-decoration: 4px underline #ffffff;
-    text-underline-offset: 43px;
+    text-underline-offset: 2.4rem;
   }
 }
 
-.hero--image {
+.hero-img {
   background-image: url(../assets/Images/hero-bio.jpg);
+  height: 100vh;
   width: 100%;
-  height: 50vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: auto;
+  position: relative;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .hero--image {
-    padding: 5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.hero-img--overlay {
+  background-color: #323232;
+  opacity: 70%;
+}
+
+.hero-img__description {
+  margin: auto;
+  width: 100vw;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 68px;
+  font-style: "Avenir 700";
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .hero-img__description {
+    border: 1px solid orange;
+    font-size: 60px;
+    line-height: 60px;
+    top: 42%;
+    font-style: "Avenir 700";
+    font-weight: bold;
   }
 }/*# sourceMappingURL=main.css.map */
