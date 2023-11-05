@@ -6,6 +6,7 @@
   background-color: $primary-one;
   padding-top: 1rem;
   // border: 1px solid yellow;
+
   @include mobile {
     padding-top: 1.5rem;
   }
@@ -34,11 +35,18 @@
   padding-left: 1rem;
   padding-right: 1rem;
   // border: 1px solid yellow;
+  @include mobileS {
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    width: default;
+  }
   @include mobile {
     text-align: center;
     font-size: 36px;
     line-height: 36px;
     width: default;
+
     // border: 1px solid yellow;
     // background-color: orange;
   }
@@ -74,7 +82,14 @@
 .nav__menu__list__item {
   //   border: 1px solid yellow;
   display: inline-flex;
-
+  @include mobileS {
+    padding-top: 1rem;
+    width: 49%;
+    justify-content: center;
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 500; /*600*/
+  }
   @include mobile {
     padding-top: 1rem;
     width: 49%;
@@ -106,6 +121,9 @@
   padding-bottom: 2rem; //1.33rem; //2rem
   // border: 1px solid red;
   // padding-bottom: 2rem; //
+  @include mobileS {
+    padding-bottom: 0.5rem;
+  }
   @include mobile {
     padding-bottom: 0.5rem;
   }
@@ -113,6 +131,10 @@
 
 .nav__menu__list__item--active-page {
   font-weight: bold;
+  @include mobileS {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $primary-three;
+  }
   @include mobile {
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $primary-three;
@@ -132,6 +154,12 @@
 .nav__menu__list__item:hover {
   text-decoration: 4px underline $primary-three;
   text-underline-offset: 43px;
+  @include mobileS {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $primary-three;
+    text-decoration: none;
+    text-underline-offset: unset;
+  }
   @include mobile {
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $primary-three;
@@ -161,9 +189,18 @@
   margin: auto;
   position: relative;
   // border: 1px solid yellow;
+  @include mobileS {
+    // background-size: contain; //must have h;to be removed later
+    height: 20rem;
+    width: 30rem;
+    margin: auto;
+  }
   @include mobile {
     // background-size: contain; //must have h;to be removed later
-    // height: 32rem; //to fit 320, must have h:13rem;to be removed later
+    height: 21.375rem; //310px; //to fit 32, must have h:13rem;to be removed later
+    width: 48.25rem;
+    margin: auto;
+    padding: 16rem;
   }
   @include tablet {
     // height: 50rem;
@@ -171,31 +208,94 @@
     // background-size: cover;
   }
 }
-
 .hero-img--overlay {
   background-color: $primary-one;
-  opacity: 70%;
+  opacity: 75%;
 }
 .hero-img__description {
   // border: 1px solid yellow;
   margin: auto;
   width: 100vw;
   color: $primary-three;
-  font-size: 60px;
-  line-height: 68px;
+  font-size: 86px;
+  line-height: 86px;
   font-style: "Avenir 700";
+  font-weight: bold;
   display: flex;
   position: absolute;
   top: 50%;
-  left: 2rem;
+  @include mobileS {
+    border: 1px solid orange;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    left: 1.5rem;
+    top: 45%;
+  }
   @include mobile {
     border: 1px solid orange;
-    font-size: 60px;
-    line-height: 60px;
-    top: 42%;
-    font-style: "Avenir 700";
-    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    left: 1.5rem;
+    top: 48%;
   }
   @include tablet {
+    left: 3.5rem;
+    top: 48%;
+  }
+  @include desktop {
+    font-size: 88px;
+    line-height: 88px;
+    left: 12.5rem;
+    top: 45%;
+  }
+}
+
+.about-header {
+  padding-top: 2.3rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-style: "Avenir 700";
+  font-weight: 900;
+  @include mobile {
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+  }
+  @include tablet {
+    padding-top: 5.3rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.5rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+  }
+  @include desktop {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left: 12rem;
+    font-size: 3.5rem;
+    line-height: 3.25rem;
+  }
+}
+.about-img {
+  background-image: url(../assets/Images/band.jpg);
+  height: 15rem; //460dimension
+  width: 26rem; //460dimension
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  @include mobile {
+    height: 29rem;
+    width: 34rem;
+  }
+  @include tablet {
+    height: 29.5rem;
+    width: 63rem;
+  }
+  @include desktop {
+    //undone;needs a little adjustment for Hxw
+    height: 40rem;
+    width: 78rem;
   }
 }

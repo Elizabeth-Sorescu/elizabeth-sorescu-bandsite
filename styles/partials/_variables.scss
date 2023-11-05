@@ -6,9 +6,11 @@ $secondary-dark-one: #000000;
 $secondary-two: #e1e1e1;
 $secondary-three: #000000;
 //responsive
-$mobile-min-width: 0px; /*320px;*/
-$mobile-max-width: 767px; //must be viewed at 24" screen
+$mobileS-min-width: 0px; /*320px;*/
+$mobileS-max-width: 460px; //mobileS
+$mobile-min-width: 461px;
+$mobile-max-width: 767px; //mobile ;must be viewed at 24" screen
 $tablet-min-width: 768px;
-$tablet-max-width: 1280px;
+$tablet-max-width: 1279px; //tablet
 // $tablet-min-landscape-width: 900px;
-$desktop-min-width: 1280px;
+$desktop-min-width: 1280px; //desktop
