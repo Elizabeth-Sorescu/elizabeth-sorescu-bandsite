@@ -24,12 +24,15 @@
     // vertical-align: auto;
     // padding-bottom: 1rem;
   }
+  @include desktopL {
+    @include navigation-large-screen-style;
+  }
 }
 //Navigation's BandSite LOGO and link
 .nav__header {
   text-align: left;
-  font-size: 36px;
-  line-height: 68px;
+  font-size: 2.25rem;
+  line-height: 4.25rem;
   font-style: "Avenir 700";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
@@ -37,14 +40,14 @@
   // border: 1px solid yellow;
   @include mobileS {
     text-align: center;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
     width: default;
   }
   @include mobile {
     text-align: center;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 2.25rem;
+    line-height: 2rem;
     width: default;
 
     // border: 1px solid yellow;
@@ -57,6 +60,13 @@
     border: 1px solid yellow;
   }
   @include desktop {
+    width: 26%;
+    padding-left: 12rem;
+    padding-right: 4rem;
+    width: fit-content;
+    border: 1px solid orange;
+  }
+  @include desktopL {
     width: 26%;
     padding-left: 12rem;
     padding-right: 4rem;
@@ -78,6 +88,9 @@
   @include desktop {
     @include navigation-large-screen-menu-style;
   }
+  @include desktopL {
+    @include navigation-large-screen-menu-style;
+  }
 }
 .nav__menu__list__item {
   //   border: 1px solid yellow;
@@ -86,31 +99,38 @@
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 21px;
-    line-height: 23px;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
     font-weight: 500; /*600*/
   }
   @include mobile {
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 21px;
-    line-height: 23px;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
     font-weight: 500; /*600*/
   }
   @include tablet {
     width: fit-content;
     padding: 0rem 3rem; //
-    font-size: 21px;
-    line-height: 32px;
+    font-size: 1.313rem;
+    line-height: 2rem;
     font-weight: 500; /*600*/
   }
 
   @include desktop {
     width: fit-content;
     padding: 0rem 3rem; //
-    font-size: 21px;
-    line-height: 32px;
+    font-size: 1.313rem;
+    line-height: 2rem;
+    font-weight: 500; /*600*/
+  }
+  @include desktopL {
+    width: fit-content;
+    padding: 0rem 3rem; //
+    font-size: 1.313rem;
+    line-height: 2rem;
     font-weight: 500; /*600*/
   }
 }
@@ -118,9 +138,7 @@
 .nav__menu__list__item__link-style {
   text-decoration: none; /*remove underline inside link*/
   color: $secondary-two;
-  padding-bottom: 2rem; //1.33rem; //2rem
-  // border: 1px solid red;
-  // padding-bottom: 2rem; //
+  padding-bottom: 2rem;
   @include mobileS {
     padding-bottom: 0.5rem;
   }
@@ -141,19 +159,24 @@
   }
   @include tablet {
     // @include navigation-large-screen-active-hover-page-style;
-    text-decoration: 4px underline $primary-three;
+    text-decoration: 0.25rem underline $primary-three;
     text-underline-offset: 2.4rem; //2.4rem
     // border: 1px solid red;
   }
   @include desktop {
     // @include navigation-large-screen-active-hover-page-style;
-    text-decoration: 4px underline $primary-three;
+    text-decoration: 0.25rem underline $primary-three;
+    text-underline-offset: 2.4rem;
+  }
+  @include desktopL {
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 0.25rem underline $primary-three;
     text-underline-offset: 2.4rem;
   }
 }
 .nav__menu__list__item:hover {
-  text-decoration: 4px underline $primary-three;
-  text-underline-offset: 43px;
+  text-decoration: 0.25rem underline $primary-three;
+  text-underline-offset: 2.688rem;
   @include mobileS {
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $primary-three;
@@ -168,17 +191,21 @@
   }
   @include tablet {
     // @include navigation-large-screen-active-hover-page-style;
-    text-decoration: 4px underline $primary-three;
+    text-decoration: 0.25rem underline $primary-three;
     text-underline-offset: 2.4rem;
   }
   @include desktop {
     // @include navigation-large-screen-active-hover-page-style;
-    text-decoration: 4px underline $primary-three;
+    text-decoration: 0.25rem underline $primary-three;
+    text-underline-offset: 2.4rem;
+  }
+  @include desktopL {
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 0.25rem underline $primary-three;
     text-underline-offset: 2.4rem;
   }
 }
 // HERO SECTION
-
 .hero-img {
   background-image: url(../assets/Images/hero-bio.jpg);
   height: 100vh; //??
@@ -212,13 +239,13 @@
   background-color: $primary-one;
   opacity: 75%;
 }
-.hero-img__description {
+.hero-img__heading {
   // border: 1px solid yellow;
   margin: auto;
   width: 100vw;
   color: $primary-three;
-  font-size: 86px;
-  line-height: 86px;
+  font-size: 5.375rem;
+  line-height: 5.375rem;
   font-style: "Avenir 700";
   font-weight: bold;
   display: flex;
@@ -233,8 +260,8 @@
   }
   @include mobile {
     border: 1px solid orange;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
     left: 1.5rem;
     top: 48%;
   }
@@ -243,14 +270,20 @@
     top: 48%;
   }
   @include desktop {
-    font-size: 88px;
-    line-height: 88px;
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    left: 12.5rem;
+    top: 45%;
+  }
+  @include desktopL {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
     left: 12.5rem;
     top: 45%;
   }
 }
 
-.about--header {
+.about--heading {
   padding-top: 2.3rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -270,6 +303,18 @@
     line-height: 3.25rem;
   }
   @include desktop {
+    padding-top: 5.3rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.5rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    // padding-top: 5rem;
+    // padding-bottom: 4rem;
+    // padding-left: 5rem;
+    // font-size: 3.5rem;
+    // line-height: 3.25rem;
+  }
+  @include desktopL {
     padding-top: 5rem;
     padding-bottom: 4rem;
     padding-left: 12rem;
@@ -295,31 +340,70 @@
     width: 63rem;
   }
   @include desktop {
+    height: 29.5rem;
+    width: 63rem;
+    // height: 29.5rem; //1280
+    // width: 55rem;
+  }
+  @include desktopL {
     height: 43rem;
-    width: 79rem;
+    width: 78rem;
   }
 }
 .about--caption {
-  padding: 0rem 1rem;
-  padding-top: 1.3rem;
   font-style: "Avenir 700";
-  font-size: 21px;
-  line-height: 29px;
+  font-size: 1.313rem;
+  line-height: 1.813rem;
   font-weight: bold;
+  width: 99rem;
+  margin-right: auto;
   @include mobile {
-    //undone; edit a bit
+    padding-left: 2rem;
+    padding-right: 53rem;
     padding-top: 2.2rem;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border: 1px solid red;
+  }
+  @include tablet {
+    padding-left: 8rem; //768
+    padding-right: 40rem; //1279
+    padding-top: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+    // border: 1px solid red;
+  }
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 38rem; //1280 /1279
+    padding-top: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  @include desktopL {
+    padding-left: 20rem;
+    padding-right: 20rem; //1499
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+.about--caption-ref {
+  padding-top: 1rem;
+  font-size: 1.313rem;
+  line-height: 1.813rem;
+  @include mobileS {
+    padding-top: 0.5rem;
+  }
+  @include mobile {
+    padding-top: 0.5rem;
   }
   @include tablet {
     //undone
-    font-size: 21px;
-    line-height: 29px;
+    padding-top: 0.5rem;
+    font-size: 25px;
   }
   @include desktop {
     //undone
-    font-size: 21px;
-    line-height: 29px;
   }
 }

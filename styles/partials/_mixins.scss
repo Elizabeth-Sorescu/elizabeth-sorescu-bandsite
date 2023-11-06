@@ -39,7 +39,12 @@
   }
 }
 @mixin desktop {
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
+    @content;
+  }
+}
+@mixin desktopL {
+  @media (min-width: $desktopL-min-width) {
     @content;
   }
 }

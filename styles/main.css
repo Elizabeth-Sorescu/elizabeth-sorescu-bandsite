@@ -35,7 +35,7 @@ body {
     padding-top: 1.5rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav {
     display: inline-flex;
     width: 100vw;
@@ -43,7 +43,15 @@ body {
     padding-top: 2rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .nav {
+    display: inline-flex;
+    width: 100vw;
+    vertical-align: auto;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1300px) {
   .nav {
     display: inline-flex;
     width: 100vw;
@@ -54,8 +62,8 @@ body {
 
 .nav__header {
   text-align: left;
-  font-size: 36px;
-  line-height: 68px;
+  font-size: 2.25rem;
+  line-height: 4.25rem;
   font-style: "Avenir 700";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
@@ -64,20 +72,20 @@ body {
 @media (min-width: 0px) and (max-width: 460px) {
   .nav__header {
     text-align: center;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
     width: default;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .nav__header {
     text-align: center;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 2.25rem;
+    line-height: 2rem;
     width: default;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__header {
     padding-left: 3.5rem;
     padding-right: 2rem;
@@ -85,7 +93,16 @@ body {
     border: 1px solid yellow;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .nav__header {
+    width: 26%;
+    padding-left: 12rem;
+    padding-right: 4rem;
+    width: fit-content;
+    border: 1px solid orange;
+  }
+}
+@media (min-width: 1300px) {
   .nav__header {
     width: 26%;
     padding-left: 12rem;
@@ -103,7 +120,7 @@ body {
 .nav__menu {
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu {
     width: fit-content;
     text-align: left;
@@ -111,7 +128,15 @@ body {
     padding-left: 1rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .nav__menu {
+    width: fit-content;
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1300px) {
   .nav__menu {
     width: fit-content;
     text-align: left;
@@ -128,8 +153,8 @@ body {
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 21px;
-    line-height: 23px;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
     font-weight: 500; /*600*/
   }
 }
@@ -138,26 +163,35 @@ body {
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 21px;
-    line-height: 23px;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
     font-weight: 500; /*600*/
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item {
     width: fit-content;
     padding: 0rem 3rem;
-    font-size: 21px;
-    line-height: 32px;
+    font-size: 1.313rem;
+    line-height: 2rem;
     font-weight: 500; /*600*/
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
   .nav__menu__list__item {
     width: fit-content;
     padding: 0rem 3rem;
-    font-size: 21px;
-    line-height: 32px;
+    font-size: 1.313rem;
+    line-height: 2rem;
+    font-weight: 500; /*600*/
+  }
+}
+@media (min-width: 1300px) {
+  .nav__menu__list__item {
+    width: fit-content;
+    padding: 0rem 3rem;
+    font-size: 1.313rem;
+    line-height: 2rem;
     font-weight: 500; /*600*/
   }
 }
@@ -193,22 +227,28 @@ body {
     border-bottom: 3px solid #ffffff;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item--active-page {
-    text-decoration: 4px underline #ffffff;
+    text-decoration: 0.25rem underline #ffffff;
     text-underline-offset: 2.4rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
   .nav__menu__list__item--active-page {
-    text-decoration: 4px underline #ffffff;
+    text-decoration: 0.25rem underline #ffffff;
+    text-underline-offset: 2.4rem;
+  }
+}
+@media (min-width: 1300px) {
+  .nav__menu__list__item--active-page {
+    text-decoration: 0.25rem underline #ffffff;
     text-underline-offset: 2.4rem;
   }
 }
 
 .nav__menu__list__item:hover {
-  text-decoration: 4px underline #ffffff;
-  text-underline-offset: 43px;
+  text-decoration: 0.25rem underline #ffffff;
+  text-underline-offset: 2.688rem;
 }
 @media (min-width: 0px) and (max-width: 460px) {
   .nav__menu__list__item:hover {
@@ -226,15 +266,21 @@ body {
     text-underline-offset: unset;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .nav__menu__list__item:hover {
-    text-decoration: 4px underline #ffffff;
+    text-decoration: 0.25rem underline #ffffff;
     text-underline-offset: 2.4rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
   .nav__menu__list__item:hover {
-    text-decoration: 4px underline #ffffff;
+    text-decoration: 0.25rem underline #ffffff;
+    text-underline-offset: 2.4rem;
+  }
+}
+@media (min-width: 1300px) {
+  .nav__menu__list__item:hover {
+    text-decoration: 0.25rem underline #ffffff;
     text-underline-offset: 2.4rem;
   }
 }
@@ -269,12 +315,12 @@ body {
   opacity: 75%;
 }
 
-.hero-img__description {
+.hero-img__heading {
   margin: auto;
   width: 100vw;
   color: #ffffff;
-  font-size: 86px;
-  line-height: 86px;
+  font-size: 5.375rem;
+  line-height: 5.375rem;
   font-style: "Avenir 700";
   font-weight: bold;
   display: flex;
@@ -282,7 +328,7 @@ body {
   top: 50%;
 }
 @media (min-width: 0px) and (max-width: 460px) {
-  .hero-img__description {
+  .hero-img__heading {
     border: 1px solid orange;
     font-size: 2.25rem;
     line-height: 2.25rem;
@@ -291,30 +337,38 @@ body {
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
-  .hero-img__description {
+  .hero-img__heading {
     border: 1px solid orange;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
     left: 1.5rem;
     top: 48%;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .hero-img__description {
+@media (min-width: 768px) and (max-width: 1280px) {
+  .hero-img__heading {
     left: 3.5rem;
     top: 48%;
   }
 }
-@media (min-width: 1280px) {
-  .hero-img__description {
-    font-size: 88px;
-    line-height: 88px;
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .hero-img__heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    left: 12.5rem;
+    top: 45%;
+  }
+}
+@media (min-width: 1300px) {
+  .hero-img__heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
     left: 12.5rem;
     top: 45%;
   }
 }
 
-.about--header {
+.about--heading {
   padding-top: 2.3rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -324,13 +378,13 @@ body {
   font-weight: 900;
 }
 @media (min-width: 461px) and (max-width: 767px) {
-  .about--header {
+  .about--heading {
     font-size: 3.25rem;
     line-height: 3.25rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .about--header {
+@media (min-width: 768px) and (max-width: 1280px) {
+  .about--heading {
     padding-top: 5.3rem;
     padding-bottom: 2.5rem;
     padding-left: 3.5rem;
@@ -338,8 +392,17 @@ body {
     line-height: 3.25rem;
   }
 }
-@media (min-width: 1280px) {
-  .about--header {
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .about--heading {
+    padding-top: 5.3rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.5rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+  }
+}
+@media (min-width: 1300px) {
+  .about--heading {
     padding-top: 5rem;
     padding-bottom: 4rem;
     padding-left: 12rem;
@@ -363,43 +426,89 @@ body {
     width: 45rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .about--img {
     height: 29.5rem;
     width: 63rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .about--img {
+    height: 29.5rem;
+    width: 63rem;
+  }
+}
+@media (min-width: 1300px) {
   .about--img {
     height: 43rem;
-    width: 79rem;
+    width: 78rem;
   }
 }
 
 .about--caption {
-  padding: 0rem 1rem;
-  padding-top: 1.3rem;
   font-style: "Avenir 700";
-  font-size: 21px;
-  line-height: 29px;
+  font-size: 1.313rem;
+  line-height: 1.813rem;
   font-weight: bold;
+  width: 99rem;
+  margin-right: auto;
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .about--caption {
+    padding-left: 2rem;
+    padding-right: 53rem;
     padding-top: 2.2rem;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border: 1px solid red;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .about--caption {
-    font-size: 21px;
-    line-height: 29px;
+    padding-left: 8rem;
+    padding-right: 40rem;
+    padding-top: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1300px) {
   .about--caption {
-    font-size: 21px;
-    line-height: 29px;
+    padding-left: 8rem;
+    padding-right: 38rem;
+    padding-top: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 1300px) {
+  .about--caption {
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.about--caption-ref {
+  padding-top: 1rem;
+  font-size: 1.313rem;
+  line-height: 1.813rem;
+}
+@media (min-width: 0px) and (max-width: 460px) {
+  .about--caption-ref {
+    padding-top: 0.5rem;
+  }
+}
+@media (min-width: 461px) and (max-width: 767px) {
+  .about--caption-ref {
+    padding-top: 0.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .about--caption-ref {
+    padding-top: 0.5rem;
+    font-size: 25px;
   }
 }/*# sourceMappingURL=main.css.map */
