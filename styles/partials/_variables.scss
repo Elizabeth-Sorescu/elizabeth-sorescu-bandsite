@@ -6,11 +6,10 @@ $secondary-dark-one: #000000;
 $secondary-two: #e1e1e1;
 $secondary-three: #000000;
 //responsive
-$mobileS-min-width: 0px; /*320px;*/
-$mobileS-max-width: 460px; //mobileS
+$mobileS-min-width: 0px; //
+$mobileS-max-width: 460px; //mobileS-style here first the check 320 MOBILE
 $mobile-min-width: 461px;
-$mobile-max-width: 767px; //mobile ;must be viewed at 24" screen
-$tablet-min-width: 768px;
-$tablet-max-width: 1279px; //tablet
-// $tablet-min-landscape-width: 900px;
-$desktop-min-width: 1280px; //desktop
+$mobile-max-width: 767px; //MOBILE ;must be viewed at 24" style here first then 461 screen-style here
+$tablet-min-width: 768px; //TABLET style here
+$tablet-max-width: 1279px; //TABLET-style here-style here first then 768
+$desktop-min-width: 1280px; //desktop-style here first then 100% view

@@ -250,7 +250,7 @@
   }
 }
 
-.about-header {
+.about--header {
   padding-top: 2.3rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -277,7 +277,8 @@
     line-height: 3.25rem;
   }
 }
-.about-img {
+
+.about--img {
   background-image: url(../assets/Images/band.jpg);
   height: 15rem; //460dimension
   width: 26rem; //460dimension
@@ -286,16 +287,39 @@
   background-size: cover;
   margin: auto;
   @include mobile {
-    height: 29rem;
-    width: 34rem;
+    height: 25rem;
+    width: 45rem;
   }
   @include tablet {
     height: 29.5rem;
     width: 63rem;
   }
   @include desktop {
-    //undone;needs a little adjustment for Hxw
-    height: 40rem;
-    width: 78rem;
+    height: 43rem;
+    width: 79rem;
+  }
+}
+.about--caption {
+  padding: 0rem 1rem;
+  padding-top: 1.3rem;
+  font-style: "Avenir 700";
+  font-size: 21px;
+  line-height: 29px;
+  font-weight: bold;
+  @include mobile {
+    //undone; edit a bit
+    padding-top: 2.2rem;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  @include tablet {
+    //undone
+    font-size: 21px;
+    line-height: 29px;
+  }
+  @include desktop {
+    //undone
+    font-size: 21px;
+    line-height: 29px;
   }
 }

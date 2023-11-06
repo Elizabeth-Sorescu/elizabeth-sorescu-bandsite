@@ -1,4 +1,3 @@
-/*320px;*/
 * {
   padding: 0;
   margin: 0;
@@ -315,7 +314,7 @@ body {
   }
 }
 
-.about-header {
+.about--header {
   padding-top: 2.3rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -325,13 +324,13 @@ body {
   font-weight: 900;
 }
 @media (min-width: 461px) and (max-width: 767px) {
-  .about-header {
+  .about--header {
     font-size: 3.25rem;
     line-height: 3.25rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .about-header {
+  .about--header {
     padding-top: 5.3rem;
     padding-bottom: 2.5rem;
     padding-left: 3.5rem;
@@ -340,7 +339,7 @@ body {
   }
 }
 @media (min-width: 1280px) {
-  .about-header {
+  .about--header {
     padding-top: 5rem;
     padding-bottom: 4rem;
     padding-left: 12rem;
@@ -349,7 +348,7 @@ body {
   }
 }
 
-.about-img {
+.about--img {
   background-image: url(../assets/Images/band.jpg);
   height: 15rem;
   width: 26rem;
@@ -359,20 +358,48 @@ body {
   margin: auto;
 }
 @media (min-width: 461px) and (max-width: 767px) {
-  .about-img {
-    height: 29rem;
-    width: 34rem;
+  .about--img {
+    height: 25rem;
+    width: 45rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .about-img {
+  .about--img {
     height: 29.5rem;
     width: 63rem;
   }
 }
 @media (min-width: 1280px) {
-  .about-img {
-    height: 40rem;
-    width: 78rem;
+  .about--img {
+    height: 43rem;
+    width: 79rem;
+  }
+}
+
+.about--caption {
+  padding: 0rem 1rem;
+  padding-top: 1.3rem;
+  font-style: "Avenir 700";
+  font-size: 21px;
+  line-height: 29px;
+  font-weight: bold;
+}
+@media (min-width: 461px) and (max-width: 767px) {
+  .about--caption {
+    padding-top: 2.2rem;
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .about--caption {
+    font-size: 21px;
+    line-height: 29px;
+  }
+}
+@media (min-width: 1280px) {
+  .about--caption {
+    font-size: 21px;
+    line-height: 29px;
   }
 }/*# sourceMappingURL=main.css.map */
