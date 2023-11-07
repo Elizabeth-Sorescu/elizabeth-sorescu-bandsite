@@ -4,14 +4,14 @@ $primary-two: #afafaf;
 $primary-three: #ffffff;
 $secondary-dark-one: #000000;
 $secondary-two: #e1e1e1;
-$secondary-three: #000000;
+$secondary-three: #fafafa;
 //responsive
 $mobileS-min-width: 0px; //
 $mobileS-max-width: 460px; //mobileS-style here first the check 320 MOBILE
 $mobile-min-width: 461px;
-$mobile-max-width: 767px; //MOBILE ;must be viewed at 24" style here first then 461 screen-style here
+$mobile-max-width: 767px; //*MOBILE ;must be viewed at 24" style here first then 461 screen-style here
 $tablet-min-width: 768px; //TABLET style here
-$tablet-max-width: 1280px; //TABLET-style here-style here first
-$desktop-min-width: 1280px; //desktop-style here first then 100% view
+$tablet-max-width: 1280px; //*1279-TABLET-style here-style here first
+$desktop-min-width: 1280px; //*desktop-style here first then 100% view
 $desktop-max-width: 1300px; //style here
 $desktopL-min-width: 1300px;

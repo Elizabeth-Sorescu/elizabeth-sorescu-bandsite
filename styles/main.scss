@@ -342,8 +342,6 @@
   @include desktop {
     height: 29.5rem;
     width: 63rem;
-    // height: 29.5rem; //1280
-    // width: 55rem;
   }
   @include desktopL {
     height: 43rem;
@@ -357,17 +355,25 @@
   font-weight: bold;
   width: 99rem;
   margin-right: auto;
+  @include mobileS {
+    padding-left: 2rem;
+    padding-right: 72rem;
+    padding-top: 2.2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    // border: 1px solid red;
+  }
   @include mobile {
     padding-left: 2rem;
     padding-right: 53rem;
     padding-top: 2.2rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   @include tablet {
     padding-left: 8rem; //768
-    padding-right: 40rem; //1279
+    padding-right: 38rem; //1279
     padding-top: 2.5rem;
     font-size: 1.8rem;
     line-height: 2.9rem;
@@ -389,21 +395,109 @@
   }
 }
 .about--caption-ref {
-  padding-top: 1rem;
-  font-size: 1.313rem;
+  padding-top: 0.5rem;
+  font-size: 1.43rem;
   line-height: 1.813rem;
   @include mobileS {
-    padding-top: 0.5rem;
+    font-size: 1rem;
   }
   @include mobile {
-    padding-top: 0.5rem;
+    font-size: 1.06rem;
   }
   @include tablet {
-    //undone
-    padding-top: 0.5rem;
-    font-size: 25px;
+    font-size: 1.27rem;
   }
   @include desktop {
-    //undone
+    font-size: 1.27rem;
+    line-height: 1.813rem;
   }
+}
+.article--heading {
+  padding: 5rem 20rem 3rem 20rem;
+  font-size: 2.3rem;
+  @include mobileS {
+    padding: 2rem 0rem 1rem 2rem;
+    font-size: 1.3rem;
+  }
+  @include mobile {
+    padding-left: 2rem;
+  }
+  @include tablet {
+    padding-left: 8rem;
+  }
+  @include desktop {
+    padding-left: 8rem;
+  }
+  @include desktopL {
+  }
+}
+
+.article-description {
+  font-size: 1.281rem;
+  line-height: 1.875rem;
+  font-style: "Avenir 400";
+  height: 17rem;
+  @include mobileS {
+    height: 55rem;
+    font-size: 1.2rem;
+    border: 1px solid red;
+  }
+  @include mobile {
+    @include article-layout;
+    padding: 0rem 2rem;
+  }
+  @include tablet {
+    @include article-layout;
+    padding: 0rem 8rem;
+  }
+  @include desktop {
+    @include article-layout;
+    padding: 0rem 8rem;
+  }
+  @include desktopL {
+    @include article-layout;
+    padding: 0rem 20rem;
+  }
+}
+.article-description--left {
+  margin-right: 1rem;
+  overflow: hidden;
+  height: auto;
+  // border: 1px solid red;
+  @include mobileS {
+    margin-right: 0rem;
+    padding: 0rem 2rem;
+  }
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
+}
+.article-description--right {
+  margin-left: 1rem;
+  overflow: hidden;
+  height: auto;
+  // border: 1px solid red;
+  @include mobileS {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    margin-left: 0rem;
+  }
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
+}
+.gallery-img--1 {
+  background-image: url(../assets/Images/Photo-gallery-1.jpg);
+  width: 30rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
 }

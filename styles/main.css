@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: "Avenir 700";
-  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf) format("ttf");
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf);
   font-weight: 700;
 }
 body {
@@ -453,6 +453,15 @@ body {
   width: 99rem;
   margin-right: auto;
 }
+@media (min-width: 0px) and (max-width: 460px) {
+  .about--caption {
+    padding-left: 2rem;
+    padding-right: 72rem;
+    padding-top: 2.2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
 @media (min-width: 461px) and (max-width: 767px) {
   .about--caption {
     padding-left: 2rem;
@@ -460,13 +469,12 @@ body {
     padding-top: 2.2rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    border: 1px solid red;
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .about--caption {
     padding-left: 8rem;
-    padding-right: 40rem;
+    padding-right: 38rem;
     padding-top: 2.5rem;
     font-size: 1.8rem;
     line-height: 2.9rem;
@@ -492,23 +500,132 @@ body {
 }
 
 .about--caption-ref {
-  padding-top: 1rem;
-  font-size: 1.313rem;
+  padding-top: 0.5rem;
+  font-size: 1.43rem;
   line-height: 1.813rem;
 }
 @media (min-width: 0px) and (max-width: 460px) {
   .about--caption-ref {
-    padding-top: 0.5rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .about--caption-ref {
-    padding-top: 0.5rem;
+    font-size: 1.06rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .about--caption-ref {
-    padding-top: 0.5rem;
-    font-size: 25px;
+    font-size: 1.27rem;
   }
+}
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .about--caption-ref {
+    font-size: 1.27rem;
+    line-height: 1.813rem;
+  }
+}
+
+.article--heading {
+  padding: 5rem 20rem 3rem 20rem;
+  font-size: 2.3rem;
+}
+@media (min-width: 0px) and (max-width: 460px) {
+  .article--heading {
+    padding: 2rem 0rem 1rem 2rem;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 461px) and (max-width: 767px) {
+  .article--heading {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .article--heading {
+    padding-left: 8rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .article--heading {
+    padding-left: 8rem;
+  }
+}
+.article-description {
+  font-size: 1.281rem;
+  line-height: 1.875rem;
+  font-style: "Avenir 400";
+  height: 17rem;
+}
+@media (min-width: 0px) and (max-width: 460px) {
+  .article-description {
+    height: 55rem;
+    font-size: 1.2rem;
+    border: 1px solid red;
+  }
+}
+@media (min-width: 461px) and (max-width: 767px) {
+  .article-description {
+    display: flex;
+    padding: 0rem 20rem;
+    flex: 1;
+    padding: 0rem 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .article-description {
+    display: flex;
+    padding: 0rem 20rem;
+    flex: 1;
+    padding: 0rem 8rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1300px) {
+  .article-description {
+    display: flex;
+    padding: 0rem 20rem;
+    flex: 1;
+    padding: 0rem 8rem;
+  }
+}
+@media (min-width: 1300px) {
+  .article-description {
+    display: flex;
+    padding: 0rem 20rem;
+    flex: 1;
+    padding: 0rem 20rem;
+  }
+}
+
+.article-description--left {
+  margin-right: 1rem;
+  overflow: hidden;
+  height: auto;
+}
+@media (min-width: 0px) and (max-width: 460px) {
+  .article-description--left {
+    margin-right: 0rem;
+    padding: 0rem 2rem;
+  }
+}
+.article-description--right {
+  margin-left: 1rem;
+  overflow: hidden;
+  height: auto;
+}
+@media (min-width: 0px) and (max-width: 460px) {
+  .article-description--right {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    margin-left: 0rem;
+  }
+}
+.gallery-img--1 {
+  background-image: url(../assets/Images/Photo-gallery-1.jpg);
+  width: 30rem;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
