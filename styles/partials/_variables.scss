@@ -1,12 +1,14 @@
 //colors
-$primary-one: #323232;
-$primary-two: #afafaf;
-$primary-three: #ffffff;
-$secondary-dark-one: #000000;
-$secondary-two: #e1e1e1;
-$secondary-three: #fafafa;
+$primary-one: #323232; //BandSite-Black
+$primary-two: #afafaf; //Silver
+$primary-three: #ffffff; //White
+$secondary-dark-one: #000000; //BandSite-DarkBlack
+$secondary-two: #e1e1e1; //Mercury
+$secondary-three: #fafafa; //Alabaster
 //responsive
-$mobileS-min-width: 0px; //
+$mobileXS-min-width: 0px; //
+$mobileXS-max-width: 321px; //XS:320
+$mobileS-min-width: 321px; //
 $mobileS-max-width: 460px; //mobileS-style here first the check 320 MOBILE
 $mobile-min-width: 461px;
 $mobile-max-width: 767px; //*MOBILE ;must be viewed at 24" style here first then 461 screen-style here

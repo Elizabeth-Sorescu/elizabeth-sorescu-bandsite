@@ -28,7 +28,12 @@
 //   @media (max-width: $mobile-max-width) {
 //     @content;
 //   }
-// }
+// }$mobileXS-max-width
+@mixin mobileXS {
+  @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
+    @content;
+  }
+}
 @mixin mobileS {
   @media (min-width: $mobileS-min-width) and (max-width: $mobileS-max-width) {
     @content;
