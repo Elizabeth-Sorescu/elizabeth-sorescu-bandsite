@@ -6,14 +6,16 @@ $secondary-dark-one: #000000; //BandSite-DarkBlack
 $secondary-two: #e1e1e1; //Mercury
 $secondary-three: #fafafa; //Alabaster
 //responsive
-$mobileXS-min-width: 0px; //
-$mobileXS-max-width: 321px; //XS:320
-$mobileS-min-width: 321px; //
-$mobileS-max-width: 460px; //mobileS-style here first the check 320 MOBILE
-$mobile-min-width: 461px;
-$mobile-max-width: 767px; //*MOBILE ;must be viewed at 24" style here first then 461 screen-style here
-$tablet-min-width: 768px; //TABLET style here
-$tablet-max-width: 1280px; //*1279-TABLET-style here-style here first
-$desktop-min-width: 1280px; //*desktop-style here first then 100% view
-$desktop-max-width: 1300px; //style here
-$desktopL-min-width: 1300px;
+$mobileXS-min-width: 0px; //320 Mobile XS -
+$mobileXS-max-width: 321px;
+$mobileS-min-width: 321px; // 460 Mobile S
+$mobileS-max-width: 461px;
+$mobile-min-width: 461px; // 767 Mobile Reg
+$mobile-max-width: 767px;
+$tabletS-min-width: 768px; //768 Tablet S -
+$tabletS-max-width: 1113px;
+$tablet-min-width: 1114px; //1279 Tablet Reg
+$tablet-max-width: 1279px;
+$desktop-min-width: 1280px; //1280 Desktop - view at 24" at 100%
+$desktop-max-width: 1300px;
+$desktopL-min-width: 1300px; //1300> Desktop without inspect

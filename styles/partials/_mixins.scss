@@ -17,7 +17,7 @@
 //This is the layout that will create two columns
 @mixin article-layout {
   display: flex;
-  padding: 0rem 20rem;
+  // padding: 0rem 20rem;
   flex: 1;
 }
 // @mixin navigation-large-screen-active-hover-page-style {
@@ -41,6 +41,11 @@
 }
 @mixin mobile {
   @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+@mixin tabletS {
+  @media (min-width: $tabletS-min-width) and (max-width: $tabletS-max-width) {
     @content;
   }
 }

@@ -5,35 +5,29 @@
 .nav {
   background-color: $primary-one;
   padding-top: 1rem;
-  // border: 1px solid yellow;
-  // @include mobileXS {
-  //   padding-top: 1.5rem;
-  // }
-  // @include mobileS {
-  //   padding-top: 1.5rem;
-  // }
+  @include mobileXS {
+    padding-top: 1.5rem;
+  }
+  @include mobileS {
+    padding-top: 1.5rem;
+  }
   @include mobile {
     padding-top: 1.5rem;
   }
+  @include tabletS {
+    @include navigation-large-screen-style;
+  }
   @include tablet {
     @include navigation-large-screen-style;
-    // display: inline-flex;
-    // width: 100vw;
-    // vertical-align: auto;
-    // padding-bottom: 1rem;
   }
   @include desktop {
     @include navigation-large-screen-style;
-    // display: inline-flex;
-    // width: 100vw;
-    // vertical-align: auto;
-    // padding-bottom: 1rem;
   }
   @include desktopL {
     @include navigation-large-screen-style;
   }
 }
-//Navigation's BandSite LOGO and link
+//Navigation's BandSite LOGO and its link
 .nav__header {
   text-align: left;
   font-size: 2.25rem;
@@ -61,25 +55,31 @@
     line-height: 2rem;
     width: default;
   }
+  @include tabletS {
+    padding-left: 3rem;
+    padding-right: 2rem;
+    width: fit-content;
+    // border: 1px solid yellow;
+  }
   @include tablet {
     padding-left: 3.5rem;
     padding-right: 2rem;
     width: fit-content;
-    border: 1px solid yellow;
+    // border: 1px solid yellow;
   }
   @include desktop {
     width: 26%;
-    padding-left: 12rem;
+    padding-left: 6rem;
     padding-right: 4rem;
     width: fit-content;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include desktopL {
     width: 26%;
-    padding-left: 12rem;
+    padding-left: 6rem;
     padding-right: 4rem;
     width: fit-content;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
 }
 .nav__header__link {
@@ -90,6 +90,9 @@
 // Navigation's MENU
 .nav__menu {
   text-align: center;
+  @include tabletS {
+    @include navigation-large-screen-menu-style;
+  }
   @include tablet {
     @include navigation-large-screen-menu-style;
   }
@@ -101,7 +104,7 @@
   }
 }
 .nav__menu__list__item {
-  //   border: 1px solid yellow;
+  // border: 1px solid yellow;
   display: inline-flex;
   @include mobileXS {
     padding-top: 1rem;
@@ -125,6 +128,13 @@
     justify-content: center;
     font-size: 1.313rem;
     line-height: 1.438rem;
+    font-weight: 500; /*600*/
+  }
+  @include tabletS {
+    width: fit-content;
+    padding: 0rem 1.5rem; //
+    font-size: 1.313rem;
+    line-height: 2rem;
     font-weight: 500; /*600*/
   }
   @include tablet {
@@ -179,6 +189,12 @@
     padding-bottom: 0.5rem;
     border-bottom: 3px solid $primary-three;
   }
+  @include tabletS {
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 0.25rem underline $primary-three;
+    text-underline-offset: 2.4rem; //2.4rem
+    // border: 1px solid red;
+  }
   @include tablet {
     // @include navigation-large-screen-active-hover-page-style;
     text-decoration: 0.25rem underline $primary-three;
@@ -217,6 +233,11 @@
     text-decoration: none;
     text-underline-offset: unset;
   }
+  @include tabletS {
+    // @include navigation-large-screen-active-hover-page-style;
+    text-decoration: 0.25rem underline $primary-three;
+    text-underline-offset: 2.4rem;
+  }
   @include tablet {
     // @include navigation-large-screen-active-hover-page-style;
     text-decoration: 0.25rem underline $primary-three;
@@ -233,40 +254,31 @@
     text-underline-offset: 2.4rem;
   }
 }
+
 // HERO SECTION
 .hero-img {
   background-image: url(../assets/Images/hero-bio.jpg);
-  height: 100vh; //??
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: auto;
   position: relative;
   // border: 1px solid yellow;
   @include mobileXS {
-    // background-size: contain; //must have h;to be removed later
     height: 10rem;
-    width: 20rem;
-    margin: auto;
   }
   @include mobileS {
-    // background-size: contain; //must have h;to be removed later
     height: 20rem;
-    width: 30rem;
-    margin: auto;
   }
   @include mobile {
-    // background-size: contain; //must have h;to be removed later
-    height: 21.375rem; //310px; //to fit 32, must have h:13rem;to be removed later
-    width: 48.25rem;
+    height: 21.375rem;
     margin: auto;
     padding: 16rem;
   }
-  @include tablet {
-    // height: 50rem;
-    // padding: 5rem;
-    // background-size: cover;
+  @include tabletS {
+    height: 30rem;
+    width: 100vw;
   }
 }
 .hero-img--overlay {
@@ -306,6 +318,11 @@
     left: 1.5rem;
     top: 48%;
   }
+  @include tabletS {
+    font-size: 4rem;
+    left: 3.5rem;
+    top: 44%;
+  }
   @include tablet {
     left: 3.5rem;
     top: 48%;
@@ -313,13 +330,13 @@
   @include desktop {
     font-size: 5.5rem;
     line-height: 5.5rem;
-    left: 12.5rem;
+    left: 6rem;
     top: 45%;
   }
   @include desktopL {
     font-size: 5.5rem;
     line-height: 5.5rem;
-    left: 12.5rem;
+    left: 6rem;
     top: 45%;
   }
 }
@@ -344,6 +361,13 @@
     font-size: 3.25rem;
     line-height: 3.25rem;
   }
+  @include tabletS {
+    padding-top: 4.3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3.5rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
   @include tablet {
     padding-top: 5.3rem;
     padding-bottom: 2.5rem;
@@ -354,14 +378,14 @@
   @include desktop {
     padding-top: 5.3rem;
     padding-bottom: 2.5rem;
-    padding-left: 3.5rem;
+    padding-left: 6rem;
     font-size: 3.25rem;
     line-height: 3.25rem;
   }
   @include desktopL {
     padding-top: 5rem;
     padding-bottom: 4rem;
-    padding-left: 12rem;
+    padding-left: 6rem;
     font-size: 3.5rem;
     line-height: 3.25rem;
   }
@@ -370,34 +394,39 @@
 .about--img {
   background-image: url(../assets/Images/band.jpg);
   height: 15rem; //460dimension
-  width: 26rem; //460dimension
+  width: 100vw;
+  // width: 26rem; //460dimension
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: auto;
   @include mobileXS {
     height: 10rem;
-    width: 30rem;
+    width: 90vw;
   }
   @include mobileS {
-    height: 15rem; //check
-    width: 35rem;
+    height: 15rem;
+    width: 90vw;
   }
   @include mobile {
     height: 25rem;
-    width: 45rem;
+    width: 95vw;
+  }
+  @include tabletS {
+    height: 20.5rem;
+    width: 70vw;
   }
   @include tablet {
     height: 29.5rem;
-    width: 63rem;
+    width: 78vw;
   }
   @include desktop {
     height: 29.5rem;
-    width: 63rem;
+    width: 72vw;
   }
   @include desktopL {
     height: 43rem;
-    width: 78rem;
+    width: 75vw;
   }
 }
 .about--caption {
@@ -405,9 +434,7 @@
   font-size: 1.313rem;
   line-height: 1.813rem;
   font-weight: bold;
-  width: 99rem;
-  margin-right: auto;
-  height: auto; //just added
+  // width: 99rem;
   @include mobileXS {
     width: 100vw;
     padding-left: 1rem;
@@ -418,42 +445,53 @@
     // border: 1px solid red;
   }
   @include mobileS {
-    padding-left: 2rem; //check
-    padding-right: 72rem;
+    width: 100vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 2.2rem;
     font-size: 1.2rem;
     line-height: 2rem;
-    // border: 1px solid red;
   }
   @include mobile {
+    width: 100vw;
     padding-left: 2rem;
-    padding-right: 53rem;
+    padding-right: 2rem;
     padding-top: 2.2rem;
     font-size: 1.5rem;
     line-height: 2rem;
     // border: 1px solid red;
   }
+  @include tabletS {
+    width: 100vw;
+    padding-left: 6.8rem;
+    padding-right: 6.5rem;
+    padding-top: 2.5rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
   @include tablet {
-    padding-left: 8rem; //768
-    padding-right: 38rem; //1279
-    padding-top: 2.5rem;
-    font-size: 1.8rem;
-    line-height: 2.9rem;
-    // border: 1px solid red;
-  }
-  @include desktop {
+    width: 100vw;
     padding-left: 8rem;
-    padding-right: 38rem; //1280 /1279
-    padding-top: 2.5rem;
-    font-size: 1.8rem;
-    line-height: 3rem;
-  }
-  @include desktopL {
-    padding-left: 20rem;
-    padding-right: 20rem; //1499
+    padding-right: 8rem;
     padding-top: 2.5rem;
     font-size: 2rem;
     line-height: 3rem;
+  }
+  @include desktop {
+    width: 100vw;
+    padding-left: 11rem;
+    padding-right: 11rem;
+    padding-top: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+  @include desktopL {
+    width: 67vw;
+    text-align: left;
+    padding-left: 15rem; //768
+    padding-top: 3.5rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
   }
 }
 .about--caption-ref {
@@ -470,11 +508,18 @@
   @include mobile {
     font-size: 1.06rem;
   }
+  @include tabletS {
+    font-size: 1rem;
+  }
   @include tablet {
     font-size: 1.27rem;
   }
   @include desktop {
     font-size: 1.27rem;
+    line-height: 1.813rem;
+  }
+  @include desktopL {
+    padding-top: 1.7rem;
     line-height: 1.813rem;
   }
 }
@@ -491,14 +536,21 @@
   }
   @include mobile {
     padding-left: 2rem;
+    font-size: 1.3rem;
+  }
+  @include tabletS {
+    padding-left: 7rem;
+    font-size: 1.3rem;
   }
   @include tablet {
     padding-left: 8rem;
+    font-size: 1.8rem;
   }
   @include desktop {
-    padding-left: 8rem;
+    padding-left: 11rem;
   }
   @include desktopL {
+    padding-left: 14rem;
   }
 }
 
@@ -506,31 +558,42 @@
   font-size: 1.281rem;
   line-height: 1.875rem;
   font-style: "Avenir 400";
-  height: 17rem;
+  // border: 1px solid red;
   @include mobileXS {
-    height: 60rem;
+    // height: 60rem;
     font-size: 1rem;
   }
   @include mobileS {
-    height: 55rem;
+    // height: 55rem;
     font-size: 1.2rem;
     // border: 1px solid red;
   }
   @include mobile {
+    // @include article-layout;
+    padding: 0rem 1.5rem;
+    // height: 32rem;
+    font-size: 1.2rem;
+    border: 1px solid green;
+  }
+  @include tabletS {
     @include article-layout;
-    padding: 0rem 2rem;
+    font-size: 1.1rem;
+    padding: 0rem 7rem;
+    // height: 38rem;
+    // border: 1px solid red;
   }
   @include tablet {
     @include article-layout;
     padding: 0rem 8rem;
+    font-size: 1.4rem;
   }
   @include desktop {
     @include article-layout;
-    padding: 0rem 8rem;
+    padding: 0rem 11rem;
   }
   @include desktopL {
     @include article-layout;
-    padding: 0rem 20rem;
+    padding: 0rem 14rem;
   }
 }
 .article-description--left {
@@ -546,10 +609,8 @@
     padding: 0rem 2rem;
   }
   @include mobile {
-  }
-  @include tablet {
-  }
-  @include desktop {
+    margin-right: 0rem;
+    padding: 0rem 2rem;
   }
 }
 .article-description--right {
@@ -567,164 +628,450 @@
     margin-left: 0rem;
   }
   @include mobile {
-  }
-  @include tablet {
-  }
-  @include desktop {
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+    margin-left: 0rem;
   }
 }
-
+//This is the container of gallery section
 .gallery {
   margin-top: 3rem; //desktopL
   background: $secondary-three;
   @include mobileXS {
     padding: 0rem 1rem;
     margin-top: 1rem;
-    // margin-left: 0rem;
-    border: 1px dashed red;
+  }
+  @include mobileS {
+    padding: 0rem 1rem;
+    margin-top: 1rem;
+  }
+  @include mobileS {
+    padding: 0rem 1rem;
+    margin-top: 1rem;
+  }
+  @include tabletS {
+    padding: 0rem 1rem;
+  }
+  @include tablet {
+    padding: 0rem 1rem;
+  }
+  @include desktop {
+    padding: 0rem 1rem;
+  }
+  @include desktopL {
+    padding: 0rem 1rem;
   }
 }
 .gallery-heading {
   padding-top: 2.3rem;
   padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
   font-style: "Avenir 700";
-  font-weight: 900;
+  font-weight: bold;
   @include mobileXS {
     padding-bottom: 1rem;
     padding-left: 0.2rem;
     font-size: 2rem;
     line-height: 2rem;
   }
-  @include desktopL {
-    padding-top: 5rem; //desktopL
-    padding-bottom: 4rem;
-    padding-left: 12rem;
-    font-size: 3.5rem;
+  @include mobileS {
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  @include mobile {
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  @include tabletS {
+    padding-top: 3rem; //desktopL
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  @include tablet {
+    padding-top: 3rem; //desktopL
+    padding-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  @include desktop {
+    padding-top: 2.3rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3.5rem;
+    font-size: 3.25rem;
     line-height: 3.25rem;
   }
+  @include desktopL {
+    padding-top: 5rem; //desktopL
+    padding-bottom: 2.5rem;
+    padding-left: 6rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+.gallery-img {
+  // No layout needed for mobiles
+  @include tabletS {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // border: 1px solid green;
+  }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // border: 1px solid green;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @include desktopL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+// MIXINS for Individual pphoto according to its media query:
+//This is individual layout of photo in mobileXS
+@mixin mobileXS-photo {
+  margin: 1.5rem 0rem;
+  height: 10rem;
+  width: 100vw;
+}
+//This is individual layout of photo in mobileS
+@mixin mobileS-photo {
+  margin: 1.5rem;
+  height: 15.5rem;
+  width: 100vw;
+}
+//This is individual layout of photo in mobile
+@mixin mobile-photo {
+  margin: 1.5rem;
+  height: 25rem;
+  width: 100vw;
+  border: 1px solid red;
+}
+//This is individual layout of photo in tabletS
+@mixin tabletS-photo {
+  margin: 1rem 0.3rem;
+  width: 28vw;
+  height: 7.5rem;
+}
+//This is individual layout of photo in tablet
+@mixin tablet-photo {
+  margin: 1rem 0.4rem;
+  width: 28vw;
+  height: 11.5rem;
+  // border: 1px solid red;
+}
+//This is individual layout of photo in desktop
+@mixin desktop-photo {
+  margin: 1rem 0.5rem;
+  width: 29vw;
+  height: 15rem;
+}
+//This is individual layout of photo in desktopL
+@mixin desktopL-photo {
+  margin: 2rem 0rem;
+  width: 31rem;
+  height: 17.5rem;
 }
 .gallery-img--1 {
   background-image: url(../assets/Images/Photo-gallery-1.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   @include mobileXS {
-    // margin: 1rem 1.5rem;
-    height: 10rem;
-    width: 30rem;
+    @include mobileXS-photo();
   }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--2 {
   background-image: url(../assets/Images/Photo-gallery-2.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--3 {
   background-image: url(../assets/Images/Photo-gallery-3.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--4 {
   background-image: url(../assets/Images/Photo-gallery-4.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--5 {
   background-image: url(../assets/Images/Photo-gallery-5.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--6 {
   background-image: url(../assets/Images/Photo-gallery-6.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--7 {
   background-image: url(../assets/Images/Photo-gallery-7.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--8 {
   background-image: url(../assets/Images/Photo-gallery-8.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
   }
 }
 .gallery-img--9 {
   background-image: url(../assets/Images/Photo-gallery-9.jpg);
-  width: 30rem;
-  height: 15.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
   @include mobileS {
-    margin: 1rem 1.5rem;
-    // padding: 2rem;
-    border: 1px solid red;
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
+  }
+}
+// FOOTER SECTION
+.footer {
+  background-color: $primary-one;
+  color: $primary-three;
+  height: 20rem;
+  width: 100vw;
+}
+.footer--heading {
+  @include desktopL {
+    font-size: 3.3rem;
+    line-height: 3.5rem;
+  }
+}
+.footer--socmed {
+  display: flex;
+}
+.soc-med--instagram {
+  background-image: url(../assets/Icons/SVG/Icon-instagram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include desktopL {
+    height: 2.1rem;
+    width: 2.1rem;
+  }
+}
+.soc-med--facebook {
+  background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include desktopL {
+    height: 2rem;
+    width: 1rem;
+  }
+}
+.soc-med--twitter {
+  background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include desktopL {
+    height: 2rem;
+    width: 2.6rem;
   }
 }
