@@ -669,34 +669,32 @@
   line-height: 2.25rem;
   font-style: "Avenir 700";
   font-weight: bold;
+  border: 1px solid red;
   @include mobileXS {
-    padding-bottom: 1rem;
     padding-left: 0.2rem;
     font-size: 2rem;
     line-height: 2rem;
   }
   @include mobileS {
-    padding-bottom: 1rem;
     padding-left: 1.5rem;
     font-size: 2rem;
     line-height: 2rem;
   }
   @include mobile {
-    padding-bottom: 1rem;
     padding-left: 1.5rem;
     font-size: 2rem;
     line-height: 2rem;
   }
   @include tabletS {
     padding-top: 3rem; //desktopL
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     padding-left: 2rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
   @include tablet {
     padding-top: 3rem; //desktopL
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     padding-left: 2.5rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -745,18 +743,21 @@
 //This is individual layout of photo in mobileXS
 @mixin mobileXS-photo {
   margin: 1.5rem 0rem;
+  margin-top: 0rem;
   height: 10rem;
   width: 100vw;
 }
 //This is individual layout of photo in mobileS
 @mixin mobileS-photo {
   margin: 1.5rem;
+  margin-top: 0rem;
   height: 15.5rem;
   width: 100vw;
 }
 //This is individual layout of photo in mobile
 @mixin mobile-photo {
   margin: 1.5rem;
+  margin-top: 0rem;
   height: 25rem;
   width: 100vw;
   border: 1px solid red;
@@ -777,14 +778,16 @@
 //This is individual layout of photo in desktop
 @mixin desktop-photo {
   margin: 1rem 0.5rem;
-  width: 29vw;
-  height: 15rem;
+  width: 26vw;
+  height: 12rem;
+  // width: 29vw;
+  // height: 15rem;
 }
 //This is individual layout of photo in desktopL
 @mixin desktopL-photo {
-  margin: 2rem 0rem;
-  width: 31rem;
-  height: 17.5rem;
+  margin: 2rem 4rem;
+  width: 29rem;
+  height: 15.5rem;
 }
 .gallery-img--1 {
   background-image: url(../assets/Images/Photo-gallery-1.jpg);
@@ -1033,45 +1036,69 @@
 .footer {
   background-color: $primary-one;
   color: $primary-three;
-  height: 20rem;
+  height: 50vw; //temp
   width: 100vw;
+  padding: 3.3rem 9rem;
+  padding-bottom: 2rem;
+  border: 1px solid blue;
+  // border: 1px solid blue;
+  @include mobileXS {
+    padding: 2rem 1rem;
+    padding-bottom: 1rem;
+  }
+  @include desktopL {
+    // padding: 4rem 8rem;
+    // padding-bottom: 2rem;
+    // border: 1px solid blue;
+  }
 }
 .footer--heading {
-  @include desktopL {
-    font-size: 3.3rem;
-    line-height: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  @include mobileXS {
+    border: 1px solid yellow;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
   }
 }
 .footer--socmed {
   display: flex;
+  justify-content: space-between;
+  width: 8rem;
+  // border: 1px solid green;
+  @include mobileXS {
+    // border: 1px solid red;
+    width: 11rem;
+  }
+  @include desktopL {
+    border: 1px solid green;
+    width: 15rem;
+  }
 }
 .soc-med--instagram {
   background-image: url(../assets/Icons/SVG/Icon-instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include desktopL {
-    height: 2.1rem;
-    width: 2.1rem;
-  }
+  height: 2.1rem;
+  width: 2.1rem;
 }
 .soc-med--facebook {
   background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include desktopL {
-    height: 2rem;
-    width: 1rem;
-  }
+  height: 2.1rem;
+  width: 1rem;
 }
 .soc-med--twitter {
   background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include desktopL {
-    height: 2rem;
-    width: 2.6rem;
-  }
+  height: 2rem;
+  width: 2.5rem;
 }
