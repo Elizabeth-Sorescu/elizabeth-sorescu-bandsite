@@ -1041,6 +1041,7 @@
   width: 100vw;
   padding: 3rem 4rem;
   padding-bottom: 2rem;
+  border: 1px solid blue;
   @include mobileXS {
     padding: 2rem 1rem;
     padding-bottom: 1rem;
@@ -1069,6 +1070,7 @@
     position: relative;
   }
   @include desktop {
+    padding: 3rem 4rem;
     height: 27rem;
     position: relative;
   }

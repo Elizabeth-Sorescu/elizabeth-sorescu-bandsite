@@ -1555,6 +1555,7 @@ body {
   width: 100vw;
   padding: 3rem 4rem;
   padding-bottom: 2rem;
+  border: 1px solid blue;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .footer {
@@ -1595,6 +1596,7 @@ body {
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
   .footer {
+    padding: 3rem 4rem;
     height: 27rem;
     position: relative;
   }
