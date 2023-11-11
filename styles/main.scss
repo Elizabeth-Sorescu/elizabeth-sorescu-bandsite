@@ -32,7 +32,7 @@
   text-align: left;
   font-size: 2.25rem;
   line-height: 4.25rem;
-  font-style: "Avenir 700";
+  font-style: "Avenir-Bold";
   font-weight: normal; /*bold 700*/
   padding-left: 1rem;
   padding-right: 1rem;
@@ -283,7 +283,7 @@
 }
 .hero-img--overlay {
   background-color: $primary-one;
-  opacity: 75%;
+  opacity: 95%;
 }
 .hero-img__heading {
   // border: 1px solid yellow;
@@ -292,7 +292,7 @@
   color: $primary-three;
   font-size: 5.375rem;
   line-height: 5.375rem;
-  font-style: "Avenir 700";
+  font-style: "Avenir-Bold";
   font-weight: bold;
   display: flex;
   position: absolute;
@@ -347,8 +347,8 @@
   padding-left: 1.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  font-style: "Avenir 700";
-  font-weight: 900;
+  font-style: "Avenir-Bold";
+  font-weight: bold;
   @include mobileXS {
     font-size: 1.8rem;
     line-height: 2rem;
@@ -430,7 +430,7 @@
   }
 }
 .about--caption {
-  font-style: "Avenir 700";
+  font-style: "Avenir-Bold";
   font-size: 1.313rem;
   line-height: 1.813rem;
   font-weight: bold;
@@ -440,7 +440,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
     // border: 1px solid red;
   }
@@ -500,7 +500,8 @@
   line-height: 1.813rem;
   height: auto; //just added
   @include mobileXS {
-    font-size: 0.8rem;
+    padding-top: 0rem;
+    font-size: 0.9rem;
   }
   @include mobileS {
     font-size: 1rem;
@@ -528,7 +529,7 @@
   font-size: 2.3rem;
   @include mobileXS {
     padding: 2rem 0rem 1rem 1rem;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
   @include mobileS {
     padding: 2rem 0rem 1rem 2rem;
@@ -557,11 +558,11 @@
 .article-description {
   font-size: 1.281rem;
   line-height: 1.875rem;
-  font-style: "Avenir 400";
+  font-style: "Avenir-Regular";
   // border: 1px solid red;
   @include mobileXS {
-    // height: 60rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
   @include mobileS {
     // height: 55rem;
@@ -579,8 +580,6 @@
     @include article-layout;
     font-size: 1.1rem;
     padding: 0rem 7rem;
-    // height: 38rem;
-    // border: 1px solid red;
   }
   @include tablet {
     @include article-layout;
@@ -667,13 +666,14 @@
   padding-bottom: 0.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  font-style: "Avenir 700";
+  font-style: "Avenir-Bold";
   font-weight: bold;
   border: 1px solid red;
   @include mobileXS {
+    padding-top: 1.5rem;
     padding-left: 0.2rem;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
   @include mobileS {
     padding-left: 1.5rem;
@@ -696,8 +696,8 @@
     padding-top: 3rem; //desktopL
     padding-bottom: 1rem;
     padding-left: 2.5rem;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 3.25rem; //2.5rem;
+    line-height: 3.25rem; //2.5rem;
   }
   @include desktop {
     padding-top: 2.3rem;
@@ -720,23 +720,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // border: 1px solid green;
   }
   @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // border: 1px solid green;
   }
   @include desktop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    border: 1px solid red;
+    // justify-content: space-evenly;
   }
   @include desktopL {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    border: 1px solid red;
+    // justify-content: space-evenly;
   }
 }
 // MIXINS for Individual pphoto according to its media query:
@@ -777,18 +779,17 @@
 }
 //This is individual layout of photo in desktop
 @mixin desktop-photo {
-  margin: 1rem 0.5rem;
-  width: 26vw;
-  height: 12rem;
-  // width: 29vw;
-  // height: 15rem;
+  margin: 1rem 1rem;
+  width: 28vw;
+  height: 14rem;
 }
 //This is individual layout of photo in desktopL
 @mixin desktopL-photo {
-  margin: 2rem 4rem;
-  width: 29rem;
-  height: 15.5rem;
+  margin: 1rem 1rem;
+  width: 26vw;
+  height: 12.5rem;
 }
+
 .gallery-img--1 {
   background-image: url(../assets/Images/Photo-gallery-1.jpg);
   background-repeat: no-repeat;
@@ -1036,46 +1037,131 @@
 .footer {
   background-color: $primary-one;
   color: $primary-three;
-  height: 50vw; //temp
+  height: 50rem;
   width: 100vw;
-  padding: 3.3rem 9rem;
+  padding: 3rem 4rem;
   padding-bottom: 2rem;
-  border: 1px solid blue;
-  // border: 1px solid blue;
   @include mobileXS {
     padding: 2rem 1rem;
     padding-bottom: 1rem;
+    height: 46.5rem;
+  }
+  @include mobileS {
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    height: 41.1rem;
+  }
+  @include mobile {
+    padding: 2rem 1.5rem;
+    padding-bottom: 1rem;
+    height: 42rem;
+  }
+  @include tabletS {
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    height: 25rem;
+    position: relative;
+  }
+  @include tablet {
+    padding: 3rem 3rem;
+    padding-bottom: 1rem;
+    height: 27rem;
+    position: relative;
+  }
+  @include desktop {
+    height: 27rem;
+    position: relative;
   }
   @include desktopL {
-    // padding: 4rem 8rem;
-    // padding-bottom: 2rem;
-    // border: 1px solid blue;
+    padding: 4rem 6rem;
+    padding-bottom: 2rem;
+    height: 28rem;
+    position: relative;
   }
 }
+.footer--group1 {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  @include mobileXS {
+    display: block;
+    width: 14rem;
+  }
+  @include mobileS {
+    display: block;
+    width: 15rem;
+  }
+  @include mobile {
+    display: block;
+    width: 15rem;
+  }
+  @include tabletS {
+    width: 23rem;
+  }
+  @include tablet {
+    width: 35rem;
+  }
+  @include desktop {
+    width: 33rem;
+  }
+  @include desktopL {
+    width: 31rem;
+  }
+}
+
 .footer--heading {
   font-size: 2.4rem;
   line-height: 2.4rem;
-  padding-bottom: 1rem;
-  font-weight: bold;
+  font-weight: 1000;
+  width: 14rem;
+  margin: 0.8rem 0rem;
   @include mobileXS {
-    border: 1px solid yellow;
-    font-size: 2rem;
-    line-height: 2rem;
-    padding-bottom: 1rem;
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  @include tabletS {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+  @include tablet {
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    width: 22rem;
+  }
+  @include desktop {
+    font-size: 2.9rem;
+    line-height: 2.9rem;
+    width: 17rem;
+  }
+  @include desktopL {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    width: 17rem;
   }
 }
 .footer--socmed {
   display: flex;
   justify-content: space-between;
-  width: 8rem;
-  // border: 1px solid green;
+  width: 12rem;
+  margin: 0.8rem 0rem;
+  align-items: center;
   @include mobileXS {
-    // border: 1px solid red;
-    width: 11rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0rem;
+    width: 8rem;
+  }
+  @include tabletS {
+    width: 8rem;
+  }
+  @include tablet {
+    width: 12rem;
+  }
+  @include desktop {
+    width: 12rem;
   }
   @include desktopL {
-    border: 1px solid green;
-    width: 15rem;
+    width: 11rem;
   }
 }
 .soc-med--instagram {
@@ -1085,6 +1171,14 @@
   background-size: cover;
   height: 2.1rem;
   width: 2.1rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
 }
 .soc-med--facebook {
   background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
@@ -1093,6 +1187,14 @@
   background-size: cover;
   height: 2.1rem;
   width: 1rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 0.7rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 0.7rem;
+  }
 }
 .soc-med--twitter {
   background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
@@ -1101,4 +1203,186 @@
   background-size: cover;
   height: 2rem;
   width: 2.5rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 2rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 2rem;
+  }
+}
+//This is the layout for contact in landscape format
+.footer--group2 {
+  @include tabletS {
+    display: flex;
+  }
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    display: flex;
+  }
+  @include desktopL {
+    display: flex;
+  }
+}
+.contact {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  width: 20rem;
+  @include mobileXS {
+    font-size: 0.9rem;
+    width: 20rem;
+    margin: 1rem 0rem;
+  }
+  @include tabletS {
+    font-size: 0.9rem;
+    width: 100vw;
+  }
+  @include tablet {
+    font-size: 1rem;
+    width: 100vw;
+  }
+  @include desktop {
+    font-size: 1rem;
+    width: 21rem;
+  }
+  @include desktopL {
+    font-size: 1rem;
+    width: 20rem;
+  }
+}
+.contact__name {
+  font-weight: bold;
+  margin: 0.5rem 0rem;
+  @include mobileXS {
+    margin: 0.7rem 0rem;
+  }
+  @include tabletS {
+    margin: 2rem 0rem;
+  }
+  @include tablet {
+    margin: 2rem 0rem;
+  }
+  @include desktop {
+    margin: 2rem 0rem;
+  }
+  @include desktopL {
+    margin: 2rem 0rem;
+  }
+}
+.contact__location {
+  margin: 0.5rem 0rem;
+  @include mobileXS {
+    margin: 0.9rem 0rem;
+  }
+  @include tabletS {
+    margin: 2rem 0rem;
+  }
+  @include tablet {
+    margin: 2rem 0rem;
+  }
+  @include desktop {
+    margin: 2rem 0rem;
+  }
+  @include desktopL {
+    margin: 2rem 0rem;
+  }
+}
+.contact__email {
+  margin: 0.5rem 0rem;
+  @include mobileXS {
+    margin: 0.9rem 0rem;
+  }
+  @include tabletS {
+    margin: 2rem 0rem;
+  }
+  @include tablet {
+    margin: 2rem 0rem;
+  }
+  @include desktop {
+    margin: 2rem 0rem;
+  }
+  @include desktopL {
+    margin: 2rem 0rem;
+  }
+}
+.footer-logo {
+  margin: 0.8rem 0rem;
+  margin-top: 2rem;
+  width: 12rem;
+  @include mobileXS {
+    font-size: 1.5rem;
+    margin: 0.7rem 0rem;
+    margin-top: 2rem;
+  }
+  @include mobileS {
+    font-size: 1.5rem;
+    margin: 0.7rem 0rem;
+    margin-top: 2rem;
+  }
+  @include mobile {
+    font-size: 1.5rem;
+    margin: 0.7rem 0rem;
+    margin-top: 2rem;
+  }
+  @include tabletS {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 17px;
+    left: 594px;
+  }
+  @include tablet {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 45px;
+    left: 1043px;
+  }
+  @include desktop {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 36px;
+    left: 1036px;
+  }
+  @include desktopL {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 51px;
+    left: 1015px;
+    border: 1px solid orange;
+  }
+}
+.footer-copyright {
+  margin: 0.5rem 0rem;
+  @include mobileXS {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0rem;
+  }
+  @include mobileS {
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0rem;
+  }
+  @include tabletS {
+    font-size: 0.9rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0rem;
+  }
+  @include tablet {
+    font-size: 0.9rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0rem;
+  }
+  @include desktop {
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0rem;
+  }
+  @include desktopL {
+    font-size: 0.9rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0rem;
+  }
 }
