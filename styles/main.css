@@ -6,22 +6,11 @@
 }
 
 @font-face {
-  font-family: "Avenir-Regular";
-  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf), url(../../assets/Font/Alternative-files/AvenirNextLTPro.ttf) format("ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir-Demi";
-  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf) format("ttf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Avenir-Bold";
-  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf), url(../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf);
-  font-weight: 700;
+  font-family: avenir;
+  src: url(/assets/Font/Alternative-files/AvenirNextLTPro.ttf) format("truetype"), url(/assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
 }
 body {
-  font-family: "Avenir-Regular";
+  font-family: avenir;
 }
 
 .nav {
@@ -81,14 +70,14 @@ body {
   font-size: 2.25rem;
   line-height: 4.25rem;
   font-style: "Avenir-Bold";
-  font-weight: normal; /*bold 700*/
+  font-weight: normal;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .nav__header {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 2.25rem;
     width: default;
   }
@@ -189,9 +178,9 @@ body {
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
-    font-size: 1.313rem;
+    font-size: 1.1rem;
     line-height: 1.438rem;
-    font-weight: 500; /*600*/
+    font-weight: 500;
   }
 }
 @media (min-width: 321px) and (max-width: 461px) {
@@ -201,7 +190,7 @@ body {
     justify-content: center;
     font-size: 1.313rem;
     line-height: 1.438rem;
-    font-weight: 500; /*600*/
+    font-weight: 500;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
@@ -484,13 +473,12 @@ body {
   padding-left: 1.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  font-style: "Avenir-Bold";
-  font-weight: bold;
+  font-weight: 700;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .about--heading {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 321px) and (max-width: 461px) {
@@ -595,17 +583,16 @@ body {
 }
 
 .about--caption {
-  font-style: "Avenir-Bold";
   font-size: 1.313rem;
   line-height: 1.813rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .about--caption {
     width: 100vw;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
@@ -781,7 +768,6 @@ body {
   .article-description {
     padding: 0rem 1.5rem;
     font-size: 1.2rem;
-    border: 1px solid green;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
@@ -914,9 +900,7 @@ body {
   padding-bottom: 0.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  font-style: "Avenir-Bold";
-  font-weight: bold;
-  border: 1px solid red;
+  font-weight: 700;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .gallery-heading {
@@ -1555,7 +1539,6 @@ body {
   width: 100vw;
   padding: 3rem 4rem;
   padding-bottom: 2rem;
-  border: 1px solid blue;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .footer {
@@ -1582,7 +1565,7 @@ body {
   .footer {
     padding: 2rem 2rem;
     padding-bottom: 1rem;
-    height: 25rem;
+    height: 28rem;
     position: relative;
   }
 }
@@ -1657,7 +1640,7 @@ body {
 .footer--heading {
   font-size: 2.4rem;
   line-height: 2.4rem;
-  font-weight: 1000;
+  font-weight: 700;
   width: 14rem;
   margin: 0.8rem 0rem;
 }
@@ -1831,6 +1814,7 @@ body {
   .contact {
     font-size: 0.9rem;
     width: 100vw;
+    border: 1px solid orange;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
@@ -1853,7 +1837,7 @@ body {
 }
 
 .contact__name {
-  font-weight: bold;
+  font-weight: 700;
   margin: 0.5rem 0rem;
 }
 @media (min-width: 0px) and (max-width: 321px) {
@@ -1943,10 +1927,15 @@ body {
 .footer-logo {
   margin: 0.8rem 0rem;
   margin-top: 2rem;
-  width: 12rem;
+  font-size: 2.2rem;
+  width: 85vw;
+  position: relative;
+  bottom: 323px;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .footer-logo {
+    position: unset;
+    width: 12rem;
     font-size: 1.5rem;
     margin: 0.7rem 0rem;
     margin-top: 2rem;
@@ -1954,6 +1943,8 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .footer-logo {
+    position: unset;
+    width: 12rem;
     font-size: 1.5rem;
     margin: 0.7rem 0rem;
     margin-top: 2rem;
@@ -1961,6 +1952,8 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .footer-logo {
+    position: unset;
+    width: 12rem;
     font-size: 1.5rem;
     margin: 0.7rem 0rem;
     margin-top: 2rem;
@@ -1968,14 +1961,17 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1113px) {
   .footer-logo {
+    width: 12rem;
     font-size: 1.8rem;
-    position: absolute;
-    top: 17px;
-    left: 594px;
+    text-align: right;
+    width: 91vw;
+    bottom: 318px;
+    border: 1px solid yellow;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
   .footer-logo {
+    width: 12rem;
     font-size: 2.2rem;
     position: absolute;
     top: 45px;
@@ -1984,6 +1980,7 @@ body {
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
   .footer-logo {
+    width: 12rem;
     font-size: 2.2rem;
     position: absolute;
     top: 36px;
@@ -1993,10 +1990,10 @@ body {
 @media (min-width: 1300px) {
   .footer-logo {
     font-size: 2.2rem;
-    position: absolute;
-    top: 51px;
-    left: 1015px;
-    border: 1px solid orange;
+    text-align: right;
+    width: 85vw;
+    position: relative;
+    bottom: 323px;
   }
 }
 
@@ -2022,6 +2019,7 @@ body {
     font-size: 0.9rem;
     margin-top: 0.9rem;
     margin-bottom: 0rem;
+    border: 1px solid yellow;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
