@@ -29,19 +29,20 @@
 }
 //Navigation's BandSite LOGO and its link
 .nav__header {
+  // border: 1px solid red;
   text-align: left;
   font-size: 2.25rem;
   line-height: 4.25rem;
-  font-style: "Avenir-Bold";
   font-weight: normal;
   padding-left: 1rem;
   padding-right: 1rem;
-  // border: 1px solid yellow;
   @include mobileXS {
     text-align: center;
     font-size: 2rem;
-    line-height: 2.25rem;
+    line-height: 2rem;
+    // line-height: 2.25rem;
     width: default;
+    // border: 1px solid red;
   }
   @include mobileS {
     text-align: center;
@@ -59,27 +60,23 @@
     padding-left: 3rem;
     padding-right: 2rem;
     width: fit-content;
-    // border: 1px solid yellow;
   }
   @include tablet {
     padding-left: 3.5rem;
     padding-right: 2rem;
     width: fit-content;
-    // border: 1px solid yellow;
   }
   @include desktop {
     width: 26%;
     padding-left: 6rem;
     padding-right: 4rem;
     width: fit-content;
-    // border: 1px solid orange;
   }
   @include desktopL {
     width: 26%;
     padding-left: 6rem;
     padding-right: 4rem;
     width: fit-content;
-    // border: 1px solid orange;
   }
 }
 .nav__header__link {
@@ -107,6 +104,7 @@
   // border: 1px solid yellow;
   display: inline-flex;
   @include mobileXS {
+    // border: 1px solid yellow;
     padding-top: 1rem;
     width: 49%;
     justify-content: center;
@@ -428,10 +426,9 @@
   }
 }
 .about--caption {
-  // font-style: "Avenir-Bold";
   font-size: 1.313rem;
   line-height: 1.813rem;
-  font-weight: 700;
+  font-weight: 800;
   @include mobileXS {
     width: 100vw;
     padding-left: 1rem;
@@ -552,8 +549,8 @@
 
 .article-description {
   font-size: 1.281rem;
+  font-weight: 400;
   line-height: 1.875rem;
-  font-style: "Avenir-Regular";
   @include mobileXS {
     font-size: 0.8rem;
     line-height: 1.2rem;
@@ -1045,26 +1042,25 @@
   }
   @include tabletS {
     padding: 2rem 2rem;
-    padding-bottom: 1rem;
-    height: 28rem;
-    position: relative;
+    height: 25rem;
+    overflow-y: hidden;
   }
   @include tablet {
     padding: 3rem 3rem;
     padding-bottom: 1rem;
     height: 27rem;
-    position: relative;
+    overflow-y: hidden;
   }
   @include desktop {
     padding: 3rem 4rem;
     height: 27rem;
-    position: relative;
+    overflow-y: hidden;
   }
   @include desktopL {
     padding: 4rem 6rem;
     padding-bottom: 2rem;
     height: 28rem;
-    position: relative;
+    overflow-y: hidden;
   }
 }
 .footer--group1 {
@@ -1227,7 +1223,7 @@
   @include tabletS {
     font-size: 0.9rem;
     width: 100vw;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include tablet {
     font-size: 1rem;
@@ -1298,9 +1294,9 @@
   }
 }
 .footer-logo {
-  margin: 0.8rem 0rem; //
-  margin-top: 2rem; //
-  font-size: 2.2rem; //
+  margin: 0.8rem 0rem;
+  margin-top: 2rem;
+  font-size: 2.2rem;
   width: 85vw;
   position: relative;
   bottom: 323px;
@@ -1316,45 +1312,38 @@
     width: 12rem;
     font-size: 1.5rem;
     margin: 0.7rem 0rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   @include mobile {
     position: unset;
     width: 12rem;
     font-size: 1.5rem;
     margin: 0.7rem 0rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   @include tabletS {
-    width: 12rem;
     font-size: 1.8rem;
     text-align: right;
     width: 91vw;
-    bottom: 318px;
-    // top: 17px;
-    // left: 594px;
-    border: 1px solid yellow;
+    bottom: 309px;
   }
   @include tablet {
-    width: 12rem;
     font-size: 2.2rem;
-    position: absolute;
-    top: 45px;
-    left: 1043px;
+    text-align: right;
+    width: 91vw;
+    bottom: 320px;
   }
   @include desktop {
-    width: 12rem;
     font-size: 2.2rem;
-    position: absolute;
-    top: 36px;
-    left: 1036px;
+    text-align: right;
+    width: 89vw;
+    bottom: 320px;
   }
   @include desktopL {
     font-size: 2.2rem;
     text-align: right;
-    width: 85vw;
-    position: relative;
-    bottom: 323px;
+    width: 84vw;
+    bottom: 316px;
   }
 }
 .footer-copyright {
@@ -1371,24 +1360,24 @@
   }
   @include tabletS {
     font-size: 0.9rem;
-    margin-top: 0.9rem;
-    margin-bottom: 0rem;
-    border: 1px solid yellow;
-    // fix copyright to take place footer-logo
+    position: relative;
+    bottom: 56px;
   }
   @include tablet {
     font-size: 0.9rem;
-    margin-top: 0.9rem;
-    margin-bottom: 0rem;
+    position: relative;
+    bottom: 66px;
+    // border: 1px solid yellow;
   }
   @include desktop {
     font-size: 0.9rem;
-    margin-top: 1.2rem;
-    margin-bottom: 0rem;
+    position: relative;
+    bottom: 66px;
   }
   @include desktopL {
     font-size: 0.9rem;
-    margin-top: 1.4rem;
-    margin-bottom: 0rem;
+    position: relative;
+    bottom: 66px;
+    // border: 1px solid yellow;
   }
 }
