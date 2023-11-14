@@ -23,3 +23,66 @@ $desktopL-min-width: 1300px; //1300>= Desktop L without inspect
 //OTHERS
 $grayscale-rate: 100%;
 $grayscale-hover-rate: 0%;
+// -----------------------------
+// .about--caption {
+//   font-size: 1.313rem;
+//   line-height: 1.813rem;
+//   font-weight: 800;
+//   color: $primary-one-color;
+//   @include mobileXS {
+//     width: 100vw;
+//     padding: 1rem 1rem 0rem 1rem;
+//     font-size: 0.9rem;
+//     line-height: 1.5rem;
+//   }
+//   @include mobileS {
+//     width: 100vw;
+//     padding: 2.2rem 2rem 0rem 2rem;
+//     font-size: 1.2rem;
+//     line-height: 1.8rem;
+//   }
+//   @include mobile {
+//     width: 100vw;
+//     padding: 2.2rem 2rem 0rem 2rem;
+//     font-size: 1.5rem;
+//     line-height: 2.1rem;
+//   }
+//   @include tabletS {
+//     width: 100vw;
+//     padding: 2.5rem 6.6rem 0rem 6.6rem;
+//     // padding-left: 6.8rem;
+//     // padding-right: 6.5rem;
+//     // padding-top: 2.5rem;
+//     font-size: 1.3rem;
+//     line-height: 2rem;
+//   }
+//   @include tablet {
+//     width: 100vw;
+//     padding: 2.5rem 8rem 0rem 8rem;
+//     // padding-left: 8rem;
+//     // padding-right: 8rem;
+//     // padding-top: 2.5rem;
+//     font-size: 2rem;
+//     line-height: 3rem;
+//   }
+//   @include desktop {
+//     width: 100vw;
+//     padding: 2.5rem 11rem 0rem 11rem;
+//     // padding-left: 11rem;
+//     // padding-right: 11rem;
+//     // padding-top: 2.5rem;
+//     font-size: 2rem;
+//     line-height: 2.5rem;
+//     // border: 1px solid red;
+//   }
+//   @include desktopL {
+//     width: 100vw;
+//     padding: 3.5rem 11rem 0rem 12rem;
+//     // width: 73vw;
+//     // text-align: left;
+//     // padding-left: 13rem;
+//     // padding-top: 3.5rem;
+//     font-size: 2.2rem;
+//     line-height: 3rem;
+//   }
+// }

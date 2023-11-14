@@ -402,8 +402,7 @@ body {
 }
 
 .hero-img--overlay {
-  background-color: #323232;
-  opacity: 95%;
+  background-color: rgba(50, 50, 50, 0.5);
 }
 
 .hero-img__heading {
@@ -420,7 +419,6 @@ body {
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .hero-img__heading {
-    border: 1px solid orange;
     font-size: 1.5rem;
     line-height: 2.25rem;
     left: 1.5rem;
@@ -429,7 +427,6 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .hero-img__heading {
-    border: 1px solid orange;
     font-size: 2.25rem;
     line-height: 2.25rem;
     left: 1.5rem;
@@ -438,7 +435,6 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .hero-img__heading {
-    border: 1px solid orange;
     font-size: 3.2rem;
     line-height: 3.2rem;
     left: 1.5rem;
@@ -482,6 +478,7 @@ body {
   font-size: 2.25rem;
   line-height: 2.25rem;
   font-weight: 700;
+  color: #323232;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .about--heading {
@@ -594,13 +591,12 @@ body {
   font-size: 1.313rem;
   line-height: 1.813rem;
   font-weight: 800;
+  color: #323232;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .about--caption {
     width: 100vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
@@ -608,29 +604,23 @@ body {
 @media (min-width: 321px) and (max-width: 461px) {
   .about--caption {
     width: 100vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2.2rem;
+    padding: 2.2rem 2rem 0rem 2rem;
     font-size: 1.2rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .about--caption {
     width: 100vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2.2rem;
+    padding: 2.2rem 2rem 0rem 2rem;
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 2.1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
   .about--caption {
     width: 100vw;
-    padding-left: 6.8rem;
-    padding-right: 6.5rem;
-    padding-top: 2.5rem;
+    padding: 2.5rem 6.6rem 0rem 6.6rem;
     font-size: 1.3rem;
     line-height: 2rem;
   }
@@ -638,9 +628,7 @@ body {
 @media (min-width: 1114px) and (max-width: 1279px) {
   .about--caption {
     width: 100vw;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-top: 2.5rem;
+    padding: 2.5rem 8rem 0rem 8rem;
     font-size: 2rem;
     line-height: 3rem;
   }
@@ -648,65 +636,73 @@ body {
 @media (min-width: 1280px) and (max-width: 1299px) {
   .about--caption {
     width: 100vw;
-    padding-left: 11rem;
-    padding-right: 11rem;
-    padding-top: 2.5rem;
-    font-size: 2.2rem;
+    padding: 2.5rem 11rem 0rem 11rem;
+    font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 @media (min-width: 1300px) {
   .about--caption {
-    width: 67vw;
-    text-align: left;
-    padding-left: 15rem;
-    padding-top: 3.5rem;
+    width: 100vw;
+    padding: 3.5rem 14rem 0rem 14rem;
     font-size: 2.2rem;
-    line-height: 2.9rem;
+    line-height: 3rem;
+    border: 1px solid red;
   }
 }
 
-.about--caption-ref {
+.about--ref {
   padding-top: 0.5rem;
-  font-size: 1.43rem;
-  line-height: 1.813rem;
-  height: auto;
+  color: #323232;
+  font-weight: bold;
 }
 @media (min-width: 0px) and (max-width: 321px) {
-  .about--caption-ref {
-    padding-top: 0rem;
+  .about--ref {
+    padding: 0rem 1rem;
     font-size: 0.9rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 321px) and (max-width: 461px) {
-  .about--caption-ref {
-    font-size: 1rem;
+  .about--ref {
+    padding: 0rem 2rem;
+    font-size: 1.2rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
-  .about--caption-ref {
-    font-size: 1.06rem;
+  .about--ref {
+    padding: 0rem 2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
-  .about--caption-ref {
-    font-size: 1rem;
+  .about--ref {
+    padding: 0rem 6.6rem;
+    font-size: 1.1rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
-  .about--caption-ref {
-    font-size: 1.27rem;
+  .about--ref {
+    padding: 0rem 8rem;
+    font-size: 1.5rem;
+    line-height: 5rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
-  .about--caption-ref {
-    font-size: 1.27rem;
-    line-height: 1.813rem;
+  .about--ref {
+    padding: 0rem 11rem;
+    font-size: 1.5rem;
+    line-height: 5rem;
   }
 }
 @media (min-width: 1300px) {
-  .about--caption-ref {
+  .about--ref {
     padding-top: 1.7rem;
+    padding-left: 14rem;
+    font-size: 1.43rem;
     line-height: 1.813rem;
   }
 }
@@ -758,24 +754,26 @@ body {
 
 .article-description {
   font-size: 1.281rem;
-  font-weight: 400;
+  font-weight: 600;
+  color: #323232;
   line-height: 1.875rem;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .article-description {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .article-description {
     font-size: 1.2rem;
+    line-height: 1.7rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .article-description {
-    padding: 0rem 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
@@ -790,8 +788,8 @@ body {
   .article-description {
     display: flex;
     flex: 1;
-    padding: 0rem 8rem;
     font-size: 1.4rem;
+    padding: 0rem 8rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
@@ -829,7 +827,7 @@ body {
 @media (min-width: 461px) and (max-width: 767px) {
   .article-description--left {
     margin-right: 0rem;
-    padding: 0rem 2rem;
+    padding: 0rem 1.2rem;
   }
 }
 
@@ -854,7 +852,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .article-description--right {
-    padding: 0rem 2rem;
+    padding: 0rem 1.2rem;
     padding-top: 2rem;
     margin-left: 0rem;
   }
@@ -876,10 +874,11 @@ body {
     margin-top: 1rem;
   }
 }
-@media (min-width: 321px) and (max-width: 461px) {
+@media (min-width: 461px) and (max-width: 767px) {
   .gallery {
     padding: 0rem 1rem;
     margin-top: 1rem;
+    border: 1px solid red;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
@@ -908,26 +907,24 @@ body {
   padding-bottom: 0.5rem;
   font-size: 2.25rem;
   line-height: 2.25rem;
-  font-weight: 700;
+  font-weight: 800;
+  color: #323232;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .gallery-heading {
     padding-top: 1.5rem;
-    padding-left: 0.2rem;
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-heading {
-    padding-left: 1.5rem;
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-heading {
-    padding-left: 1.5rem;
     font-size: 2rem;
     line-height: 2rem;
   }
@@ -936,7 +933,7 @@ body {
   .gallery-heading {
     padding-top: 3rem;
     padding-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
@@ -1015,7 +1012,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--1 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1023,7 +1020,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--1 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1079,7 +1076,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--2 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1087,7 +1084,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--2 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1143,7 +1140,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--3 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1151,7 +1148,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--3 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1207,7 +1204,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--4 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1215,7 +1212,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--4 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1271,7 +1268,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--5 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1279,7 +1276,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--5 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1335,7 +1332,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--6 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1343,7 +1340,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--6 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1399,7 +1396,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--7 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1407,7 +1404,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--7 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1463,7 +1460,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--8 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1471,7 +1468,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--8 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1527,7 +1524,7 @@ body {
 }
 @media (min-width: 321px) and (max-width: 461px) {
   .gallery-img--9 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 15.5rem;
     width: 100vw;
@@ -1535,7 +1532,7 @@ body {
 }
 @media (min-width: 461px) and (max-width: 767px) {
   .gallery-img--9 {
-    margin: 1.5rem;
+    margin: 1.5rem 0rem;
     margin-top: 0rem;
     height: 25rem;
     width: 100vw;
@@ -1593,7 +1590,7 @@ body {
   .footer {
     padding: 2rem 2rem;
     padding-bottom: 1rem;
-    height: 41.1rem;
+    height: 42rem;
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
@@ -1975,7 +1972,7 @@ body {
   font-size: 2.2rem;
   width: 85vw;
   position: relative;
-  bottom: 323px;
+  bottom: 20.188rem;
 }
 @media (min-width: 0px) and (max-width: 321px) {
   .footer-logo {
@@ -2009,7 +2006,7 @@ body {
     font-size: 1.8rem;
     text-align: right;
     width: 91vw;
-    bottom: 309px;
+    bottom: 19.313rem;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
@@ -2017,7 +2014,7 @@ body {
     font-size: 2.2rem;
     text-align: right;
     width: 91vw;
-    bottom: 320px;
+    bottom: 20rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
@@ -2025,7 +2022,7 @@ body {
     font-size: 2.2rem;
     text-align: right;
     width: 89vw;
-    bottom: 320px;
+    bottom: 20rem;
   }
 }
 @media (min-width: 1300px) {
@@ -2033,7 +2030,7 @@ body {
     font-size: 2.2rem;
     text-align: right;
     width: 87vw;
-    bottom: 316px;
+    bottom: 19.75rem;
   }
 }
 
@@ -2058,27 +2055,27 @@ body {
   .footer-copyright {
     font-size: 0.9rem;
     position: relative;
-    bottom: 56px;
+    bottom: 3.5rem;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
   .footer-copyright {
     font-size: 0.9rem;
     position: relative;
-    bottom: 66px;
+    bottom: 4.125rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
   .footer-copyright {
     font-size: 0.9rem;
     position: relative;
-    bottom: 66px;
+    bottom: 4.125rem;
   }
 }
 @media (min-width: 1300px) {
   .footer-copyright {
     font-size: 0.9rem;
     position: relative;
-    bottom: 66px;
+    bottom: 4.125rem;
   }
 }/*# sourceMappingURL=main.css.map */

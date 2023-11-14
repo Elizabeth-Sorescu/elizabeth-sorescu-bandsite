@@ -36,6 +36,13 @@
   flex: 1;
 }
 
+// BANDSITE LOGO:-------------------------------------------------------------------------------------------
+@mixin bansite-logo($bandsite-logo-size) {
+  text-align: center;
+  width: default;
+  font-size: 2rem;
+  line-height: 2rem;
+}
 // MEDIA QUERIES MIXINS:------------------------------------------------------------------------------------
 @mixin mobileXS {
   @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
