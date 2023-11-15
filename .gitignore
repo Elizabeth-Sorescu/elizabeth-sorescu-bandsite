@@ -1,4 +1,4 @@
-#ignore DS_store
+#ignore the following files:
 *.DS_store
 *.css.map
 *.css

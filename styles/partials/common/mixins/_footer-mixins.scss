@@ -1,0 +1,37 @@
+@use "../../variables" as *;
+// THIS IS THE MIXINS FILE FOR FOOTER STYLE
+
+@mixin image-layout {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin footer-logo-mobile-screens {
+  position: unset;
+  width: 12rem;
+  font-size: 1.5rem;
+  margin: 0.7rem 0rem;
+  margin-top: 3rem;
+}
+@mixin footer-logo-large-screens {
+  font-size: 2.2rem;
+  text-align: right;
+  width: 88vw;
+  bottom: 20rem;
+}
+@mixin footer--group1-mobile-screens {
+  display: block;
+  width: 15rem;
+}
+@mixin contact__name-large-screens {
+  margin: 2rem 0rem;
+}
+@mixin contact__location-large-screens {
+  margin: 2rem 0rem;
+}
+@mixin footer--group2-large-screens {
+  display: flex;
+}
+@mixin contact_email-large-screens {
+  margin: 2rem 0rem;
+}

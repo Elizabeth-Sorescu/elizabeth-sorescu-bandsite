@@ -1,49 +1,6 @@
 @use "./variables" as *;
 
-// NAVIGATION MIXINS:-----------------------------------------------------------------------------------
-//This is the style for the whole NAVIGATION BAR of MOBILE screens:
-@mixin small-screen-navigation {
-  padding-top: 1.5rem;
-}
-//This is the style for the whole NAVIGATION BAR of LARGE screens:
-@mixin large-screen-navigation {
-  display: inline-flex;
-  width: 100vw;
-  vertical-align: auto;
-  padding-top: 2rem;
-}
-//This is the style for the MENU of LARGE screens:
-@mixin large-screen-menu {
-  width: fit-content;
-  text-align: left;
-  padding-top: 1rem;
-  padding-left: 1rem;
-}
-
-//This is a layout for an underline to appear below the MENU LIST when a page is active for MOBILE SCREENS:
-@mixin small-screen-active-menu {
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid $primary-three-color;
-}
-//This is a layout for an underline to appear below the MENU LIST when a page is active for LARGE SCREENS:
-@mixin large-screen-active-menu {
-  text-decoration: 0.25rem underline $primary-three-color;
-  text-underline-offset: 2.4rem;
-}
-//This is the layout that will create two columns in the ARTICLE SECTION
-@mixin article-layout {
-  display: flex;
-  flex: 1;
-}
-
-// BANDSITE LOGO:-------------------------------------------------------------------------------------------
-@mixin bansite-logo($bandsite-logo-size) {
-  text-align: center;
-  width: default;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-// MEDIA QUERIES MIXINS:------------------------------------------------------------------------------------
+// MEDIA QUERIES MIXINS:
 @mixin mobileXS {
   @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
     @content;
@@ -79,3 +36,5 @@
     @content;
   }
 }
+
+// MAIN MIXINS

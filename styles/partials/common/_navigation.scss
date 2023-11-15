@@ -1,0 +1,360 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+@use "./mixins/navigation-mixins" as *;
+
+// NAVIGATION SECTION
+.nav {
+  background-color: $primary-one-color;
+  padding-top: 1rem;
+  @include mobileXS {
+    @include small-screen-navigation;
+  }
+  @include mobileS {
+    @include small-screen-navigation;
+  }
+  @include mobile {
+    @include small-screen-navigation;
+  }
+  @include tabletS {
+    @include large-screen-navigation;
+  }
+  @include tablet {
+    @include large-screen-navigation;
+  }
+  @include desktop {
+    @include large-screen-navigation;
+  }
+  @include desktopL {
+    @include large-screen-navigation;
+  }
+
+  //Navigation's BandSite LOGO and its link
+  &__header {
+    text-align: left;
+    font-size: 2.25rem;
+    line-height: 4.25rem;
+    font-weight: normal;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: 0.3s ease;
+    @include mobileXS {
+      @include nav_header-mobile-screens;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    @include mobileS {
+      @include nav_header-mobile-screens;
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+    @include mobile {
+      @include nav_header-mobile-screens;
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+    @include tabletS {
+      padding-left: 3rem;
+      padding-right: 2rem;
+      width: fit-content;
+    }
+    @include tablet {
+      padding-left: 3.5rem;
+      padding-right: 2rem;
+      width: fit-content;
+    }
+    @include desktop {
+      width: 26%;
+      padding-left: 6rem;
+      padding-right: 4rem;
+      width: fit-content;
+    }
+    @include desktopL {
+      width: 26%;
+      padding-left: 6rem;
+      padding-right: 4rem;
+      width: fit-content;
+    }
+
+    // This is the bansite logo link style
+    &__link {
+      text-decoration: none;
+      color: $secondary-two-color;
+
+      // Dive deeper: color the bandsite logo when hovered
+      &:hover {
+        color: $tertiary-one-color;
+      }
+    }
+  }
+
+  // Navigation's MENU
+  &__menu {
+    text-align: center;
+    @include tabletS {
+      @include large-screen-menu;
+    }
+    @include tablet {
+      @include large-screen-menu;
+    }
+    @include desktop {
+      @include large-screen-menu;
+    }
+    @include desktopL {
+      @include large-screen-menu;
+    }
+  }
+}
+
+// //Navigation's BandSite LOGO and its link
+// .nav__header {
+//   text-align: left;
+//   font-size: 2.25rem;
+//   line-height: 4.25rem;
+//   font-weight: normal;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   transition: 0.3s ease;
+//   @include mobileXS {
+//     @include nav_header-mobile-screens;
+//     font-size: 2rem;
+//     line-height: 2rem;
+//   }
+//   @include mobileS {
+//     @include nav_header-mobile-screens;
+//     font-size: 2.25rem;
+//     line-height: 2.25rem;
+//   }
+//   @include mobile {
+//     @include nav_header-mobile-screens;
+//     font-size: 2.25rem;
+//     line-height: 2.25rem;
+//   }
+//   @include tabletS {
+//     padding-left: 3rem;
+//     padding-right: 2rem;
+//     width: fit-content;
+//   }
+//   @include tablet {
+//     padding-left: 3.5rem;
+//     padding-right: 2rem;
+//     width: fit-content;
+//   }
+//   @include desktop {
+//     width: 26%;
+//     padding-left: 6rem;
+//     padding-right: 4rem;
+//     width: fit-content;
+//   }
+//   @include desktopL {
+//     width: 26%;
+//     padding-left: 6rem;
+//     padding-right: 4rem;
+//     width: fit-content;
+//   }
+// }
+
+// .nav__header__link {
+//   text-decoration: none;
+//   color: $secondary-two-color;
+// }
+
+// // Dive deeper: color the bandsite logo when hovered
+// .nav__header__link:hover {
+//   color: $tertiary-one-color;
+// }
+
+// // Navigation's MENU
+// .nav__menu {
+//   text-align: center;
+//   @include tabletS {
+//     @include large-screen-menu;
+//   }
+//   @include tablet {
+//     @include large-screen-menu;
+//   }
+//   @include desktop {
+//     @include large-screen-menu;
+//   }
+//   @include desktopL {
+//     @include large-screen-menu;
+//   }
+// }
+
+.nav__menu__list__item {
+  display: inline-flex;
+  @include mobileXS {
+    @include nav__menu__list__item-layout;
+    font-size: 1.1rem;
+  }
+  @include mobileS {
+    @include nav__menu__list__item-layout;
+  }
+  @include mobile {
+    @include nav__menu__list__item-layout;
+  }
+  @include tabletS {
+    @include nav__menu__list__item-layout;
+    width: fit-content;
+    padding: 0rem 1.5rem;
+    line-height: 2rem;
+  }
+  @include tablet {
+    @include nav__menu__list__item-layout;
+    width: fit-content;
+    padding: 0rem 3rem;
+    line-height: 2rem;
+  }
+  @include desktop {
+    @include nav__menu__list__item-layout;
+    width: fit-content;
+    padding: 0rem 3rem;
+    line-height: 2rem;
+  }
+  @include desktopL {
+    @include nav__menu__list__item-layout;
+    width: fit-content;
+    padding: 0rem 3rem;
+    line-height: 2rem;
+  }
+
+  //Menu list's style:
+  &__link-style {
+    text-decoration: none;
+    color: $secondary-two-color;
+    padding-bottom: 2rem;
+    @include mobileXS {
+      padding-bottom: 0.5rem;
+    }
+    @include mobileS {
+      padding-bottom: 0.5rem;
+    }
+    @include mobile {
+      padding-bottom: 0.5rem;
+    }
+    &:hover {
+      color: $tertiary-one-color;
+    }
+  }
+
+  &--active-page {
+    font-weight: bold;
+    @include mobileXS {
+      @include small-screen-active-menu;
+    }
+    @include mobileS {
+      @include small-screen-active-menu;
+    }
+    @include mobile {
+      @include small-screen-active-menu;
+    }
+    @include tabletS {
+      @include large-screen-active-menu;
+    }
+    @include tablet {
+      @include large-screen-active-menu;
+    }
+    @include desktop {
+      @include large-screen-active-menu;
+    }
+    @include desktopL {
+      @include large-screen-active-menu;
+    }
+  }
+
+  &:hover {
+    text-decoration: 0.25rem underline $primary-three-color;
+    text-underline-offset: 2.688rem;
+    @include mobileXS {
+      @include nav__menu__list__item-hover-mobile-screens;
+    }
+    @include mobileS {
+      @include nav__menu__list__item-hover-mobile-screens;
+    }
+    @include mobile {
+      @include nav__menu__list__item-hover-mobile-screens;
+    }
+    @include tabletS {
+      @include nav__menu__list__item-hover-large-screens;
+    }
+    @include tablet {
+      @include nav__menu__list__item-hover-large-screens;
+    }
+    @include desktop {
+      @include nav__menu__list__item-hover-large-screens;
+    }
+    @include desktopL {
+      @include nav__menu__list__item-hover-large-screens;
+    }
+  }
+}
+
+// //Menu list's style:
+// .nav__menu__list__item__link-style {
+//   text-decoration: none;
+//   color: $secondary-two-color;
+//   padding-bottom: 2rem;
+//   @include mobileXS {
+//     padding-bottom: 0.5rem;
+//   }
+//   @include mobileS {
+//     padding-bottom: 0.5rem;
+//   }
+//   @include mobile {
+//     padding-bottom: 0.5rem;
+//   }
+// }
+
+// .nav__menu__list__item__link-style:hover {
+//   color: $tertiary-one-color;
+// }
+
+// .nav__menu__list__item--active-page {
+//   font-weight: bold;
+//   @include mobileXS {
+//     @include small-screen-active-menu;
+//   }
+//   @include mobileS {
+//     @include small-screen-active-menu;
+//   }
+//   @include mobile {
+//     @include small-screen-active-menu;
+//   }
+//   @include tabletS {
+//     @include large-screen-active-menu;
+//   }
+//   @include tablet {
+//     @include large-screen-active-menu;
+//   }
+//   @include desktop {
+//     @include large-screen-active-menu;
+//   }
+//   @include desktopL {
+//     @include large-screen-active-menu;
+//   }
+// }
+
+// .nav__menu__list__item:hover {
+//   text-decoration: 0.25rem underline $primary-three-color;
+//   text-underline-offset: 2.688rem;
+//   @include mobileXS {
+//     @include nav__menu__list__item-hover-mobile-screens;
+//   }
+//   @include mobileS {
+//     @include nav__menu__list__item-hover-mobile-screens;
+//   }
+//   @include mobile {
+//     @include nav__menu__list__item-hover-mobile-screens;
+//   }
+//   @include tabletS {
+//     @include nav__menu__list__item-hover-large-screens;
+//   }
+//   @include tablet {
+//     @include nav__menu__list__item-hover-large-screens;
+//   }
+//   @include desktop {
+//     @include nav__menu__list__item-hover-large-screens;
+//   }
+//   @include desktopL {
+//     @include nav__menu__list__item-hover-large-screens;
+//   }
+// }
