@@ -1,11 +1,6 @@
 @use "../../variables" as *;
 // THIS IS THE MIXINS FILE FOR FOOTER STYLE
 
-@mixin image-layout {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 @mixin footer-logo-mobile-screens {
   position: unset;
   width: 12rem;

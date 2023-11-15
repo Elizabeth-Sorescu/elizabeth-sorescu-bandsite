@@ -1,179 +1,182 @@
 @use "../variables" as *;
 @use "../mixins" as *;
-// ABOUT SECTION
-.about--heading {
-  padding-top: 2.3rem;
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  color: $primary-one-color;
-  @include mobileXS {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-  @include mobileS {
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-  }
-  @include mobile {
-    font-size: 3.25rem;
-    line-height: 3.25rem;
-  }
-  @include tabletS {
-    padding-top: 4.3rem;
-    padding-bottom: 1.5rem;
-    padding-left: 3.5rem;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-  }
-  @include tablet {
-    padding-top: 5.3rem;
-    padding-bottom: 2.5rem;
-    padding-left: 3.5rem;
-    font-size: 3.25rem;
-    line-height: 3.25rem;
-  }
-  @include desktop {
-    padding-top: 5.3rem;
-    padding-bottom: 2.5rem;
-    padding-left: 6rem;
-    font-size: 3.25rem;
-    line-height: 3.25rem;
-  }
-  @include desktopL {
-    padding-top: 5rem;
-    padding-bottom: 4rem;
-    padding-left: 6rem;
-    font-size: 3.5rem;
-    line-height: 3.25rem;
-  }
-}
 
-.about--img {
-  background-image: url(../assets/Images/band.jpg);
-  height: 15rem;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: auto;
-  @include mobileXS {
-    height: 10rem;
-    width: 90vw;
+// ABOUT SECTION
+.about {
+  &--heading {
+    padding-top: 2.3rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: $primary-one-color;
+    @include mobileXS {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    @include mobileS {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+    @include mobile {
+      font-size: 3.25rem;
+      line-height: 3.25rem;
+    }
+    @include tabletS {
+      padding-top: 4.3rem;
+      padding-bottom: 1.5rem;
+      padding-left: 3.5rem;
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+    @include tablet {
+      padding-top: 5.3rem;
+      padding-bottom: 2.5rem;
+      padding-left: 3.5rem;
+      font-size: 3.25rem;
+      line-height: 3.25rem;
+    }
+    @include desktop {
+      padding-top: 5.3rem;
+      padding-bottom: 2.5rem;
+      padding-left: 6rem;
+      font-size: 3.25rem;
+      line-height: 3.25rem;
+    }
+    @include desktopL {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+      padding-left: 6rem;
+      font-size: 3.5rem;
+      line-height: 3.25rem;
+    }
   }
-  @include mobileS {
+
+  &--img {
+    background-image: url(../assets/Images/band.jpg);
     height: 15rem;
-    width: 90vw;
-  }
-  @include mobile {
-    height: 25rem;
-    width: 95vw;
-  }
-  @include tabletS {
-    height: 20.5rem;
-    width: 70vw;
-  }
-  @include tablet {
-    height: 29.5rem;
-    width: 78vw;
-  }
-  @include desktop {
-    height: 29.5rem;
-    width: 72vw;
-  }
-  @include desktopL {
-    height: 43rem;
-    width: 75vw;
-  }
-}
-.about--caption {
-  font-size: 1.313rem;
-  line-height: 1.813rem;
-  font-weight: 800;
-  color: $primary-one-color;
-  @include mobileXS {
     width: 100vw;
-    padding: 1rem 1rem 0rem 1rem;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    @include image-layout;
+    margin: auto;
+    @include mobileXS {
+      height: 10rem;
+      width: 90vw;
+    }
+    @include mobileS {
+      height: 15rem;
+      width: 90vw;
+    }
+    @include mobile {
+      height: 25rem;
+      width: 95vw;
+    }
+    @include tabletS {
+      height: 20.5rem;
+      width: 70vw;
+    }
+    @include tablet {
+      height: 29.5rem;
+      width: 78vw;
+    }
+    @include desktop {
+      height: 29.5rem;
+      width: 72vw;
+    }
+    @include desktopL {
+      height: 43rem;
+      width: 75vw;
+    }
   }
-  @include mobileS {
-    width: 100vw;
-    padding: 2.2rem 2rem 0rem 2rem;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-  @include mobile {
-    width: 100vw;
-    padding: 2.2rem 2rem 0rem 2rem;
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-  }
-  @include tabletS {
-    width: 100vw;
-    padding: 2.5rem 6.6rem 0rem 6.6rem;
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-  @include tablet {
-    width: 100vw;
-    padding: 2.5rem 8rem 0rem 8rem;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-  @include desktop {
-    width: 100vw;
-    padding: 2.5rem 11rem 0rem 11rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  @include desktopL {
-    width: 100vw;
-    padding: 3.5rem 14rem 0rem 14rem;
-    font-size: 2.2rem;
-    line-height: 3rem;
-  }
-}
-.about--ref {
-  padding-top: 0.5rem;
-  color: $primary-one-color;
-  font-weight: bold;
-  @include mobileXS {
-    padding: 0rem 1rem;
-    font-size: 0.9rem;
-    line-height: 2rem;
-  }
-  @include mobileS {
-    padding: 0rem 2rem;
-    font-size: 1.2rem;
-    line-height: 3rem;
-  }
-  @include mobile {
-    padding: 0rem 2rem;
-    font-size: 1.5rem;
-    line-height: 3rem;
-  }
-  @include tabletS {
-    padding: 0rem 6.6rem;
-    font-size: 1.1rem;
-    line-height: 3rem;
-  }
-  @include tablet {
-    padding: 0rem 8rem;
-    font-size: 1.5rem;
-    line-height: 5rem;
-  }
-  @include desktop {
-    padding: 0rem 11rem;
-    font-size: 1.5rem;
-    line-height: 5rem;
-  }
-  @include desktopL {
-    padding-top: 1.7rem;
-    padding-left: 14rem;
-    font-size: 1.43rem;
+
+  &--caption {
+    font-size: 1.313rem;
     line-height: 1.813rem;
+    font-weight: 800;
+    color: $primary-one-color;
+    @include mobileXS {
+      width: 100vw;
+      padding: 1rem 1rem 0rem 1rem;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+    @include mobileS {
+      width: 100vw;
+      padding: 2.2rem 2rem 0rem 2rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+    @include mobile {
+      width: 100vw;
+      padding: 2.2rem 2rem 0rem 2rem;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+    }
+    @include tabletS {
+      width: 100vw;
+      padding: 2.5rem 6.6rem 0rem 6.6rem;
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+    @include tablet {
+      width: 100vw;
+      padding: 2.5rem 8rem 0rem 8rem;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    @include desktop {
+      width: 100vw;
+      padding: 2.5rem 11rem 0rem 11rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+    @include desktopL {
+      width: 100vw;
+      padding: 3.5rem 14rem 0rem 14rem;
+      font-size: 2.2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &--ref {
+    padding-top: 0.5rem;
+    color: $primary-one-color;
+    font-weight: bold;
+    @include mobileXS {
+      padding: 0rem 1rem;
+      font-size: 0.9rem;
+      line-height: 2rem;
+    }
+    @include mobileS {
+      padding: 0rem 2rem;
+      font-size: 1.2rem;
+      line-height: 3rem;
+    }
+    @include mobile {
+      padding: 0rem 2rem;
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+    @include tabletS {
+      padding: 0rem 6.6rem;
+      font-size: 1.1rem;
+      line-height: 3rem;
+    }
+    @include tablet {
+      padding: 0rem 8rem;
+      font-size: 1.5rem;
+      line-height: 5rem;
+    }
+    @include desktop {
+      padding: 0rem 11rem;
+      font-size: 1.5rem;
+      line-height: 5rem;
+    }
+    @include desktopL {
+      padding-top: 1.7rem;
+      padding-left: 14rem;
+      font-size: 1.43rem;
+      line-height: 1.813rem;
+    }
   }
 }

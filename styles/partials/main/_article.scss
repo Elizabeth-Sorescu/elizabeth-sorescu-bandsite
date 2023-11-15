@@ -74,41 +74,43 @@
     @include article-layout;
     padding: 0rem 14rem;
   }
-}
-.article-description--left {
-  margin-right: 1rem;
-  overflow: hidden;
-  height: auto;
-  @include mobileXS {
-    margin-right: auto;
-    padding: 0rem 1rem;
+
+  &--left {
+    margin-right: 1rem;
+    overflow: hidden;
+    height: auto;
+    @include mobileXS {
+      margin-right: auto;
+      padding: 0rem 1rem;
+    }
+    @include mobileS {
+      margin-right: 0rem;
+      padding: 0rem 2rem;
+    }
+    @include mobile {
+      margin-right: 0rem;
+      padding: 0rem 1.2rem;
+    }
   }
-  @include mobileS {
-    margin-right: 0rem;
-    padding: 0rem 2rem;
-  }
-  @include mobile {
-    margin-right: 0rem;
-    padding: 0rem 1.2rem;
-  }
-}
-.article-description--right {
-  margin-left: 1rem;
-  overflow: hidden;
-  height: auto;
-  @include mobileXS {
-    padding: 0rem 1rem;
-    padding-top: 1.5rem;
-    margin-left: 0rem;
-  }
-  @include mobileS {
-    padding: 0rem 2rem;
-    padding-top: 2rem;
-    margin-left: 0rem;
-  }
-  @include mobile {
-    padding: 0rem 1.2rem;
-    padding-top: 2rem;
-    margin-left: 0rem;
+
+  &--right {
+    margin-left: 1rem;
+    overflow: hidden;
+    height: auto;
+    @include mobileXS {
+      padding: 0rem 1rem;
+      padding-top: 1.5rem;
+      margin-left: 0rem;
+    }
+    @include mobileS {
+      padding: 0rem 2rem;
+      padding-top: 2rem;
+      margin-left: 0rem;
+    }
+    @include mobile {
+      padding: 0rem 1.2rem;
+      padding-top: 2rem;
+      margin-left: 0rem;
+    }
   }
 }

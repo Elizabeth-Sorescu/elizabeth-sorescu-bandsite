@@ -47,89 +47,109 @@
     height: 28rem;
     overflow-y: hidden;
   }
-}
-.footer--group1 {
-  display: flex;
-  justify-content: space-between;
-  width: 30rem;
-  @include mobileXS {
-    @include footer--group1-mobile-screens;
+
+  &--group1 {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    @include mobileXS {
+      @include footer--group1-mobile-screens;
+      width: 14rem;
+    }
+    @include mobileS {
+      @include footer--group1-mobile-screens;
+    }
+    @include mobile {
+      @include footer--group1-mobile-screens;
+    }
+    @include tabletS {
+      width: 23rem;
+    }
+    @include tablet {
+      width: 35rem;
+    }
+    @include desktop {
+      width: 33rem;
+    }
+    @include desktopL {
+      width: 31rem;
+    }
+  }
+
+  &--heading {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: 700;
     width: 14rem;
+    margin: 0.8rem 0rem;
+    @include mobileXS {
+      margin-top: 0.3rem;
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+    }
+    @include tabletS {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
+    @include tablet {
+      font-size: 3.25rem;
+      line-height: 3.25rem;
+      width: 22rem;
+    }
+    @include desktop {
+      font-size: 2.9rem;
+      line-height: 2.9rem;
+      width: 17rem;
+    }
+    @include desktopL {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+      width: 17rem;
+    }
   }
-  @include mobileS {
-    @include footer--group1-mobile-screens;
-  }
-  @include mobile {
-    @include footer--group1-mobile-screens;
-  }
-  @include tabletS {
-    width: 23rem;
-  }
-  @include tablet {
-    width: 35rem;
-  }
-  @include desktop {
-    width: 33rem;
-  }
-  @include desktopL {
-    width: 31rem;
-  }
-}
-.footer--heading {
-  font-size: 2.4rem;
-  line-height: 2.6rem;
-  font-weight: 700;
-  width: 14rem;
-  margin: 0.8rem 0rem;
-  @include mobileXS {
-    margin-top: 0.3rem;
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-  }
-  @include tabletS {
-    font-size: 2.2rem;
-    line-height: 2.2rem;
-  }
-  @include tablet {
-    font-size: 3.25rem;
-    line-height: 3.25rem;
-    width: 22rem;
-  }
-  @include desktop {
-    font-size: 2.9rem;
-    line-height: 2.9rem;
-    width: 17rem;
-  }
-  @include desktopL {
-    font-size: 2.8rem;
-    line-height: 2.8rem;
-    width: 17rem;
-  }
-}
-.footer--socmed {
-  display: flex;
-  justify-content: space-between;
-  width: 12rem;
-  margin: 0.8rem 0rem;
-  align-items: center;
-  @include mobileXS {
-    margin-top: 0.3rem;
-    margin-bottom: 0rem;
-    width: 8rem;
-  }
-  @include tabletS {
-    width: 8rem;
-  }
-  @include tablet {
+
+  &--socmed {
+    display: flex;
+    justify-content: space-between;
     width: 12rem;
+    margin: 0.8rem 0rem;
+    align-items: center;
+    @include mobileXS {
+      margin-top: 0.3rem;
+      margin-bottom: 0rem;
+      width: 8rem;
+    }
+    @include tabletS {
+      width: 8rem;
+    }
+    @include tablet {
+      width: 12rem;
+    }
+    @include desktop {
+      width: 12rem;
+    }
+    @include desktopL {
+      width: 11rem;
+    }
   }
-  @include desktop {
-    width: 12rem;
-  }
-  @include desktopL {
-    width: 11rem;
+
+  //This is the layout for contact in inline-block format
+  &--group2 {
+    @include tabletS {
+      @include footer--group2-large-screens;
+    }
+    @include tablet {
+      @include footer--group2-large-screens;
+    }
+    @include desktop {
+      @include footer--group2-large-screens;
+    }
+    @include desktopL {
+      @include footer--group2-large-screens;
+    }
   }
 }
+
 .soc-med--instagram {
   background-image: url(../assets/Icons/SVG/Icon-instagram.svg);
   @include image-layout;
@@ -158,6 +178,7 @@
     width: 0.7rem;
   }
 }
+
 .soc-med--twitter {
   background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
   @include image-layout;
@@ -172,21 +193,7 @@
     width: 2rem;
   }
 }
-//This is the layout for contact in inline-block format
-.footer--group2 {
-  @include tabletS {
-    @include footer--group2-large-screens;
-  }
-  @include tablet {
-    @include footer--group2-large-screens;
-  }
-  @include desktop {
-    @include footer--group2-large-screens;
-  }
-  @include desktopL {
-    @include footer--group2-large-screens;
-  }
-}
+
 .contact {
   font-size: 0.9rem;
   line-height: 1.3rem;
@@ -212,69 +219,72 @@
     font-size: 1rem;
     width: 20rem;
   }
+
+  &__name {
+    font-weight: 700;
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.7rem 0rem;
+    }
+    @include tabletS {
+      @include contact__name-large-screens;
+    }
+    @include tablet {
+      @include contact__name-large-screens;
+    }
+    @include desktop {
+      @include contact__name-large-screens;
+    }
+    @include desktopL {
+      @include contact__name-large-screens;
+    }
+  }
+
+  &__location {
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.9rem 0rem;
+    }
+    @include tabletS {
+      @include contact__location-large-screens;
+    }
+    @include tablet {
+      @include contact__location-large-screens;
+    }
+    @include desktop {
+      @include contact__location-large-screens;
+    }
+    @include desktopL {
+      @include contact__location-large-screens;
+    }
+  }
+
+  &__email {
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.9rem 0rem;
+    }
+    @include tabletS {
+      @include contact_email-large-screens;
+    }
+    @include tablet {
+      @include contact_email-large-screens;
+    }
+    @include desktop {
+      @include contact_email-large-screens;
+    }
+    @include desktopL {
+      @include contact_email-large-screens;
+    }
+  }
 }
 
-.contact__name {
-  font-weight: 700;
-  margin: 0.5rem 0rem;
-  @include mobileXS {
-    margin: 0.7rem 0rem;
-  }
-  @include tabletS {
-    @include contact__name-large-screens;
-  }
-  @include tablet {
-    @include contact__name-large-screens;
-  }
-  @include desktop {
-    @include contact__name-large-screens;
-  }
-  @include desktopL {
-    @include contact__name-large-screens;
-  }
-}
-
-.contact__location {
-  margin: 0.5rem 0rem;
-  @include mobileXS {
-    margin: 0.9rem 0rem;
-  }
-  @include tabletS {
-    @include contact__location-large-screens;
-  }
-  @include tablet {
-    @include contact__location-large-screens;
-  }
-  @include desktop {
-    @include contact__location-large-screens;
-  }
-  @include desktopL {
-    @include contact__location-large-screens;
-  }
-}
-.contact__email {
-  margin: 0.5rem 0rem;
-  @include mobileXS {
-    margin: 0.9rem 0rem;
-  }
-  @include tabletS {
-    @include contact_email-large-screens;
-  }
-  @include tablet {
-    @include contact_email-large-screens;
-  }
-  @include desktop {
-    @include contact_email-large-screens;
-  }
-  @include desktopL {
-    @include contact_email-large-screens;
-  }
-}
 // dive deeper: add link to open directly the mail when clicked
 .email-link {
   text-decoration: none;
   color: $primary-three-color;
 }
+
 .footer-logo {
   margin: 0.8rem 0rem;
   margin-top: 2rem;
@@ -321,6 +331,7 @@
   margin-top: 0.7rem;
   margin-bottom: 0rem;
 }
+
 .footer-copyright {
   margin: 0.5rem 0rem;
   @include mobileXS {

@@ -6,10 +6,14 @@
   background-image: url(../assets/Images/hero-bio.jpg);
   height: 100vh;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @include image-layout;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   position: relative;
+  &--overlay {
+    background-color: rgba(50, 50, 50, 0.5);
+  }
   @include mobileXS {
     height: 10rem;
   }
@@ -25,60 +29,110 @@
     height: 30rem;
     width: 100vw;
   }
+
+  &__heading {
+    margin: auto;
+    width: 100vw;
+    color: $primary-three-color;
+    font-size: 5.375rem;
+    line-height: 5.375rem;
+    font-weight: 900;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    @include mobileXS {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      left: 1.5rem;
+      top: 45%;
+    }
+    @include mobileS {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      left: 1.5rem;
+      top: 45%;
+    }
+    @include mobile {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      left: 1.5rem;
+      top: 48%;
+    }
+    @include tabletS {
+      font-size: 4rem;
+      left: 3.5rem;
+      top: 44%;
+    }
+    @include tablet {
+      left: 3.5rem;
+      top: 48%;
+    }
+    @include desktop {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+      left: 6rem;
+      top: 45%;
+    }
+    @include desktopL {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+      left: 6rem;
+      top: 45%;
+    }
+  }
 }
 
-.hero-img--overlay {
-  background-color: rgba(50, 50, 50, 0.5);
-}
+// .hero-img--overlay {
+//   background-color: rgba(50, 50, 50, 0.5);
+// }
 
-.hero-img__heading {
-  margin: auto;
-  width: 100vw;
-  color: $primary-three-color;
-  font-size: 5.375rem;
-  line-height: 5.375rem;
-  font-style: "Avenir-Bold";
-  font-weight: bold;
-  display: flex;
-  position: absolute;
-  top: 50%;
-  @include mobileXS {
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-    left: 1.5rem;
-    top: 45%;
-  }
-  @include mobileS {
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-    left: 1.5rem;
-    top: 45%;
-  }
-  @include mobile {
-    font-size: 3.2rem;
-    line-height: 3.2rem;
-    left: 1.5rem;
-    top: 48%;
-  }
-  @include tabletS {
-    font-size: 4rem;
-    left: 3.5rem;
-    top: 44%;
-  }
-  @include tablet {
-    left: 3.5rem;
-    top: 48%;
-  }
-  @include desktop {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
-    left: 6rem;
-    top: 45%;
-  }
-  @include desktopL {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
-    left: 6rem;
-    top: 45%;
-  }
-}
+// .hero-img__heading {
+//   margin: auto;
+//   width: 100vw;
+//   color: $primary-three-color;
+//   font-size: 5.375rem;
+//   line-height: 5.375rem;
+//   font-weight: 900;
+//   display: flex;
+//   position: absolute;
+//   top: 50%;
+//   @include mobileXS {
+//     font-size: 1.5rem;
+//     line-height: 2.25rem;
+//     left: 1.5rem;
+//     top: 45%;
+//   }
+//   @include mobileS {
+//     font-size: 2.25rem;
+//     line-height: 2.25rem;
+//     left: 1.5rem;
+//     top: 45%;
+//   }
+//   @include mobile {
+//     font-size: 3.2rem;
+//     line-height: 3.2rem;
+//     left: 1.5rem;
+//     top: 48%;
+//   }
+//   @include tabletS {
+//     font-size: 4rem;
+//     left: 3.5rem;
+//     top: 44%;
+//   }
+//   @include tablet {
+//     left: 3.5rem;
+//     top: 48%;
+//   }
+//   @include desktop {
+//     font-size: 5.5rem;
+//     line-height: 5.5rem;
+//     left: 6rem;
+//     top: 45%;
+//   }
+//   @include desktopL {
+//     font-size: 5.5rem;
+//     line-height: 5.5rem;
+//     left: 6rem;
+//     top: 45%;
+//   }
+// }
