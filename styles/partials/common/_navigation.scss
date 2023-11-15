@@ -80,9 +80,9 @@
       text-decoration: none;
       color: $secondary-two-color;
 
-      // Dive deeper: color the bandsite logo when hovered
+      // color the bandsite logo when hovered
       &:hover {
-        color: $tertiary-one-color;
+        color: $primary-three-color;
       }
     }
   }
@@ -232,7 +232,7 @@
       padding-bottom: 0.5rem;
     }
     &:hover {
-      color: $tertiary-one-color;
+      color: $primary-three-color;
     }
   }
 
