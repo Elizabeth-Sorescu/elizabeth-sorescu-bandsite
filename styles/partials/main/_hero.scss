@@ -12,6 +12,7 @@
   // background-size: cover;
   position: relative;
   &--overlay {
+    background-blend-mode: multiply;
     background-color: rgba(50, 50, 50, 0.5);
   }
   @include mobileXS {
@@ -39,6 +40,7 @@
     font-weight: 900;
     display: flex;
     position: absolute;
+    font-weight: 600;
     top: 50%;
     @include mobileXS {
       font-size: 1.5rem;
