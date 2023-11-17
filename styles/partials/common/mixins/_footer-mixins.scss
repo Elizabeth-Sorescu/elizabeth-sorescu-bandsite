@@ -8,25 +8,43 @@
   margin: 0.7rem 0rem;
   margin-top: 3rem;
 }
+
 @mixin footer-logo-large-screens {
   font-size: 2.2rem;
   text-align: right;
   width: 88vw;
   bottom: 20rem;
 }
+
 @mixin footer--group1-mobile-screens {
   display: block;
   width: 15rem;
 }
+
 @mixin contact__name-large-screens {
   margin: 2rem 0rem;
 }
+
 @mixin contact__location-large-screens {
   margin: 2rem 0rem;
 }
+
 @mixin footer--group2-large-screens {
   display: flex;
 }
+
 @mixin contact_email-large-screens {
   margin: 2rem 0rem;
+}
+
+@mixin footer-copyright-large-screens {
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 4.125rem;
+}
+
+@mixin footer-copyright-mobile-screens {
+  font-size: 0.7rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0rem;
 }

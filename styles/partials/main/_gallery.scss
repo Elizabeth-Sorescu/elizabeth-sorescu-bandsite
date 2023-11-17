@@ -28,6 +28,7 @@
     @include gallery-large-screens;
   }
 }
+
 .gallery-heading {
   padding-top: 2.3rem;
   padding-bottom: 0.5rem;
@@ -98,6 +99,7 @@
   &--1 {
     background-image: url(../assets/Images/Photo-gallery-1.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -106,6 +108,7 @@
   &--2 {
     background-image: url(../assets/Images/Photo-gallery-2.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -114,6 +117,7 @@
   &--3 {
     background-image: url(../assets/Images/Photo-gallery-3.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -122,6 +126,7 @@
   &--4 {
     background-image: url(../assets/Images/Photo-gallery-4.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -130,6 +135,7 @@
   &--5 {
     background-image: url(../assets/Images/Photo-gallery-5.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -138,6 +144,7 @@
   &--6 {
     background-image: url(../assets/Images/Photo-gallery-6.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -146,6 +153,7 @@
   &--7 {
     background-image: url(../assets/Images/Photo-gallery-7.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -154,6 +162,7 @@
   &--8 {
     background-image: url(../assets/Images/Photo-gallery-8.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }
@@ -162,6 +171,7 @@
   &--9 {
     background-image: url(../assets/Images/Photo-gallery-9.jpg);
     @include photo-layout;
+
     &:hover {
       @include photo-hovered-color($grayscale-hover-rate);
     }

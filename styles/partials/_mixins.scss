@@ -6,31 +6,37 @@
     @content;
   }
 }
+
 @mixin mobileS {
   @media (min-width: $mobileS-min-width) and (max-width: $mobileS-max-width) {
     @content;
   }
 }
+
 @mixin mobile {
   @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
     @content;
   }
 }
+
 @mixin tabletS {
   @media (min-width: $tabletS-min-width) and (max-width: $tabletS-max-width) {
     @content;
   }
 }
+
 @mixin tablet {
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     @content;
   }
 }
+
 @mixin desktop {
   @media (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
     @content;
   }
 }
+
 @mixin desktopL {
   @media (min-width: $desktopL-min-width) {
     @content;
@@ -49,19 +55,23 @@
   padding: 0rem 1rem;
   margin-top: 1rem;
 }
+
 @mixin gallery-large-screens {
   padding: 0rem 1rem;
 }
+
 @mixin gallery-img-tablets {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 @mixin gallery-img-desktops {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 // Gallery mixins for Individual photo according to its media query:
 //This is individual layout of each photo in mobileXS
 @mixin mobileXS-photo {
@@ -70,6 +80,7 @@
   height: 10rem;
   width: 100vw;
 }
+
 //This is individual layout of each photo in mobileS
 @mixin mobileS-photo {
   margin: 1.5rem 0rem;
@@ -77,6 +88,7 @@
   height: 15.5rem;
   width: 100vw;
 }
+
 //This is individual layout of each photo in mobile
 @mixin mobile-photo {
   margin: 1.5rem 0rem;
@@ -84,30 +96,35 @@
   height: 25rem;
   width: 100vw;
 }
+
 //This is individual layout of each photo in tabletS
 @mixin tabletS-photo {
   margin: 1rem 0.3rem;
   width: 28vw;
   height: 7.5rem;
 }
+
 //This is individual layout of each photo in tablet
 @mixin tablet-photo {
   margin: 1rem 0.4rem;
   width: 28vw;
   height: 11.5rem;
 }
+
 //This is individual layout of each photo in desktop
 @mixin desktop-photo {
   margin: 1rem 1rem;
   width: 28vw;
   height: 14rem;
 }
+
 //This is individual layout of each photo in desktopL
 @mixin desktopL-photo {
   margin: 1rem 1rem;
   width: 28vw; //26vw;
   height: 14.5rem; //12.5rem;
 }
+
 //This is the layout of each photo in every media query
 @mixin photo-layout {
   @include image-layout;
@@ -134,6 +151,7 @@
     @include desktopL-photo();
   }
 }
+
 @mixin photo-hovered-color($grayscale-hover-rate) {
   filter: grayscale($grayscale-hover-rate);
 }

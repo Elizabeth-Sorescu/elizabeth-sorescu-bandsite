@@ -25,11 +25,13 @@
   line-height: 1.438rem;
   font-weight: 500;
 }
+
 @mixin nav__menu__list__item-large-screens {
   width: fit-content;
   padding: 0rem 3rem;
   line-height: 2rem;
 }
+
 //This is the style for the MENU of LARGE screens:
 @mixin large-screen-menu {
   width: fit-content;
@@ -69,12 +71,14 @@
   text-align: center;
   width: default;
 }
+
 @mixin nav_header-large-screens {
   width: 26%;
   padding-left: 6rem;
   padding-right: 4rem;
   width: fit-content;
 }
+
 @mixin bansite-logo($bandsite-logo-size) {
   text-align: center;
   width: default;

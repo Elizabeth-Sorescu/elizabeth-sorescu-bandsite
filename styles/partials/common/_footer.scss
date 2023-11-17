@@ -165,6 +165,7 @@
     width: 1.7rem;
   }
 }
+
 .soc-med--facebook {
   background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
   @include image-layout;
@@ -323,16 +324,6 @@
     @include footer-logo-large-screens;
     bottom: 25rem;
   }
-}
-@mixin footer-copyright-large-screens {
-  font-size: 0.9rem;
-  position: relative;
-  bottom: 4.125rem;
-}
-@mixin footer-copyright-mobile-screens {
-  font-size: 0.7rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0rem;
 }
 
 .footer-copyright {
