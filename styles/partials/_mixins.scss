@@ -155,3 +155,11 @@
 @mixin photo-hovered-color($grayscale-hover-rate) {
   filter: grayscale($grayscale-hover-rate);
 }
+
+// ARTICLE SECTION
+
+//This is the layout that will create two columns of article description
+@mixin article-layout {
+  display: flex;
+  flex: 1;
+}

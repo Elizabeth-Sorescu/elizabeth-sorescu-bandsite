@@ -23,22 +23,23 @@
   @include mobile {
     padding: 2rem 1.5rem;
     padding-bottom: 1rem;
-    height: 42rem;
+    height: 43rem;
   }
   @include tabletS {
-    padding: 2rem 2rem;
-    height: 25rem;
+    padding: 4rem 2rem;
+    height: 55vh;
     overflow-y: hidden;
   }
   @include tablet {
-    padding: 3rem 3rem;
-    padding-bottom: 1rem;
-    height: 27rem;
+    padding: 4rem 4rem;
+    padding-bottom: 2rem;
+    height: 69vh;
     overflow-y: hidden;
   }
   @include desktop {
-    padding: 3rem 4rem;
-    height: 27rem;
+    padding: 4rem 4rem;
+    padding-bottom: 2rem;
+    height: 69vh;
     overflow-y: hidden;
   }
   @include desktopL {
@@ -63,13 +64,15 @@
       @include footer--group1-mobile-screens;
     }
     @include tabletS {
-      width: 23rem;
+      width: 25.5rem;
+      // width: 23rem;
+      // border: 1px solid yellow;
     }
     @include tablet {
-      width: 35rem;
+      width: 36rem;
     }
     @include desktop {
-      width: 33rem;
+      width: 36rem;
     }
     @include desktopL {
       width: 37rem;
@@ -88,18 +91,19 @@
       line-height: 2.2rem;
     }
     @include tabletS {
-      font-size: 2.2rem;
-      line-height: 2.2rem;
+      font-size: 2.7rem;
+      line-height: 2.8rem;
+      width: 16rem;
     }
     @include tablet {
-      font-size: 3.25rem;
-      line-height: 3.25rem;
-      width: 22rem;
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      width: 20rem;
     }
     @include desktop {
-      font-size: 2.9rem;
-      line-height: 2.9rem;
-      width: 17rem;
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      width: 20rem;
     }
     @include desktopL {
       font-size: 3.4rem;
@@ -140,9 +144,11 @@
     }
     @include tablet {
       @include footer--group2-large-screens;
+      margin: 0.9rem 0rem;
     }
     @include desktop {
       @include footer--group2-large-screens;
+      margin: 0.9rem 0rem;
     }
     @include desktopL {
       @include footer--group2-large-screens;
@@ -206,16 +212,18 @@
     margin: 1rem 0rem;
   }
   @include tabletS {
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 100vw;
   }
   @include tablet {
-    font-size: 1rem;
-    width: 100vw;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 25rem;
   }
   @include desktop {
-    font-size: 1rem;
-    width: 21rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 25rem;
   }
   @include desktopL {
     font-size: 1.4rem;
@@ -253,9 +261,11 @@
     }
     @include tablet {
       @include contact__location-large-screens;
+      margin: 2.5rem 0rem; //added
     }
     @include desktop {
       @include contact__location-large-screens;
+      margin: 2.5rem 0rem;
     }
     @include desktopL {
       @include contact__location-large-screens;
@@ -302,9 +312,11 @@
   }
   @include mobileS {
     @include footer-logo-mobile-screens;
+    font-size: 2.3rem;
   }
   @include mobile {
     @include footer-logo-mobile-screens;
+    font-size: 2.3rem;
   }
   @include tabletS {
     @include footer-logo-large-screens;
@@ -314,10 +326,12 @@
   }
   @include tablet {
     @include footer-logo-large-screens;
-    width: 91vw;
+    bottom: 25rem;
+    width: 89vw;
   }
   @include desktop {
     @include footer-logo-large-screens;
+    bottom: 25rem;
     width: 89vw;
   }
   @include desktopL {
@@ -341,13 +355,17 @@
   }
   @include tablet {
     @include footer-copyright-large-screens;
+    font-size: 1.3rem;
+    bottom: 3rem;
   }
   @include desktop {
     @include footer-copyright-large-screens;
+    font-size: 1.3rem;
+    bottom: 3rem;
   }
   @include desktopL {
     @include footer-copyright-large-screens;
     font-size: 1.3rem;
-    bottom: 3rem; //4.122rem;;
+    bottom: 3rem;
   }
 }

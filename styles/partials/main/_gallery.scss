@@ -51,25 +51,25 @@
     line-height: 2rem;
   }
   @include tabletS {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2.1rem;
     padding-left: 1.5rem;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
   @include tablet {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
     padding-left: 2.5rem;
-    font-size: 3.25rem;
-    line-height: 3.25rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
   @include desktop {
-    padding-top: 2.3rem;
-    padding-bottom: 0.5rem;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
     padding-left: 3.5rem;
-    font-size: 3.25rem;
-    line-height: 3.25rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
   @include desktopL {
     padding-top: 5rem;

@@ -24,11 +24,11 @@
       line-height: 3.25rem;
     }
     @include tabletS {
-      padding-top: 4.3rem;
-      padding-bottom: 1.5rem;
+      padding-top: 5.3rem;
+      padding-bottom: 2.5rem;
       padding-left: 3.5rem;
-      font-size: 2.25rem;
-      line-height: 2.25rem;
+      font-size: 3.25rem;
+      line-height: 3.25rem;
     }
     @include tablet {
       padding-top: 5.3rem;
@@ -38,10 +38,10 @@
       line-height: 3.25rem;
     }
     @include desktop {
-      padding-top: 5.3rem;
-      padding-bottom: 2.5rem;
-      padding-left: 6rem;
-      font-size: 3.25rem;
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+      padding-left: 4rem;
+      font-size: 3.5rem;
       line-height: 3.25rem;
     }
     @include desktopL {
@@ -72,7 +72,7 @@
       width: 95vw;
     }
     @include tabletS {
-      height: 20.5rem;
+      height: 25.5rem;
       width: 70vw;
     }
     @include tablet {
@@ -80,7 +80,7 @@
       width: 78vw;
     }
     @include desktop {
-      height: 29.5rem;
+      height: 43rem;
       width: 72vw;
     }
     @include desktopL {
@@ -92,7 +92,7 @@
   &--caption {
     font-size: 1.313rem;
     line-height: 1.813rem;
-    font-weight: 600;
+    font-weight: 700;
     color: $primary-one-color;
     @include mobileXS {
       width: 100vw;
@@ -115,7 +115,7 @@
     @include tabletS {
       width: 100vw;
       padding: 2.5rem 6.6rem 0rem 6.6rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       line-height: 2rem;
     }
     @include tablet {
@@ -141,7 +141,7 @@
   &--ref {
     padding-top: 0.5rem;
     color: $primary-one-color;
-    font-weight: bold;
+    font-weight: 700;
     @include mobileXS {
       padding: 0rem 1rem;
       font-size: 0.9rem;
@@ -159,8 +159,9 @@
     }
     @include tabletS {
       padding: 0rem 6.6rem;
-      font-size: 1.1rem;
-      line-height: 3rem;
+      font-size: 1.5rem;
+      line-height: 4rem;
+      font-weight: 600;
     }
     @include tablet {
       padding: 0rem 8rem;
