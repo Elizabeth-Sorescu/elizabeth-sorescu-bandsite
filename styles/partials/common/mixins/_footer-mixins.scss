@@ -48,3 +48,9 @@
   margin-top: 0.7rem;
   margin-bottom: 0rem;
 }
+
+// this will allow access to each Socmed as BandSite Logo overlaps
+@mixin footer--socmed-large-screens {
+  z-index: 1;
+  width: 12rem;
+}
