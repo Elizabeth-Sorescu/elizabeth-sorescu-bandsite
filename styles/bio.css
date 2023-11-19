@@ -500,7 +500,7 @@ body {
   .footer {
     padding: 2rem 1.5rem;
     padding-bottom: 1rem;
-    height: 44rem;
+    height: 43rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1113px) {
@@ -636,21 +636,26 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1113px) {
   .footer--socmed {
+    z-index: 1;
+    width: 12rem;
     width: 8rem;
   }
 }
 @media (min-width: 1114px) and (max-width: 1279px) {
   .footer--socmed {
+    z-index: 1;
     width: 12rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1299px) {
   .footer--socmed {
+    z-index: 1;
     width: 12rem;
   }
 }
 @media (min-width: 1300px) {
   .footer--socmed {
+    z-index: 1;
     width: 12rem;
   }
 }
@@ -742,7 +747,7 @@ body {
 }
 
 .contact {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.3rem;
   width: 20rem;
 }
