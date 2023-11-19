@@ -5,17 +5,19 @@
 .article--heading {
   padding: 5rem 20rem 3rem 20rem;
   font-size: 2.3rem;
-  font-weight: 600;
+  font-weight: 700;
   @include mobileXS {
-    padding: 2rem 0rem 1rem 1rem;
+    padding: 2rem 0rem 2rem 1rem;
     font-size: 0.9rem;
   }
   @include mobileS {
-    padding: 2rem 0rem 1rem 2rem;
+    padding: 2rem 0rem 3rem 2rem;
     font-size: 1.3rem;
   }
   @include mobile {
     padding-left: 2rem;
+    padding-right: 0rem;
+
     font-size: 1.3rem;
   }
   @include tabletS {
