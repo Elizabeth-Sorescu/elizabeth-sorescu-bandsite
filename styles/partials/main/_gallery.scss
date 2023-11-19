@@ -1,0 +1,179 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// GALLERY SECTION
+//This is the container of gallery section
+.gallery {
+  margin-top: 3rem;
+  background: $secondary-three-color;
+  @include mobileXS {
+    @include gallery-mobile-screens;
+  }
+  @include mobileS {
+    @include gallery-mobile-screens;
+  }
+  @include mobile {
+    @include gallery-mobile-screens;
+  }
+  @include tabletS {
+    @include gallery-large-screens;
+  }
+  @include tablet {
+    @include gallery-large-screens;
+  }
+  @include desktop {
+    @include gallery-large-screens;
+  }
+  @include desktopL {
+    @include gallery-large-screens;
+  }
+}
+
+.gallery-heading {
+  padding-top: 2.3rem;
+  padding-bottom: 0.5rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: $primary-one-color;
+  font-weight: 600;
+  @include mobileXS {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  @include mobileS {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  @include mobile {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  @include tabletS {
+    padding-top: 5rem;
+    padding-bottom: 2.1rem;
+    padding-left: 1.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  @include tablet {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  @include desktop {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  @include desktopL {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 6rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+.gallery-img {
+  // No layout needed for mobiles
+  @include tabletS {
+    @include gallery-img-tablets;
+  }
+  @include tablet {
+    @include gallery-img-tablets;
+  }
+  @include desktop {
+    @include gallery-img-desktops;
+  }
+  @include desktopL {
+    @include gallery-img-desktops;
+  }
+
+  //This is the layout of the whole gallery photos:
+  &--1 {
+    background-image: url(../assets/Images/Photo-gallery-1.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--2 {
+    background-image: url(../assets/Images/Photo-gallery-2.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--3 {
+    background-image: url(../assets/Images/Photo-gallery-3.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--4 {
+    background-image: url(../assets/Images/Photo-gallery-4.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--5 {
+    background-image: url(../assets/Images/Photo-gallery-5.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--6 {
+    background-image: url(../assets/Images/Photo-gallery-6.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--7 {
+    background-image: url(../assets/Images/Photo-gallery-7.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--8 {
+    background-image: url(../assets/Images/Photo-gallery-8.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+
+  &--9 {
+    background-image: url(../assets/Images/Photo-gallery-9.jpg);
+    @include photo-layout;
+
+    &:hover {
+      @include photo-hovered-color($grayscale-hover-rate);
+    }
+  }
+}

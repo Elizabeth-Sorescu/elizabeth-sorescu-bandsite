@@ -1,0 +1,371 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "./mixins/footer-mixins" as *;
+
+// FOOTER SECTION
+.footer {
+  background-color: $primary-one-color;
+  color: $primary-three-color;
+  height: 50rem;
+  width: 100vw;
+  padding: 3rem 4rem;
+  padding-bottom: 2rem;
+  @include mobileXS {
+    padding: 2rem 1rem;
+    padding-bottom: 1rem;
+    height: 46.5rem;
+  }
+  @include mobileS {
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    height: 42rem;
+  }
+  @include mobile {
+    padding: 2rem 1.5rem;
+    padding-bottom: 1rem;
+    height: 44rem;
+  }
+  @include tabletS {
+    padding: 4rem 2rem;
+    height: 55vh;
+    overflow-y: hidden;
+  }
+  @include tablet {
+    padding: 4rem 4rem;
+    padding-bottom: 2rem;
+    height: 69vh;
+    overflow-y: hidden;
+  }
+  @include desktop {
+    padding: 4rem 4rem;
+    padding-bottom: 2rem;
+    height: 69vh;
+    overflow-y: hidden;
+  }
+  @include desktopL {
+    padding: 4rem 6rem;
+    padding-bottom: 2rem;
+    height: 62.5vh;
+    overflow-y: hidden;
+  }
+
+  &--group1 {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    @include mobileXS {
+      @include footer--group1-mobile-screens;
+      width: 14rem;
+    }
+    @include mobileS {
+      @include footer--group1-mobile-screens;
+    }
+    @include mobile {
+      @include footer--group1-mobile-screens;
+    }
+    @include tabletS {
+      width: 25.5rem;
+      // width: 23rem;
+      // border: 1px solid yellow;
+    }
+    @include tablet {
+      width: 36rem;
+    }
+    @include desktop {
+      width: 36rem;
+    }
+    @include desktopL {
+      width: 37rem;
+    }
+  }
+
+  &--heading {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+    width: 14rem;
+    margin: 0.8rem 0rem;
+    @include mobileXS {
+      margin-top: 0.3rem;
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+    }
+    @include tabletS {
+      font-size: 2.7rem;
+      line-height: 2.8rem;
+      width: 16rem;
+    }
+    @include tablet {
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      width: 20rem;
+    }
+    @include desktop {
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      width: 20rem;
+    }
+    @include desktopL {
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      width: 20rem;
+    }
+  }
+
+  &--socmed {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+    margin: 0.8rem 0rem;
+    align-items: center;
+    @include mobileXS {
+      margin-top: 0.3rem;
+      margin-bottom: 0rem;
+      width: 8rem;
+    }
+    @include tabletS {
+      width: 8rem;
+    }
+    @include tablet {
+      width: 12rem;
+    }
+    @include desktop {
+      width: 12rem;
+    }
+    @include desktopL {
+      width: 12rem;
+    }
+  }
+
+  //This is the layout for contact in inline-block format
+  &--group2 {
+    @include tabletS {
+      @include footer--group2-large-screens;
+    }
+    @include tablet {
+      @include footer--group2-large-screens;
+      margin: 0.9rem 0rem;
+    }
+    @include desktop {
+      @include footer--group2-large-screens;
+      margin: 0.9rem 0rem;
+    }
+    @include desktopL {
+      @include footer--group2-large-screens;
+      margin: 0.9rem 0rem;
+    }
+  }
+}
+
+.soc-med--instagram {
+  background-image: url(../assets/Icons/SVG/Icon-instagram.svg);
+  @include image-layout;
+  height: 2.1rem;
+  width: 2.1rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+}
+
+.soc-med--facebook {
+  background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
+  @include image-layout;
+  height: 2.1rem;
+  width: 1rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 0.7rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 0.7rem;
+  }
+}
+
+.soc-med--twitter {
+  background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
+  @include image-layout;
+  height: 2rem;
+  width: 2.5rem;
+  @include mobileXS {
+    height: 1.7rem;
+    width: 2rem;
+  }
+  @include tabletS {
+    height: 1.7rem;
+    width: 2rem;
+  }
+}
+
+.contact {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  width: 20rem;
+  @include mobileXS {
+    font-size: 0.9rem;
+    width: 20rem;
+    margin: 1rem 0rem;
+  }
+  @include tabletS {
+    font-size: 1rem;
+    width: 100vw;
+  }
+  @include tablet {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 25rem;
+  }
+  @include desktop {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 25rem;
+  }
+  @include desktopL {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 25rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.7rem 0rem;
+    }
+    @include tabletS {
+      @include contact__name-large-screens;
+    }
+    @include tablet {
+      @include contact__name-large-screens;
+    }
+    @include desktop {
+      @include contact__name-large-screens;
+    }
+    @include desktopL {
+      @include contact__name-large-screens;
+    }
+  }
+
+  &__location {
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.9rem 0rem;
+    }
+    @include tabletS {
+      @include contact__location-large-screens;
+    }
+    @include tablet {
+      @include contact__location-large-screens;
+      margin: 2.5rem 0rem; //added
+    }
+    @include desktop {
+      @include contact__location-large-screens;
+      margin: 2.5rem 0rem;
+    }
+    @include desktopL {
+      @include contact__location-large-screens;
+      margin: 2.5rem 0rem; //adjust the distance between name and email
+    }
+  }
+
+  &__email {
+    margin: 0.5rem 0rem;
+    @include mobileXS {
+      margin: 0.9rem 0rem;
+    }
+    @include tabletS {
+      @include contact_email-large-screens;
+    }
+    @include tablet {
+      @include contact_email-large-screens;
+    }
+    @include desktop {
+      @include contact_email-large-screens;
+    }
+    @include desktopL {
+      @include contact_email-large-screens;
+    }
+  }
+}
+
+// dive deeper: add link to open directly the mail when clicked
+.email-link {
+  text-decoration: none;
+  color: $primary-three-color;
+}
+
+.footer-logo {
+  margin: 0.8rem 0rem;
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  width: 85vw;
+  position: relative;
+  bottom: 20.188rem;
+  @include mobileXS {
+    @include footer-logo-mobile-screens;
+    margin-top: 2rem;
+  }
+  @include mobileS {
+    @include footer-logo-mobile-screens;
+    font-size: 2.3rem;
+  }
+  @include mobile {
+    @include footer-logo-mobile-screens;
+    font-size: 2.3rem;
+  }
+  @include tabletS {
+    @include footer-logo-large-screens;
+    font-size: 1.8rem;
+    width: 91vw;
+    bottom: 19.313rem;
+  }
+  @include tablet {
+    @include footer-logo-large-screens;
+    bottom: 25rem;
+    width: 89vw;
+  }
+  @include desktop {
+    @include footer-logo-large-screens;
+    bottom: 25rem;
+    width: 89vw;
+  }
+  @include desktopL {
+    @include footer-logo-large-screens;
+    bottom: 25rem;
+  }
+}
+
+.footer-copyright {
+  margin: 0.5rem 0rem;
+  @include mobileXS {
+    @include footer-copyright-mobile-screens;
+  }
+  @include mobileS {
+    @include footer-copyright-mobile-screens;
+    font-size: 0.8rem;
+  }
+  @include tabletS {
+    @include footer-copyright-large-screens;
+    bottom: 3.5rem;
+  }
+  @include tablet {
+    @include footer-copyright-large-screens;
+    font-size: 1.3rem;
+    bottom: 3rem;
+  }
+  @include desktop {
+    @include footer-copyright-large-screens;
+    font-size: 1.3rem;
+    bottom: 3rem;
+  }
+  @include desktopL {
+    @include footer-copyright-large-screens;
+    font-size: 1.3rem;
+    bottom: 3rem;
+  }
+}

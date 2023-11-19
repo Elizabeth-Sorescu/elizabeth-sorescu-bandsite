@@ -1,0 +1,5 @@
+#ignore the following files:
+*.DS_store
+*.css.map
+*.css
+*.vscode

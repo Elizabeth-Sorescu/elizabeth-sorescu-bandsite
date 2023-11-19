@@ -1,14 +1,26 @@
-//colors
-$primary-one: #323232;
-$primary-two: #afafaf;
-$primary-three: #ffffff;
-$secondary-dark-one: #000000;
-$secondary-two: #e1e1e1;
-$secondary-three: #000000;
-//responsive
-$mobile-min-width: 320px; /*320px;*/
+//COLORS:
+$primary-one-color: #323232; //BandSite-Black
+$primary-two-color: #afafaf; //Silver
+$primary-three-color: #ffffff; //White
+$secondary-one-color: #000000; //BandSite-DarkBlack
+$secondary-two-color: #e1e1e1; //Mercury
+$secondary-three-color: #fafafa; //Alabaster
+
+//BREAKPOINTS FOR MEDIA QUERIES (VIEW w/ 24" screen at 100%):
+$mobileXS-min-width: 0px; //320 Mobile XS -
+$mobileXS-max-width: 321px;
+$mobileS-min-width: 321px; // 460 Mobile S
+$mobileS-max-width: 461px;
+$mobile-min-width: 461px; // 767 Mobile Reg
 $mobile-max-width: 767px;
-$tablet-min-width: 768px;
+$tabletS-min-width: 768px; //768 Tablet S -
+$tabletS-max-width: 1113px;
+$tablet-min-width: 1114px; //1279 Tablet Reg
 $tablet-max-width: 1279px;
-// $tablet-min-landscape-width: 900px;
-$desktop-min-width: 1280px;
+$desktop-min-width: 1280px; //1280 Desktop -
+$desktop-max-width: 1299px;
+$desktopL-min-width: 1300px; //1300>= Desktop L without inspect
+
+//OTHERS:
+$grayscale-rate: 100%;
+$grayscale-hover-rate: 0%;

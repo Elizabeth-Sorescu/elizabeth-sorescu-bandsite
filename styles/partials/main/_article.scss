@@ -1,0 +1,115 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// ARTICLE SECTION
+.article--heading {
+  padding: 5rem 20rem 3rem 20rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  @include mobileXS {
+    padding: 2rem 0rem 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  @include mobileS {
+    padding: 2rem 0rem 3rem 2rem;
+    font-size: 1.3rem;
+  }
+  @include mobile {
+    padding-left: 2rem;
+    padding-right: 0rem;
+
+    font-size: 1.3rem;
+  }
+  @include tabletS {
+    padding-left: 7rem;
+    padding-top: 3.5rem;
+    font-size: 2.2rem;
+  }
+  @include tablet {
+    padding-left: 8rem;
+    padding-top: 3.5rem;
+    font-size: 2.2rem;
+  }
+  @include desktop {
+    padding-left: 11rem;
+  }
+  @include desktopL {
+    padding-left: 14rem;
+  }
+}
+
+.article-description {
+  font-size: 1.281rem;
+  font-weight: 600;
+  color: $primary-one-color;
+  line-height: 1.875rem;
+  @include mobileXS {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+  @include mobileS {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  @include mobile {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  @include tabletS {
+    @include article-layout;
+    font-size: 1.2rem;
+    padding: 0rem 7rem;
+  }
+  @include tablet {
+    @include article-layout;
+    font-size: 1.4rem;
+    padding: 0rem 8rem;
+  }
+  @include desktop {
+    @include article-layout;
+    padding: 0rem 11rem;
+  }
+  @include desktopL {
+    @include article-layout;
+    padding: 0rem 14rem;
+  }
+
+  &--left {
+    margin-right: 1rem;
+    overflow: hidden;
+    height: auto;
+    @include mobileXS {
+      margin-right: auto;
+      padding: 0rem 1rem;
+    }
+    @include mobileS {
+      margin-right: 0rem;
+      padding: 0rem 2rem;
+    }
+    @include mobile {
+      margin-right: 0rem;
+      padding: 0rem 1.2rem;
+    }
+  }
+
+  &--right {
+    margin-left: 1rem;
+    overflow: hidden;
+    height: auto;
+    @include mobileXS {
+      padding: 0rem 1rem;
+      padding-top: 1.5rem;
+      margin-left: 0rem;
+    }
+    @include mobileS {
+      padding: 0rem 2rem;
+      padding-top: 2rem;
+      margin-left: 0rem;
+    }
+    @include mobile {
+      padding: 0rem 1.2rem;
+      padding-top: 2rem;
+      margin-left: 0rem;
+    }
+  }
+}

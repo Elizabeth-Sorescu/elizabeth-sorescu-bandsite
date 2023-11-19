@@ -1,0 +1,87 @@
+@use "../../variables" as *;
+/*THIS IS THE MIXINS FILE FOR NAVIGATION STYLE:*/
+
+// NAVIGATION BAR:
+//This is the style for the whole NAVIGATION BAR of MOBILE screens:
+@mixin small-screen-navigation {
+  padding-top: 1.5rem;
+}
+
+//This is the style for the whole NAVIGATION BAR of LARGE screens:
+@mixin large-screen-navigation {
+  display: inline-flex;
+  width: 100vw;
+  vertical-align: auto;
+  padding-top: 2rem;
+}
+
+// MENU SECTION
+// This is the style specifically for the menu list item:
+@mixin nav__menu__list__item-layout {
+  padding-top: 1rem;
+  width: 49%;
+  justify-content: center;
+  font-size: 1.313rem;
+  line-height: 1.438rem;
+  font-weight: 500;
+}
+
+@mixin nav__menu__list__item-large-screens {
+  width: fit-content;
+  padding: 0rem 3rem;
+  line-height: 2rem;
+}
+
+//This is the style for the MENU of LARGE screens:
+@mixin large-screen-menu {
+  width: fit-content;
+  text-align: left;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+// This is the layout of menu item's when hovered, has underlined effect for mobile screens
+@mixin nav__menu__list__item-hover-mobile-screens {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid $primary-three-color;
+  text-decoration: none;
+  text-underline-offset: unset;
+}
+
+// This is the layout of menu item's when hovered, has underlined effect for large screens
+@mixin nav__menu__list__item-hover-large-screens {
+  text-decoration: 0.25rem underline $primary-three-color;
+  text-underline-offset: 2.45rem;
+}
+
+//This is a layout for an underline to appear below the MENU LIST when a page is active for MOBILE SCREENS:
+@mixin small-screen-active-menu {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid $primary-three-color;
+}
+
+//This is a layout for an underline to appear below the MENU LIST when a page is active for LARGE SCREENS:
+@mixin large-screen-active-menu {
+  text-decoration: 0.25rem underline $primary-three-color;
+  text-underline-offset: 2.45rem;
+}
+
+// BANDSITE LOGO:
+@mixin nav_header-mobile-screens {
+  text-align: center;
+  width: default;
+}
+
+@mixin nav_header-large-screens {
+  width: 26%;
+  padding-left: 6rem;
+  padding-right: 4rem;
+  width: fit-content;
+}
+
+@mixin bansite-logo($bandsite-logo-size) {
+  text-align: center;
+  width: default;
+  font-size: 2rem;
+  line-height: 2rem;
+}

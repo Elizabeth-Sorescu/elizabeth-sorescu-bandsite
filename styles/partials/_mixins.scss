@@ -1,28 +1,30 @@
 @use "./variables" as *;
 
-@mixin navigation-large-screen-style {
-  display: inline-flex;
-  width: 100vw;
-  vertical-align: auto;
-  padding-bottom: 1.09rem;
-  padding-top: 2rem;
-  //   border: 1px solid red;
+// MEDIA QUERIES MIXINS:
+@mixin mobileXS {
+  @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
+    @content;
+  }
 }
-@mixin navigation-large-screen-menu-style {
-  width: fit-content;
-  text-align: left;
-  padding-top: 1rem;
-  padding-left: 1rem;
+
+@mixin mobileS {
+  @media (min-width: $mobileS-min-width) and (max-width: $mobileS-max-width) {
+    @content;
+  }
 }
-@mixin navigation-large-screen-active-hover-page-style {
-  text-decoration: 4px underline $primary-three;
-  text-underline-offset: 43px;
-}
+
 @mixin mobile {
   @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
     @content;
   }
 }
+
+@mixin tabletS {
+  @media (min-width: $tabletS-min-width) and (max-width: $tabletS-max-width) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     @content;
@@ -30,12 +32,134 @@
 }
 
 @mixin desktop {
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
     @content;
   }
 }
-// @mixin tablet-landscape {
-//   @media (min-width: $tablet-min-landscape-width) {
-//     @content;
-//   }
-// }
+
+@mixin desktopL {
+  @media (min-width: $desktopL-min-width) {
+    @content;
+  }
+}
+
+// GLOBAL MIXINS:
+@mixin image-layout {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+//GALLERY MIXINS:
+@mixin gallery-mobile-screens {
+  padding: 0rem 1rem;
+  margin-top: 1rem;
+}
+
+@mixin gallery-large-screens {
+  padding: 0rem 1rem;
+}
+
+@mixin gallery-img-tablets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@mixin gallery-img-desktops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Gallery mixins for Individual photo according to its media query:
+//This is individual layout of each photo in mobileXS
+@mixin mobileXS-photo {
+  margin: 1.5rem 0rem;
+  margin-top: 0rem;
+  height: 10rem;
+  width: 100vw;
+}
+
+//This is individual layout of each photo in mobileS
+@mixin mobileS-photo {
+  margin: 1.5rem 0rem;
+  margin-top: 0rem;
+  height: 15.5rem;
+  width: 100vw;
+}
+
+//This is individual layout of each photo in mobile
+@mixin mobile-photo {
+  margin: 1.5rem 0rem;
+  margin-top: 0rem;
+  height: 25rem;
+  width: 100vw;
+}
+
+//This is individual layout of each photo in tabletS
+@mixin tabletS-photo {
+  margin: 1rem 0.3rem;
+  width: 28vw;
+  height: 7.5rem;
+}
+
+//This is individual layout of each photo in tablet
+@mixin tablet-photo {
+  margin: 1rem 0.4rem;
+  width: 28vw;
+  height: 11.5rem;
+}
+
+//This is individual layout of each photo in desktop
+@mixin desktop-photo {
+  margin: 1rem 1rem;
+  width: 28vw;
+  height: 14rem;
+}
+
+//This is individual layout of each photo in desktopL
+@mixin desktopL-photo {
+  margin: 1rem 1rem;
+  width: 28vw; //26vw;
+  height: 14.5rem; //12.5rem;
+}
+
+//This is the layout of each photo in every media query
+@mixin photo-layout {
+  @include image-layout;
+  filter: grayscale($grayscale-rate); //B/W photo color: set to 0%
+  @include mobileXS {
+    @include mobileXS-photo();
+  }
+  @include mobileS {
+    @include mobileS-photo();
+  }
+  @include mobile {
+    @include mobile-photo();
+  }
+  @include tabletS {
+    @include tabletS-photo();
+  }
+  @include tablet {
+    @include tablet-photo();
+  }
+  @include desktop {
+    @include desktop-photo();
+  }
+  @include desktopL {
+    @include desktopL-photo();
+  }
+}
+
+@mixin photo-hovered-color($grayscale-hover-rate) {
+  filter: grayscale($grayscale-hover-rate);
+}
+
+// ARTICLE SECTION
+
+//This is the layout that will create two columns of article description
+@mixin article-layout {
+  display: flex;
+  flex: 1;
+}

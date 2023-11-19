@@ -1,0 +1,84 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// HERO SECTION
+.hero-img {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 100vh;
+  width: 100vw;
+  @include image-layout;
+  position: relative;
+
+  &--overlay {
+    background-blend-mode: multiply;
+    background-color: rgba(50, 50, 50, 0.5);
+  }
+  @include mobileXS {
+    height: 10rem;
+  }
+  @include mobileS {
+    height: 20rem;
+  }
+  @include mobile {
+    height: 21.375rem;
+    margin: auto;
+    padding: 16rem;
+  }
+  @include tabletS {
+    height: 30rem;
+    width: 100vw;
+  }
+
+  &__heading {
+    margin: auto;
+    width: 100vw;
+    color: $primary-three-color;
+    font-size: 5.375rem;
+    line-height: 5.375rem;
+    font-weight: 900;
+    display: flex;
+    position: absolute;
+    font-weight: 600;
+    top: 50%;
+    @include mobileXS {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      left: 1.5rem;
+      top: 45%;
+    }
+    @include mobileS {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      left: 1.5rem;
+      top: 45%;
+    }
+    @include mobile {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      left: 1.5rem;
+      top: 48%;
+    }
+    @include tabletS {
+      font-size: 4.5rem;
+      left: 3.5rem;
+      top: 44%;
+    }
+    @include tablet {
+      font-size: 5.5rem;
+      left: 3.5rem;
+      top: 48%;
+    }
+    @include desktop {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+      left: 6rem;
+      top: 45%;
+    }
+    @include desktopL {
+      font-size: 5.5rem;
+      line-height: 5.5rem;
+      left: 6rem;
+      top: 45%;
+    }
+  }
+}
