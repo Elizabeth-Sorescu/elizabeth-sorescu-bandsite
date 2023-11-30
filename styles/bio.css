@@ -7,17 +7,17 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Font/Alternative-files/AvenirNextLTPro.ttf") format("truetype"), url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/alternative-files/AvenirNextLTPro.ttf") format("truetype"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf") format("truetype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf") format("truetype"), url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Font/Alternative-files/AvenirNextLTProBold.ttf") format("truetype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf") format("truetype"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
 body {
@@ -684,7 +684,7 @@ body {
 }
 
 .soc-med--instagram {
-  background-image: url(../assets/Icons/SVG/Icon-instagram.svg);
+  background-image: url(../assets/icons/SVG/Icon-instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -705,7 +705,7 @@ body {
 }
 
 .soc-med--facebook {
-  background-image: url(../assets/Icons/SVG/Icon-facebook.svg);
+  background-image: url(../assets/icons/SVG/Icon-facebook.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -726,7 +726,7 @@ body {
 }
 
 .soc-med--twitter {
-  background-image: url(../assets/Icons/SVG/Icon-twitter.svg);
+  background-image: url(../assets/icons/SVG/Icon-twitter.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
