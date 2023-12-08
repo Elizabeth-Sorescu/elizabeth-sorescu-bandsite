@@ -5,6 +5,7 @@ $primary-three-color: #ffffff; //White
 $secondary-one-color: #000000; //BandSite-DarkBlack
 $secondary-two-color: #e1e1e1; //Mercury
 $secondary-three-color: #fafafa; //Alabaster
+$error-state-color: #d22d2d; //Error color for input box
 
 //BREAKPOINTS FOR MEDIA QUERIES (VIEW w/ 24" screen at 100%):
 $mobileXS-min-width: 0px; //320 Mobile XS -
@@ -24,3 +25,25 @@ $desktopL-min-width: 1300px; //1300>= Desktop L without inspect
 //OTHERS:
 $grayscale-rate: 100%;
 $grayscale-hover-rate: 0%;
+
+// @include mobileXS {
+//     @include gallery-mobile-screens;
+//   }
+//   @include mobileS {
+//     @include gallery-mobile-screens;
+//   }
+//   @include mobile {
+//     @include gallery-mobile-screens;
+//   }
+//   @include tabletS {
+//     @include gallery-large-screens;
+//   }
+//   @include tablet {
+//     @include gallery-large-screens;
+//   }
+//   @include desktop {
+//     @include gallery-large-screens;
+//   }
+//   @include desktopL {
+//     @include gallery-large-screens;
+//   }

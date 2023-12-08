@@ -1,32 +1,219 @@
 @use "../variables" as *;
 @use "../mixins" as *;
-.container {
-  border: 1px solid red;
-  //   background: #fff;
-  padding: 20px;
-  width: 100vw;
+.comments {
+  // background: red;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-top: 1.7rem;
+  height: 137vh;
+  width: 100vh;
+  margin-right: 2rem;
+  @include tablet {
+    border: 1px solid red;
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+    height: 138vh;
+    width: 130vh;
+  }
 }
-
-.head {
+.comments__heading {
   color: $primary-one-color;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 2.3rem;
-}
-.commentbox {
-  display: flex;
-  //   justify-content: space-around;
-  padding: 10px;
-  border: 1px solid green;
-}
-.img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  //   margin-right: 20px;
-  object-fit: cover;
-  //   object-position: center;
+  @include mobileXS {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  @include tablet {
+    border: 1px solid red;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
-.content {
-  border: 1px solid pink;
+.comments__content {
+  // background-color: green;
+  border-bottom: 3px solid $secondary-two-color;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.7rem;
+  height: 49vh;
+  width: 94vw;
+  position: relative;
+}
+
+.comments__img {
+  width: 4rem;
+  height: 3.438rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 52px;
+  // border: 1px solid green;
+}
+
+.comments__inputs {
+  // border: 1px solid violet;
+  width: 94vw;
+  margin-left: 5rem;
+  margin-right: auto;
+  height: 45vh;
+}
+
+.input-box__name-label {
+  font-weight: bold;
+  color: $primary-two-color;
+  background-color: pink;
+}
+.username {
+  width: 83vw;
+  height: 6vh;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Avenir";
+  border: 2px solid $secondary-two-color;
+  font-size: 1.3rem;
+  @include mobileXS {
+    width: 65vw;
+    font-size: 1rem;
+  }
+  @include mobileS {
+    width: 73vw;
+  }
+}
+.username::placeholder {
+  color: $secondary-one-color;
+  width: 35vw;
+  // border: 1px solid red;
+  @include mobileXS {
+    width: 38vw;
+    font-size: 0.9rem;
+  }
+}
+.input-box__comment-label {
+  padding-top: 2rem;
+  font-weight: bold;
+  color: $primary-two-color;
+}
+.usercomment {
+  // background-color: aqua;
+  width: 83vw;
+  height: 17vh;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Avenir";
+  border: 2px solid $secondary-two-color;
+  font-size: 1.3rem;
+  @include mobileXS {
+    width: 65vw;
+  }
+  @include mobileS {
+    width: 73vw;
+  }
+}
+.usercomment::placeholder {
+  color: $secondary-one-color;
+  position: absolute;
+  top: 0px;
+  width: 45vw;
+  // border: 1px solid red;
+  @include mobileXS {
+    width: 43vw;
+    font-size: 0.9rem;
+  }
+}
+.comment-btn {
+  width: 83vw;
+  height: 7vh;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-three-color;
+  background-color: $primary-one-color;
+  @include mobileXS {
+    width: 65vw;
+  }
+  @include mobileS {
+    width: 73vw;
+  }
+}
+
+.comment-btn:hover {
+  background-color: $secondary-one-color;
+}
+
+.comment-post__box {
+  // background-color: yellow;
+  height: 24vh;
+  width: 95vw;
+  margin: 1rem 0rem;
+  position: relative;
+  border-bottom: 3px solid $secondary-two-color;
+  @include mobileXS {
+    width: 90vw;
+  }
+}
+
+.comments-post__grp1 {
+  display: flex;
+  justify-content: space-between;
+  @include mobileXS {
+    width: 65vw;
+  }
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+
+.comments-post__grp1-name {
+  font-weight: bold;
+  @include mobileXS {
+    font-size: 0.8rem;
+  }
+  // border: 1px solid red;
+}
+.comments-post__grp1-time {
+  // border: 1px solid green;
+  width: 10rem;
+  color: $secondary-two-color;
+  @include mobileXS {
+    font-size: 0.8rem;
+    width: 5rem;
+  }
+}
+.comments-post__grp1,
+.comments-post__grp2 {
+  // border: 1px solid violet;
+  font-size: 1.2rem;
+  width: 85vw;
+  margin-left: 5rem;
+  margin-right: auto;
+  height: auto;
+  @include mobileXS {
+    width: 65vw;
+  }
+}
+.comments-post__grp2 {
+  margin-top: 1rem;
+  @include mobileXS {
+    font-size: 1rem;
+  }
+  @include mobileS {
+    width: 73vw;
+  }
+}
+
+.comments-post__box-img {
+  width: 4rem;
+  height: 3.438rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  background-color: $secondary-two-color;
+  // border: 1px solid green;
 }

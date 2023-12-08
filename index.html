@@ -88,27 +88,74 @@
       </div>
     </section>
     <!-- COMMENTS SECTION -->
-    <section class="container">
-      <div class="head"><h4>Join the Conversation</h4></div>
-      <div class="commentbox">
-        <img class="img" src="/assets/images/Mohan-muruge.jpg" alt="" />
-        <div class="content">
-          <p>NAME</p>
-          <textarea class="user" placeholder="Enter your name"></textarea>
-          <div class="commentinput">
-            <p>COMMENT</p>
-            <textarea
-              class="usercomment"
-              placeholder="Enter comment"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <div class="buttons">
-              <button class="comment-btn" type="submit" disabled id="publish">
-                Comment
-              </button>
-            </div>
+    <section class="comments">
+      <div class="comments__heading"><h4>Join the Conversation</h4></div>
+      <form class="comments__content">
+        <img
+          class="comments__img"
+          src="/assets/images/Mohan-muruge.jpg"
+          alt=""
+        />
+        <div class="comments__inputs">
+          <div class="input-box">
+            <div class="input-box__name-label">NAME</div>
+            <!-- <form type="text" class="username" placeholder="Enter your name">Enter your name</form> -->
+            <input type="text" class="username" placeholder="Enter your name" />
           </div>
+
+          <div class="input-box">
+            <div class="input-box__comment-label">COMMENT</div>
+            <input
+              type="text"
+              class="usercomment"
+              placeholder="Add a new comment"
+            />
+          </div>
+          <div class="buttons">
+            <button class="comment-btn" type="submit" id="publish">
+              Comment
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- COMMENTS POSTED -->
+      <div class="comment-post">
+        <div class="comment-post__box comment-post__first">
+          <div class="comments-post__box-img"></div>
+          <div class="comments-post__grp1">
+            <label class="comments-post__grp1-name">Connor Walton</label>
+            <div class="comments-post__grp1-time">12/17/2021</div>
+          </div>
+          <p class="comments-post__grp2">
+            This is art. This is inexplicable magic expressed in the purest way,
+            everything that makes up this majestic work deserves reverence. Let
+            us appreciate this for what it is and what it contains.
+          </p>
+        </div>
+        <div class="comment-post__box comment-post__second">
+          <div class="comments-post__box-img"></div>
+          <div class="comments-post__grp1">
+            <label class="comments-post__grp1-name">Emilie Beach</label>
+            <div class="comments-post__grp1-time">01/09/2021</div>
+          </div>
+          <p class="comments-post__grp2">
+            I feel blessed to have seen them in person. What a show! They were
+            just perfection. If there was one day of my life I could relive,
+            this would be it. What an incredible day.
+          </p>
+        </div>
+
+        <div class="comment-post__box comment-post__third">
+          <div class="comments-post__box-img"></div>
+          <div class="comments-post__grp1">
+            <label class="comments-post__grp1-name">Miles Acosta</label>
+            <div class="comments-post__grp1-time">12/20/2020</div>
+          </div>
+          <p class="comments-post__grp2">
+            I can't stop listening. Every time I hear one of their songs - the
+            vocals - it gives me goosebumps. Shivers straight down my spine.
+            What a beautiful expression of creativity. Can't get enough.
+          </p>
         </div>
       </div>
     </section>
