@@ -8,12 +8,33 @@
   height: 137vh;
   width: 100vh;
   margin-right: 2rem;
-  @include tablet {
-    border: 1px solid red;
+  @include tabletS {
+    // border: 1px solid green;
     padding-left: 2.5rem;
     margin-top: 3rem;
-    height: 138vh;
-    width: 130vh;
+    height: 149vh;
+    width: 147vh;
+  }
+  @include tablet {
+    // border: 1px solid green;
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+    height: 149vh;
+    width: 147vh;
+  }
+  @include desktop {
+    border: 1px solid green;
+    padding: 0rem 3.5rem;
+    padding-top: 0.2rem;
+    height: 157vh;
+    width: 140vh;
+  }
+  @include desktopL {
+    // border: 1px solid green;
+    padding: 0rem 3.5rem;
+    padding-top: 0.2rem;
+    height: 157vh;
+    width: 140vh;
   }
 }
 .comments__heading {
@@ -24,10 +45,29 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
-  @include tablet {
-    border: 1px solid red;
+  @include tabletS {
+    // border: 1px solid red;
     font-size: 3rem;
     line-height: 3rem;
+  }
+  @include tablet {
+    // border: 1px solid red;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  @include desktop {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  @include desktopL {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -40,16 +80,116 @@
   height: 49vh;
   width: 94vw;
   position: relative;
+  @include tabletS {
+    padding: 1.7rem 5rem 0rem 5rem;
+    border: none;
+    height: 58vh;
+    // background-color: purple;
+    padding-top: 4rem;
+    // border: 1px solid red;
+  }
+  @include tablet {
+    padding: 1.7rem 5rem 0rem 5rem;
+    border: none;
+    height: 58vh;
+    // background-color: purple;
+    padding-top: 4rem;
+    // border: 1px solid red;
+  }
+  @include desktop {
+    // padding: 1.7rem 5rem 0rem 5rem;
+    justify-content: center;
+    border: none;
+    height: 58vh;
+    // background-color: purple;
+    padding-top: 4rem;
+    width: 100vw;
+    // border: 1px solid red;
+  }
+  @include desktopL {
+    justify-content: center;
+    border: none;
+    height: 58vh;
+    padding-top: 4rem;
+    width: 100vw;
+    // border: 1px solid red;
+  }
 }
-
+// this is where the first border bottom  will be
+.inputing-grp {
+  @include tabletS {
+    border-bottom: 3px solid $secondary-two-color;
+  }
+  @include tablet {
+    border-bottom: 3px solid $secondary-two-color;
+  }
+  @include desktop {
+    border-bottom: 3px solid $secondary-two-color;
+    width: 64vw;
+    // border: 1px solid red;
+  }
+  @include desktopL {
+    border-bottom: 3px solid $secondary-two-color;
+    width: 64vw;
+    // border: 1px solid red;
+  }
+}
+.comment-post {
+  @include tabletS {
+    padding: 0rem 5rem 1.5rem 5rem;
+    // background-color: orange;
+  }
+  @include tablet {
+    padding: 0rem 5rem 1.5rem 5rem;
+    // background-color: orange;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    // background-color: orange;
+  }
+  @include desktopL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    // background-color: orange;
+  }
+}
 .comments__img {
-  width: 4rem;
+  width: 3.5rem;
   height: 3.438rem;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
   top: 52px;
   // border: 1px solid green;
+  @include tabletS {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 94px;
+    // border: 1px solid blue;
+  }
+  @include tablet {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 94px;
+    // border: 1px solid blue;
+  }
+  @include desktop {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 94px;
+    // border: 1px solid blue;
+  }
+  @include desktopL {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 94px;
+    // border: 1px solid blue;
+  }
 }
 
 .comments__inputs {
@@ -58,12 +198,48 @@
   margin-left: 5rem;
   margin-right: auto;
   height: 45vh;
+  @include tabletS {
+    width: 75vw;
+    position: relative;
+    width: 70.5vw;
+    margin-left: 5.6rem;
+    height: 48vh;
+    // background-color: aqua;
+    // border: 1px solid yellow;
+  }
+  @include tablet {
+    width: 75vw;
+    position: relative;
+    width: 70.5vw;
+    margin-left: 5.6rem;
+    height: 48vh;
+    // background-color: aqua;
+    // border: 1px solid yellow;
+  }
+  @include desktop {
+    // width: 75vw;
+    position: relative;
+    width: 55.5vw;
+    margin-left: 5.6rem;
+    height: 48vh;
+    // background-color: aqua;
+    // border: 1px solid yellow;
+  }
+  @include desktopL {
+    // width: 75vw;
+    position: relative;
+    width: 55.5vw;
+    margin-left: 5.6rem;
+    height: 48vh;
+    // background-color: aqua;
+    // border: 1px solid yellow;
+  }
 }
 
 .input-box__name-label {
   font-weight: bold;
   color: $primary-two-color;
-  background-color: pink;
+  // background-color: pink;
 }
 .username {
   width: 83vw;
@@ -80,6 +256,26 @@
   }
   @include mobileS {
     width: 73vw;
+  }
+  @include tabletS {
+    width: 70vw;
+    height: 8.2vh;
+    // background-color: yellow;
+  }
+  @include tablet {
+    width: 70vw;
+    height: 8.2vh;
+    // background-color: yellow;
+  }
+  @include desktop {
+    width: 55vw;
+    height: 8.2vh;
+    // background-color: yellow;
+  }
+  @include desktopL {
+    width: 55vw;
+    height: 8.2vh;
+    // background-color: yellow;
   }
 }
 .username::placeholder {
@@ -112,6 +308,18 @@
   @include mobileS {
     width: 73vw;
   }
+  @include tabletS {
+    width: 70vw;
+  }
+  @include tablet {
+    width: 70vw;
+  }
+  @include desktop {
+    width: 55vw;
+  }
+  @include desktopL {
+    width: 55vw;
+  }
 }
 .usercomment::placeholder {
   color: $secondary-one-color;
@@ -140,6 +348,30 @@
   @include mobileS {
     width: 73vw;
   }
+  @include tabletS {
+    width: 19vw;
+    position: absolute;
+    bottom: 16px;
+    right: 5px;
+  }
+  @include tablet {
+    width: 19vw;
+    position: absolute;
+    bottom: 16px;
+    right: 5px;
+  }
+  @include desktop {
+    width: 17.5vw;
+    position: absolute;
+    bottom: 16px;
+    right: 5px;
+  }
+  @include desktopL {
+    width: 17.5vw;
+    position: absolute;
+    bottom: 16px;
+    right: 5px;
+  }
 }
 
 .comment-btn:hover {
@@ -156,6 +388,36 @@
   @include mobileXS {
     width: 90vw;
   }
+  @include tabletS {
+    padding-top: 1.5rem;
+    width: 77vw;
+    height: 24vh;
+    // border: 1px solid green;
+  }
+  @include tablet {
+    padding-top: 1.5rem;
+    width: 77vw;
+    height: 24vh;
+    // border: 1px solid green;
+  }
+  @include desktop {
+    justify-content: center;
+    padding-top: 2.1rem;
+    margin: 0rem;
+    width: 64vw;
+    height: 24vh;
+    // border: 1px solid green;
+    // background-color: pink;
+  }
+  @include desktopL {
+    justify-content: center;
+    padding-top: 2.1rem;
+    margin: 0rem;
+    width: 64vw;
+    height: 24vh;
+    // border: 1px solid green;
+    // background-color: pink;
+  }
 }
 
 .comments-post__grp1 {
@@ -164,8 +426,18 @@
   @include mobileXS {
     width: 65vw;
   }
+  @include tabletS {
+    flex-wrap: wrap;
+  }
   @include tablet {
     flex-wrap: wrap;
+  }
+  @include desktop {
+    width: 10vw;
+    // border: 1px solid green;
+  }
+  @include desktopL {
+    width: 10vw;
   }
 }
 
@@ -184,6 +456,22 @@
     font-size: 0.8rem;
     width: 5rem;
   }
+  @include tabletS {
+    width: 7.5rem;
+    // background: pink;
+  }
+  @include tablet {
+    width: 7.5rem;
+    // background: pink;
+  }
+  @include desktop {
+    width: 7rem;
+    // border: 1px solid yellow;
+  }
+  @include desktopL {
+    width: 7rem;
+    // border: 1px solid yellow;
+  }
 }
 .comments-post__grp1,
 .comments-post__grp2 {
@@ -196,6 +484,32 @@
   @include mobileXS {
     width: 65vw;
   }
+  @include tabletS {
+    margin-left: 5.6rem;
+    width: 70.1vw;
+    // border: 1px solid blue;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+  @include tablet {
+    margin-left: 5.6rem;
+    width: 70.1vw;
+    // border: 1px solid blue;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+  @include desktop {
+    margin-left: 5.6rem;
+    width: 55.5vw;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+  @include desktopL {
+    margin-left: 5.6rem;
+    width: 55.5vw;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
 }
 .comments-post__grp2 {
   margin-top: 1rem;
@@ -205,15 +519,57 @@
   @include mobileS {
     width: 73vw;
   }
+  @include tabletS {
+    width: 70vw;
+    margin-top: 0.4rem;
+    // border: 1px solid red;
+  }
+  @include tablet {
+    width: 70vw;
+    margin-top: 0.4rem;
+    // border: 1px solid red;
+  }
+  @include desktop {
+    width: 57vw;
+    margin-top: 0.4rem;
+    // border: 1px solid red;
+    // background-color: yellow;
+  }
+  @include desktopL {
+    width: 57vw;
+    margin-top: 0.4rem;
+    // border: 1px solid red;
+    // background-color: yellow;
+  }
 }
 
 .comments-post__box-img {
-  width: 4rem;
+  width: 3.5rem;
   height: 3.438rem;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
-  top: 2px;
+  top: 1px;
   background-color: $secondary-two-color;
-  // border: 1px solid green;
+  border: 1px solid green;
+  @include tabletS {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 29px;
+  }
+  @include tablet {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 29px;
+  }
+  @include desktop {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 29px;
+  }
+  @include desktopL {
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 29px;
+  }
 }

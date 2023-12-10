@@ -36,8 +36,15 @@
     </header>
     <!-- HERO SECTION -->
     <section class="hero-img hero-img--overlay">
+      <!-- <section class="">
+      <img
+        class="hero-img hero-img--overlay"
+        src="./assets/images/hero-bio.jpg"
+        alt=""
+      /> -->
       <h2 class="hero-img__heading">The Bees Knees</h2>
     </section>
+    <!-- ABOUT SECTION -->
     <section class="about">
       <h2 class="about--heading">About the Musicians</h2>
       <div class="about--img"></div>
@@ -47,6 +54,7 @@
       </p>
       <p class="about--ref">- Bryan Teddy, lead vocalist of The Bees Knees</p>
     </section>
+    <!-- ARTICLE SECTION -->
     <article class="article">
       <h3 class="article--heading">The Bees Knees</h3>
       <div class="article-description">
@@ -73,6 +81,7 @@
         </div>
       </div>
     </article>
+    <!-- GALLERY SECTION -->
     <section class="gallery">
       <h4 class="gallery-heading">Photo Gallery</h4>
       <div class="gallery-img">
@@ -91,30 +100,42 @@
     <section class="comments">
       <div class="comments__heading"><h4>Join the Conversation</h4></div>
       <form class="comments__content">
-        <img
-          class="comments__img"
-          src="/assets/images/Mohan-muruge.jpg"
-          alt=""
-        />
-        <div class="comments__inputs">
-          <div class="input-box">
-            <div class="input-box__name-label">NAME</div>
-            <!-- <form type="text" class="username" placeholder="Enter your name">Enter your name</form> -->
-            <input type="text" class="username" placeholder="Enter your name" />
-          </div>
+        <div class="inputing-grp">
+          <img
+            class="comments__img"
+            src="/assets/images/Mohan-muruge.jpg"
+            alt=""
+          />
+          <div class="comments__inputs">
+            <div class="input-box">
+              <div class="input-box__name-label">NAME</div>
+              <!-- <form type="text" class="username" placeholder="Enter your name">Enter your name</form> -->
+              <input
+                type="text"
+                value=""
+                name="userName"
+                class="username"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
 
-          <div class="input-box">
-            <div class="input-box__comment-label">COMMENT</div>
-            <input
-              type="text"
-              class="usercomment"
-              placeholder="Add a new comment"
-            />
-          </div>
-          <div class="buttons">
-            <button class="comment-btn" type="submit" id="publish">
-              Comment
-            </button>
+            <div class="input-box">
+              <div class="input-box__comment-label">COMMENT</div>
+              <input
+                type="text"
+                value=""
+                name="userComment"
+                class="usercomment"
+                placeholder="Add a new comment"
+                required
+              />
+            </div>
+            <div class="buttons">
+              <button class="comment-btn" type="submit" id="publish">
+                Comment
+              </button>
+            </div>
           </div>
         </div>
       </form>

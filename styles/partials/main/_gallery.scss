@@ -24,9 +24,11 @@
   }
   @include desktop {
     @include gallery-large-screens;
+    padding-bottom: 2rem;
   }
   @include desktopL {
     @include gallery-large-screens;
+    padding-bottom: 2rem;
   }
 }
 
