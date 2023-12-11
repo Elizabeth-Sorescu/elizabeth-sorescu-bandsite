@@ -6,6 +6,7 @@
     <title>Band Site - Home</title>
     <link rel="stylesheet" href="./styles/bio.css" />
     <link rel="stylesheet" href="./styles/partials/_global.scss" />
+    <script src="./scripts/index-page.js"></script>
   </head>
   <body>
     <!-- NAVIGATION SECTION -->
@@ -36,12 +37,6 @@
     </header>
     <!-- HERO SECTION -->
     <section class="hero-img hero-img--overlay">
-      <!-- <section class="">
-      <img
-        class="hero-img hero-img--overlay"
-        src="./assets/images/hero-bio.jpg"
-        alt=""
-      /> -->
       <h2 class="hero-img__heading">The Bees Knees</h2>
     </section>
     <!-- ABOUT SECTION -->
@@ -99,7 +94,7 @@
     <!-- COMMENTS SECTION -->
     <section class="comments">
       <div class="comments__heading"><h4>Join the Conversation</h4></div>
-      <form class="comments__content">
+      <form class="comments__form">
         <div class="inputing-grp">
           <img
             class="comments__img"
@@ -112,9 +107,8 @@
               <!-- <form type="text" class="username" placeholder="Enter your name">Enter your name</form> -->
               <input
                 type="text"
-                value=""
-                name="userName"
-                class="username"
+                id="name"
+                name="name"
                 placeholder="Enter your name"
                 required
               />
@@ -124,15 +118,19 @@
               <div class="input-box__comment-label">COMMENT</div>
               <input
                 type="text"
-                value=""
-                name="userComment"
-                class="usercomment"
+                id="comment"
+                name="comment"
                 placeholder="Add a new comment"
                 required
               />
             </div>
-            <div class="buttons">
-              <button class="comment-btn" type="submit" id="publish">
+            <div>
+              <button
+                type="submit"
+                form="comments__form"
+                value="Comment"
+                class="comment-btn"
+              >
                 Comment
               </button>
             </div>
@@ -147,7 +145,7 @@
             <label class="comments-post__grp1-name">Connor Walton</label>
             <div class="comments-post__grp1-time">12/17/2021</div>
           </div>
-          <p class="comments-post__grp2">
+          <p class="comments-post__grp2 comments-post__grp2-1">
             This is art. This is inexplicable magic expressed in the purest way,
             everything that makes up this majestic work deserves reverence. Let
             us appreciate this for what it is and what it contains.

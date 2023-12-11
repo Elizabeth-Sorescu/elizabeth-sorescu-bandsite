@@ -23,14 +23,14 @@
     width: 147vh;
   }
   @include desktop {
-    border: 1px solid green;
+    // border: 1px solid green;
     padding: 0rem 3.5rem;
     padding-top: 0.2rem;
     height: 157vh;
     width: 140vh;
   }
   @include desktopL {
-    // border: 1px solid green;
+    border: 1px solid green;
     padding: 0rem 3.5rem;
     padding-top: 0.2rem;
     height: 157vh;
@@ -71,7 +71,7 @@
   }
 }
 
-.comments__content {
+.comments__form {
   // background-color: green;
   border-bottom: 3px solid $secondary-two-color;
   display: flex;
@@ -241,7 +241,7 @@
   color: $primary-two-color;
   // background-color: pink;
 }
-.username {
+#name {
   width: 83vw;
   height: 6vh;
   border-radius: 0.5rem;
@@ -278,7 +278,7 @@
     // background-color: yellow;
   }
 }
-.username::placeholder {
+#name::placeholder {
   color: $secondary-one-color;
   width: 35vw;
   // border: 1px solid red;
@@ -292,7 +292,7 @@
   font-weight: bold;
   color: $primary-two-color;
 }
-.usercomment {
+#comment {
   // background-color: aqua;
   width: 83vw;
   height: 17vh;
@@ -321,7 +321,7 @@
     width: 55vw;
   }
 }
-.usercomment::placeholder {
+#comment::placeholder {
   color: $secondary-one-color;
   position: absolute;
   top: 0px;

@@ -5,6 +5,10 @@
 @use "./partials/common/footer";
 @use "./partials/main/hero";
 
+.hero-img {
+  background-image: url(../assets/images/hero-shows.jpg);
+}
+
 // @use "./partials/main/about";
 // @use "./partials/main/article";
 // @use "./partials/main/gallery";
