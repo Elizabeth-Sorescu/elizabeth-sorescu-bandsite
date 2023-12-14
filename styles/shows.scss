@@ -105,19 +105,20 @@
   top: 252px;
   height: 9rem;
   width: 93%; //26rem;
-  border: 1px solid orange;
+  // border: 1px solid orange;
   border-radius: 0.5rem;
+
   @include mobileXS {
     top: 94px;
     height: 3rem;
     width: 85%; //26rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include mobileS {
     top: 210px;
     height: 5rem;
     width: 85%; //26rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include tabletS {
     left: 48px;
@@ -131,21 +132,21 @@
     top: 450px;
     height: 13rem;
     width: 45%; //26rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include desktop {
     left: 813px;
     top: 394px;
     height: 13rem;
     width: 29%; //26rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
   @include desktopL {
     left: 1075px;
     top: 385px;
     height: 13rem;
     width: 33%; //26rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
 }
 .shows {
@@ -215,7 +216,7 @@
   padding: 1.1rem 0rem;
   display: flex;
   flex-wrap: wrap;
-  // border: 1px solid red;
+  border: 1px solid red;
   @include tabletS {
     padding: 1.1rem 0rem;
     margin: 0rem 1rem 0rem 1.5rem;
@@ -347,7 +348,7 @@
     padding-top: 0.5rem;
     padding-left: 1rem;
     align-items: baseline;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   @include tablet {
     width: 26.5%;

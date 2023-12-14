@@ -28,6 +28,7 @@ let show6 = {
   venue: "Press Club",
   location: "San Francisco, CA",
 };
+
 let arrayShows = [];
 arrayShows.push(show1);
 arrayShows.push(show2);
@@ -36,19 +37,25 @@ arrayShows.push(show4);
 arrayShows.push(show5);
 arrayShows.push(show6);
 
-// console.log(arrayShows);
+let ref = document.getElementById("bnd-footer");
+let newElem = ref.insertAdjacentHTML(
+  "beforebegin",
+  "<section class=shows></section>"
+);
+ref.insertAdjacentHTML("beforebegin", "<!-- FOOTER SECTION -->");
 
 let commentsContainer = document.querySelector(".shows");
+commentsContainer.insertAdjacentHTML(
+  "beforebegin",
+  "<!-- COMMENTS SECTION -->"
+);
+
 let heroBackgroundImg = document.querySelector(".hero-img");
 
 let songAlbum = document.createElement("p");
 songAlbum.classList.add("song-album");
 heroBackgroundImg.appendChild(songAlbum);
-songAlbum.innerText = "Beautiful Beasts Album";
-
-// let mediaImg = document.createElement("div");
-// mediaImg.classList.add("hero-img__media");
-// heroBackgroundImg.appendChild(mediaImg);
+songAlbum.innerText = "Moonlight Soul Album";
 
 let heading = document.createElement("h2");
 heading.classList.add("shows-heading");
@@ -79,7 +86,7 @@ locationLabel.classList.add("shows-group__label");
 grpLabels.appendChild(locationLabel);
 locationLabel.innerText = "LOCATION";
 
-// Event Funtion
+// Event Function
 function generateDiv(show, divGroup) {
   let divSubGroup = document.createElement("div");
   divSubGroup.classList.add("show");
@@ -140,3 +147,44 @@ function generateDiv(show, divGroup) {
 for (let show of arrayShows) {
   generateDiv(show, divGroup);
 }
+
+// Click Event Handler
+
+for (let i = 0; i < arrayShows.length; i++) {
+  let divElements = document.getElementsByClassName("show");
+  let divElement = divElements[i];
+
+  divElement.addEventListener("click", function () {
+    divElement.setAttribute("style", "background-color:#e1e1e1");
+    clearHighlights(i);
+  });
+  let isHovered = false;
+  divElement.addEventListener("mouseover", function () {
+    isHovered = true;
+    if (divElement.hasAttribute("style", "background:none")) {
+      divElement.setAttribute("style", "background:#FFFF00");
+    }
+    clearHighlights(i);
+  });
+  divElement.addEventListener("mouseout", function () {
+    if (!isClicked) {
+      divElement.removeAttribute("style");
+    }
+  });
+}
+
+function clearHighlights(index) {
+  for (let i = 0; i <= arrayShows.length; i++) {
+    let divElement = document.getElementsByClassName("show")[i];
+    if (index !== i) {
+      divElement.setAttribute("style", "background-color:none");
+    }
+  }
+}
+
+// // Hovering state:
+// for (j = 0; j <= arrayShows.length; j++) {
+//   let divElement = document.getElementsByClassName("show")[j];
+//   let isHovered = false;
+
+// }

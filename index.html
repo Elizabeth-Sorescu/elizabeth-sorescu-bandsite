@@ -93,7 +93,7 @@
     <!-- COMMENTS SECTION -->
     <section class="comments">
       <div class="comments__heading"><h4>Join the Conversation</h4></div>
-      <form class="comments__form" id="form1">
+      <form id="comments__form">
         <div class="inputing-grp">
           <img
             class="comments__img"
@@ -126,9 +126,9 @@
             <div>
               <button
                 type="submit"
-                form="form1"
+                form="comments__form"
                 value="Comment"
-                class="comment-btn"
+                id="comment-btn"
               >
                 Comment
               </button>
@@ -136,8 +136,10 @@
           </div>
         </div>
       </form>
+
       <!-- COMMENTS POSTED -->
-      <div class="comment-post">
+
+      <div class="comment-post" id="default-comments">
         <!-- <div class="comment-post__box comment-post__first">
           <div class="comments-post__box-img"></div>
           <div class="comments-post__grp1">

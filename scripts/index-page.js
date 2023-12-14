@@ -100,7 +100,10 @@ let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
 //   };
 //   generateComment(comment, mainCommentContainer);
 // });
-
+for (let comment of arrayComments) {
+  generateComment(comment, mainCommentContainer);
+}
+// Here are the functions used:
 function generateComment(comment, mainCommentContainer) {
   let commentPostBox = document.createElement("div");
   commentPostBox.classList.add("comment-post__box");
@@ -130,6 +133,33 @@ function generateComment(comment, mainCommentContainer) {
   commentPostGrp2.innerText = comment.userComment;
 }
 
-for (let comment of arrayComments) {
-  generateComment(comment, mainCommentContainer);
+function clearBox(elementID) {
+  document.getElementById(elementID).innerHTML = "";
 }
+
+document.addEventListener("click", function (e) {
+  e.preventDefault();
+  let target = e.target;
+  if (target.id === "comment-btn") {
+    // alert("button test");
+
+    let nameInput = userName.value;
+    let commentDated = date.toLocaleDateString("en-US");
+    let commentInput = userComment.value;
+
+    const comment = {
+      userName: nameInput,
+      timeStamp: commentDated,
+      userComment: commentInput,
+    };
+    userName.value = "";
+    userComment.value = "";
+
+    arrayComments.unshift(comment);
+
+    clearBox("default-comments");
+    for (let comment of arrayComments) {
+      generateComment(comment, mainCommentContainer);
+    }
+  }
+});
