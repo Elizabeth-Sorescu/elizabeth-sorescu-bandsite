@@ -21,7 +21,7 @@
     height: 60rem;
   }
 }
-.song-album {
+.hero-img__song-album {
   color: $primary-three-color;
   z-index: 3;
   position: absolute;
@@ -169,7 +169,7 @@
     // background-color: orange;
   }
 }
-.shows-group {
+.shows__group {
   @include desktop {
     margin: 5.5rem 2rem 3rem 2rem;
     width: 100%;
@@ -181,7 +181,7 @@
     // background-color: pink;
   }
 }
-.shows-heading {
+.shows__heading {
   padding: 2.3rem 1.5rem 0rem 1.5rem;
   font-size: 2.25rem;
   font-weight: 600;
@@ -246,7 +246,7 @@
   }
 }
 
-.main-label {
+.show__main-label {
   padding-top: 0.7rem;
   color: $primary-two-color;
   font-weight: 600;
@@ -268,7 +268,7 @@
     display: none;
   }
 }
-.main-value {
+.show__main-value {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 3rem;
@@ -310,7 +310,7 @@
   }
 }
 
-.date-value {
+.show__date-value {
   font-weight: 600;
 }
 

@@ -1,29 +1,3 @@
-// REQUIREMENTS:
-// #1. have an array with 3 default comment objects to start;
-// comment must have a name, timestamp, & comment text
-// let name =
-// let commentArray = new Comment(name, time, commentText);
-// #2. have a function that takes a one object as parameter;
-// then displays it on the page using DOM Manipulation
-// function Comment(name, time, commentText) {
-//   this.name = name;
-//   this.time = time;
-//   this.commentText = commentText;
-// }
-
-// #3. all dynamic HTML must be added to DOM via DOM Methods for indiividual elements
-// avoid bulk assigning stringfield HTML using innerHTML
-
-// #4. use HTML form with follwing functionality:
-// submit using addEventListener
-// prevents reloading the page when submitting a new comment
-// constructs new comment object
-// PUSHES a new comment object to an array of comments
-// Clear all comments from the page
-// new comments will be posted on top of the 3 default comments
-// re-renders to the page all comments from the comment array
-// clears the input fields after submitting a new comment
-
 let userName = document.querySelector("#name");
 let userComment = document.querySelector("#comment");
 const date = new Date();
@@ -58,48 +32,6 @@ const defaultComment3 = {
 
 let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
 
-// let form = document.querySelector(".comments__form");
-
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   const comment = {
-//     userName: userName.innerHTML,
-//     timeStamp: date.toLocaleDateString("en-US"),
-//     userComment: userComment.innerHTML,
-//   };
-//   generateComment(comment, mainCommentContainer);
-// });
-// -----------------------------------------------------
-// Button.prototype.clickHandler = function () {
-//   //   event.preventDefault();
-//   const comment = {
-//     userName: userName.value,
-//     timeStamp: date.toLocaleDateString("en-US"),
-//     userComment: userComment.value,
-//   };
-//   generateComment(comment, mainCommentContainer);
-// };
-//------------------------------------------------------
-// function submit_form() {
-//   //   event.preventDefault();
-//   const comment = {
-//     userName: userName.value,
-//     timeStamp: date.toLocaleDateString("en-US"),
-//     userComment: userComment.value,
-//   };
-//   generateComment(comment, mainCommentContainer);
-// }
-
-// document.getElementById("form1").addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   const comment = {
-//     userName: userName.value,
-//     timeStamp: date.toLocaleDateString("en-US"),
-//     userComment: userComment.value,
-//   };
-//   generateComment(comment, mainCommentContainer);
-// });
 for (let comment of arrayComments) {
   generateComment(comment, mainCommentContainer);
 }
@@ -133,33 +65,33 @@ function generateComment(comment, mainCommentContainer) {
   commentPostGrp2.innerText = comment.userComment;
 }
 
+// Second Function
+let commentButton = document.getElementById("comment-btn");
 function clearBox(elementID) {
   document.getElementById(elementID).innerHTML = "";
 }
 
-document.addEventListener("click", function (e) {
+commentButton.addEventListener("click", function (e) {
   e.preventDefault();
-  let target = e.target;
-  if (target.id === "comment-btn") {
-    // alert("button test");
+  //let target = e.target;
+  //if (target.id === "comment-btn") {
+  let nameInput = userName.value;
+  let commentDated = date.toLocaleDateString("en-US");
+  let commentInput = userComment.value;
 
-    let nameInput = userName.value;
-    let commentDated = date.toLocaleDateString("en-US");
-    let commentInput = userComment.value;
+  const comment = {
+    userName: nameInput,
+    timeStamp: commentDated,
+    userComment: commentInput,
+  };
+  userName.value = "";
+  userComment.value = "";
 
-    const comment = {
-      userName: nameInput,
-      timeStamp: commentDated,
-      userComment: commentInput,
-    };
-    userName.value = "";
-    userComment.value = "";
+  arrayComments.unshift(comment);
 
-    arrayComments.unshift(comment);
-
-    clearBox("default-comments");
-    for (let comment of arrayComments) {
-      generateComment(comment, mainCommentContainer);
-    }
+  clearBox("default-comments");
+  for (let comment of arrayComments) {
+    generateComment(comment, mainCommentContainer);
   }
+  //}
 });

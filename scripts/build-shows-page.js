@@ -1,41 +1,72 @@
-let show1 = {
-  date: "Mon Sept 06 2021",
-  venue: "Ronald Lane",
-  location: "San Francisco, CA",
-};
-let show2 = {
-  date: "Tue Sept 21 2021",
-  venue: "Pier 3 East",
-  location: "San Francisco, CA",
-};
-let show3 = {
-  date: "Fri Oct 15 2021",
-  venue: "View Lounge",
-  location: "San Francisco, CA",
-};
-let show4 = {
-  date: "Sat Nov 06 2021",
-  venue: "Hyatt Agency",
-  location: "San Francisco, CA",
-};
-let show5 = {
-  date: "Fri Nov 26 2021",
-  venue: "Moscow Center",
-  location: "San Francisco, CA",
-};
-let show6 = {
-  date: "Wed Dec 15 2021",
-  venue: "Press Club",
-  location: "San Francisco, CA",
-};
-
-let arrayShows = [];
-arrayShows.push(show1);
-arrayShows.push(show2);
-arrayShows.push(show3);
-arrayShows.push(show4);
-arrayShows.push(show5);
-arrayShows.push(show6);
+// let show1 = {
+//   date: "Mon Sept 06 2021",
+//   venue: "Ronald Lane",
+//   location: "San Francisco, CA",
+// };
+// let show2 = {
+//   date: "Tue Sept 21 2021",
+//   venue: "Pier 3 East",
+//   location: "San Francisco, CA",
+// };
+// let show3 = {
+//   date: "Fri Oct 15 2021",
+//   venue: "View Lounge",
+//   location: "San Francisco, CA",
+// };
+// let show4 = {
+//   date: "Sat Nov 06 2021",
+//   venue: "Hyatt Agency",
+//   location: "San Francisco, CA",
+// };
+// let show5 = {
+//   date: "Fri Nov 26 2021",
+//   venue: "Moscow Center",
+//   location: "San Francisco, CA",
+// };
+// let show6 = {
+//   date: "Wed Dec 15 2021",
+//   venue: "Press Club",
+//   location: "San Francisco, CA",
+// };
+// let arrayShows = [];
+// arrayShows.push(show1);
+// arrayShows.push(show2);
+// arrayShows.push(show3);
+// arrayShows.push(show4);
+// arrayShows.push(show5);
+// arrayShows.push(show6);
+let arrayShows = [
+  {
+    date: "Mon Sept 06 2021",
+    venue: "Ronald Lane",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Tue Sept 21 2021",
+    venue: "Pier 3 East",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Fri Oct 15 2021",
+    venue: "View Lounge",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Sat Nov 06 2021",
+    venue: "Hyatt Agency",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Fri Nov 26 2021",
+    venue: "Moscow Center",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Wed Dec 15 2021",
+    venue: "Press Club",
+    location: "San Francisco, CA",
+  },
+];
 
 let ref = document.getElementById("bnd-footer");
 let newElem = ref.insertAdjacentHTML(
@@ -53,20 +84,20 @@ commentsContainer.insertAdjacentHTML(
 let heroBackgroundImg = document.querySelector(".hero-img");
 
 let songAlbum = document.createElement("p");
-songAlbum.classList.add("song-album");
+songAlbum.classList.add("hero-img__song-album");
 heroBackgroundImg.appendChild(songAlbum);
 songAlbum.innerText = "Moonlight Soul Album";
 
 let heading = document.createElement("h2");
-heading.classList.add("shows-heading");
+heading.classList.add("shows__heading");
 commentsContainer.appendChild(heading);
 heading.innerText = "Shows";
 
 let divGroup = document.createElement("div");
-divGroup.classList.add("shows-group");
+divGroup.classList.add("shows__group");
 commentsContainer.appendChild(divGroup);
 
-// Group of Labels for Large screen
+// Group of Labels for Large screens
 let grpLabels = document.createElement("div");
 grpLabels.classList.add("shows-group__labels");
 divGroup.appendChild(grpLabels);
@@ -94,46 +125,46 @@ function generateDiv(show, divGroup) {
 
   // DATE
   let labelDateCaption = document.createElement("label");
-  labelDateCaption.classList.add("main-label");
+  labelDateCaption.classList.add("show__main-label");
   labelDateCaption.classList.add("date");
   divSubGroup.appendChild(labelDateCaption);
   labelDateCaption.innerText = "DATE";
 
   let labelDateText = document.createElement("label");
-  labelDateText.classList.add("main-value");
-  labelDateText.classList.add("date-value");
+  labelDateText.classList.add("show__main-value");
+  labelDateText.classList.add("show__date-value");
   divSubGroup.appendChild(labelDateText);
   labelDateText.innerText = show.date;
 
   // VENUE
   let labelVenueCaption = document.createElement("label");
-  labelVenueCaption.classList.add("main-label");
+  labelVenueCaption.classList.add("show__main-label");
   labelVenueCaption.classList.add("venue");
   divSubGroup.appendChild(labelVenueCaption);
   labelVenueCaption.innerText = "VENUE";
 
   let labelVenueText = document.createElement("label");
-  labelVenueText.classList.add("main-value");
+  labelVenueText.classList.add("show__main-value");
   labelVenueText.classList.add("venue-value");
   divSubGroup.appendChild(labelVenueText);
   labelVenueText.innerText = show.venue;
 
   // LOCATION
   let labelLocationCaption = document.createElement("label");
-  labelLocationCaption.classList.add("main-label");
+  labelLocationCaption.classList.add("show__main-label");
   labelLocationCaption.classList.add("location");
   divSubGroup.appendChild(labelLocationCaption);
   labelLocationCaption.innerText = "LOCATION";
 
   let labelLocationText = document.createElement("label");
-  labelLocationText.classList.add("main-value");
+  labelLocationText.classList.add("show__main-value");
   labelLocationText.classList.add("location-value");
   divSubGroup.appendChild(labelLocationText);
   labelLocationText.innerText = show.location;
 
   // BUTTON
   let btnDiv = document.createElement("div");
-  btnDiv.classList.add("main-value");
+  btnDiv.classList.add("show__main-value");
   btnDiv.classList.add("buytcktbtn-value");
   btnDiv.classList.add("buy-tckt");
   divSubGroup.appendChild(btnDiv);
