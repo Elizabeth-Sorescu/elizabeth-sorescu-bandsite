@@ -22,6 +22,13 @@ $desktop-min-width: 1280px; //1280 Desktop -
 $desktop-max-width: 1299px;
 $desktopL-min-width: 1300px; //1300>= Desktop L without inspect
 
+// Breakpoints for SPRINT2 using Mobile-first principle:
+
+$tablet-min-width-sprint2: 768px;
+$tablet-max-width-sprint2: 1280px;
+
+$desktop-min-width-sprint2: 1280px; //1280 Desktop -
+
 //OTHERS:
 $grayscale-rate: 100%;
 $grayscale-hover-rate: 0%;

@@ -1,6 +1,18 @@
 @use "./variables" as *;
+// MEDIA QUERIES MIXINS FOR SPRINT 2:
+@mixin tablet-sprint2 {
+  @media (min-width: $tablet-min-width-sprint2) and (max-width: $tablet-max-width-sprint2) {
+    @content;
+  }
+}
 
-// MEDIA QUERIES MIXINS:
+@mixin desktop-sprint2 {
+  @media (min-width: $desktop-min-width-sprint2) {
+    @content;
+  }
+}
+
+// MEDIA QUERIES MIXINS FOR SPRINT 1:
 @mixin mobileXS {
   @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
     @content;

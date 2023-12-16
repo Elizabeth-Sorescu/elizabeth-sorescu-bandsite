@@ -8,18 +8,25 @@
 .hero-img {
   background-image: url(../assets/images/hero-shows.jpg);
   position: relative;
-  @include tabletS {
+  height: 26rem; //remove
+  @include tablet-sprint2 {
     height: 47rem;
   }
-  @include tablet {
-    height: 47rem;
-  }
-  @include desktop {
+  @include desktop-sprint2 {
     height: 60rem;
   }
-  @include desktopL {
-    height: 60rem;
-  }
+  // @include tabletS {
+  //   height: 47rem;
+  // }
+  // @include tablet {
+  //   height: 47rem;
+  // }
+  // @include desktop {
+  //   height: 60rem;
+  // }
+  // @include desktopL {
+  //   height: 60rem;
+  // }
 }
 .hero-img__song-album {
   color: $primary-three-color;
@@ -27,123 +34,163 @@
   position: absolute;
   font-size: 1.3rem;
   font-weight: 600;
-  top: 51px;
-  left: 25px;
+  top: 3.188rem;
+  left: 1.563rem;
+  @include tablet-sprint2 {
+    font-size: 2.3rem;
+    top: 6.25rem;
+    left: 3.25rem;
+  }
+  @include desktop-sprint2 {
+    font-size: 2.3rem;
+    top: 20.063rem;
+    left: 6.375rem;
+  }
+
   // border: 1px solid yellow;
-  @include mobileXS {
-    font-size: 0.9rem;
-    top: 17px;
-  }
-  @include tabletS {
-    font-size: 2.2rem;
-    top: 95px;
-    left: 48px;
-  }
-  @include tablet {
-    font-size: 2.3rem;
-    top: 100px;
-    left: 52px;
-  }
-  @include desktop {
-    font-size: 2.3rem;
-    top: 321px;
-    left: 102px;
-  }
-  @include desktopL {
-    font-size: 2.3rem;
-    top: 310px;
-    left: 102px;
-  }
+  // @include mobileXS {
+  //   font-size: 0.9rem;
+  //   top: 17px;
+  // }
+  // @include tabletS {
+  //   font-size: 2.2rem;
+  //   top: 95px;
+  //   left: 48px;
+  // }
+  // @include tablet {
+  //   font-size: 2.3rem;
+  //   top: 100px;
+  //   left: 52px;
+  // }
+  // @include desktop {
+  //   font-size: 2.3rem;
+  //   top: 321px;
+  //   left: 102px;
+  // }
+  // @include desktopL {
+  //   font-size: 2.3rem;
+  //   top: 310px;
+  //   left: 102px;
+  // }
 }
 .hero-img__heading {
   position: absolute;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   line-height: 2.5rem;
-  left: 1.5rem;
-  top: 118px;
+  left: 1.3rem;
+  top: 7.375rem; //118px;
   width: 20rem;
   // border: 1px solid yellow;
-  @include mobileXS {
-    font-size: 1.2rem;
-    top: 41px;
-    width: 11rem;
-    line-height: 1.3rem;
-  }
-  @include tabletS {
-    font-size: 5.3rem;
-    line-height: 5.6rem;
-    top: 167px;
-    left: 48px;
+  @include tablet-sprint2 {
+    font-size: 5.3rem; //5.5rem
+    line-height: 6.5rem;
+    top: 10.625rem; //170px;
+    left: 3rem; //48px;
     width: 50rem;
   }
-  @include tablet {
+  @include desktop-sprint2 {
     font-size: 5.5rem;
     line-height: 6.5rem;
-    top: 170px;
-    left: 48px;
-    width: 50rem;
-  }
-  @include desktop {
-    font-size: 5.5rem;
-    line-height: 6.5rem;
-    top: 397px;
-    left: 97px;
+    top: 24.813rem; //397px;
+    left: 6.063rem; //97px;
     width: 46rem;
   }
-  @include desktopL {
-    font-size: 5.5rem;
-    line-height: 6.5rem;
-    top: 387px;
-    left: 97px;
-    width: 46rem;
-  }
+
+  // @include mobileXS {
+  //   font-size: 1.2rem;
+  //   top: 41px;
+  //   width: 11rem;
+  //   line-height: 1.3rem;
+  // }
+  // @include tabletS {
+  //   font-size: 5.3rem;
+  //   line-height: 5.6rem;
+  //   top: 167px;
+  //   left: 48px;
+  //   width: 50rem;
+  // }
+  // @include tablet {
+  //   font-size: 5.5rem;
+  //   line-height: 6.5rem;
+  //   top: 170px;
+  //   left: 48px;
+  //   width: 50rem;
+  // }
+  // @include desktop {
+  //   font-size: 5.5rem;
+  //   line-height: 6.5rem;
+  //   top: 397px;
+  //   left: 97px;
+  //   width: 46rem;
+  // }
+  // @include desktopL {
+  //   font-size: 5.5rem;
+  //   line-height: 6.5rem;
+  //   top: 387px;
+  //   left: 97px;
+  //   width: 46rem;
+  // }
 }
 
 .hero-img__media {
   position: absolute;
-  left: 23px;
-  top: 252px;
+  left: 1.438rem; //23px;
+  top: 14.813rem; //237px; //252px;
   height: 9rem;
-  width: 93%; //26rem;
-  // border: 1px solid orange;
+  width: 90%; //93%;; //26rem;
   border-radius: 0.5rem;
+  // @include tablet-sprint2 {
+  //   left: 3.75rem; //60px;
+  //   top: 28.125rem; //450px;
+  //   height: 13rem;
+  //   width: 45%; //26rem;
+  //   // border: 1px solid orange;
+  // }
+  // @include desktop-sprint2 {
+  //   left: 50.813rem; //813px;
+  //   top: 24.625rem; //394px;
+  //   height: 13rem;
+  //   width: 29%; //26rem;
+  //   // border: 1px solid orange;
+  // }
 
-  @include mobileXS {
-    top: 94px;
-    height: 3rem;
-    width: 85%; //26rem;
-    // border: 1px solid orange;
-  }
-  @include mobileS {
-    top: 210px;
-    height: 5rem;
-    width: 85%; //26rem;
-    // border: 1px solid orange;
-  }
+  // @include mobileXS {
+  //   left: 23px;
+  //   top: 237px;
+  //   height: 9rem;
+  //   width: 90%; //26rem;
+  //   // border: 1px solid orange;
+  // }
+  // @include mobileS {
+  //   top: 210px;
+  //   height: 5rem;
+  //   width: 90%; //26rem;
+  //   // border: 1px solid orange;
+  // }
   @include tabletS {
-    left: 48px;
-    top: 446px;
+    left: 3rem;
+    top: 27.875rem;
     height: 13.5rem;
     width: 90%; //26rem;
     // border: 1px solid orange;
   }
   @include tablet {
-    left: 60px;
-    top: 450px;
+    left: 3.75rem;
+    top: 28.125rem;
     height: 13rem;
     width: 45%; //26rem;
     // border: 1px solid orange;
   }
   @include desktop {
-    left: 813px;
-    top: 394px;
+    left: 50.813rem;
+    top: 24.625rem;
     height: 13rem;
     width: 29%; //26rem;
     // border: 1px solid orange;
   }
   @include desktopL {
-    left: 1075px;
-    top: 385px;
+    left: 67.188rem;
+    top: 24.063rem;
     height: 13rem;
     width: 33%; //26rem;
     // border: 1px solid orange;
@@ -152,34 +199,49 @@
 .shows {
   margin: 1rem 0rem;
   // background-color: orange;
-  @include tabletS {
-    margin: 1rem 0rem 3rem 0rem;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     margin: 1rem 3rem 3rem 3rem;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     margin: 1rem 4rem 0.5rem 4rem;
     display: flex;
     // background-color: orange;
   }
-  @include desktopL {
-    margin: 1rem 4rem 0.5rem 4rem;
-    display: flex;
-    // background-color: orange;
-  }
+
+  //   @include tabletS {
+  //     margin: 1rem 0rem 3rem 0rem;
+  //   }
+  //   @include tablet {
+  //     margin: 1rem 3rem 3rem 3rem;
+  //   }
+  //   @include desktop {
+  //     margin: 1rem 4rem 0.5rem 4rem;
+  //     display: flex;
+  //     // background-color: orange;
+  //   }
+  //   @include desktopL {
+  //     margin: 1rem 4rem 0.5rem 4rem;
+  //     display: flex;
+  //     // background-color: orange;
+  //   }
 }
 .shows__group {
-  @include desktop {
+  @include desktop-sprint2 {
     margin: 5.5rem 2rem 3rem 2rem;
     width: 100%;
     // background-color: pink;
   }
-  @include desktopL {
-    margin: 5.5rem 2rem 3rem 2rem;
-    width: 100%;
-    // background-color: pink;
-  }
+
+  // @include desktop {
+  //   margin: 5.5rem 2rem 3rem 2rem;
+  //   width: 100%;
+  //   // background-color: pink;
+  // }
+  // @include desktopL {
+  //   margin: 5.5rem 2rem 3rem 2rem;
+  //   width: 100%;
+  //   // background-color: pink;
+  // }
 }
 .shows__heading {
   padding: 2.3rem 1.5rem 0rem 1.5rem;
@@ -187,63 +249,91 @@
   font-weight: 600;
   color: $primary-one-color;
   // border: 1px solid green;
-  @include tabletS {
-    padding: 3.8rem 2.5rem 3.4rem 2.5rem;
-    font-size: 3.5rem;
-    // border: 1px solid green;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     padding: 3.8rem 1.5rem 3.4rem 1.5rem;
     font-size: 3.5rem;
     // border: 1px solid green;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     padding: 3.8rem 1.5rem 3.4rem 1.5rem;
     font-size: 3.5rem;
     // border: 1px solid green;
     width: 21%;
   }
-  @include desktopL {
-    padding: 3.8rem 1.5rem 3.4rem 1.5rem;
-    font-size: 3.5rem;
-    // border: 1px solid green;
-    width: 21%;
-  }
+
+  // @include tabletS {
+  //   padding: 3.8rem 2.5rem 3.4rem 2.5rem;
+  //   font-size: 3.5rem;
+  //   // border: 1px solid green;
+  // }
+  // @include tablet {
+  //   padding: 3.8rem 1.5rem 3.4rem 1.5rem;
+  //   font-size: 3.5rem;
+  //   // border: 1px solid green;
+  // }
+  // @include desktop {
+  //   padding: 3.8rem 1.5rem 3.4rem 1.5rem;
+  //   font-size: 3.5rem;
+  //   // border: 1px solid green;
+  //   width: 21%;
+  // }
+  // @include desktopL {
+  //   padding: 3.8rem 1.5rem 3.4rem 1.5rem;
+  //   font-size: 3.5rem;
+  //   // border: 1px solid green;
+  //   width: 21%;
+  // }
 }
 
 .show {
-  border-bottom: 3px solid $primary-two-color;
+  border-bottom: 2px solid $primary-two-color;
   padding: 1.1rem 0rem;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
-  @include tabletS {
-    padding: 1.1rem 0rem;
-    margin: 0rem 1rem 0rem 1.5rem;
-    // height: 50%;
-    // background-color: pink;
-  }
-  @include tablet {
+  // border: 1px solid red;
+
+  @include tablet-sprint2 {
     padding: 1.1rem 0rem;
     margin: 0rem 0rem 0rem 0rem;
     // background-color: pink;
 
     // flex-direction: row;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     padding: 1.1rem 0rem;
     margin: 0rem 0rem 0rem 0rem;
     // background-color: pink;
 
     // flex-direction: row;
   }
-  @include desktopL {
-    padding: 1.1rem 0rem;
-    margin: 0rem 0rem 0rem 0rem;
-    // background-color: pink;
 
-    // flex-direction: row;
-  }
+  // @include tabletS {
+  //   padding: 1.1rem 0rem;
+  //   margin: 0rem 1rem 0rem 1.5rem;
+  //   // height: 50%;
+  //   // background-color: pink;
+  // }
+  // @include tablet {
+  //   padding: 1.1rem 0rem;
+  //   margin: 0rem 0rem 0rem 0rem;
+  //   // background-color: pink;
+
+  //   // flex-direction: row;
+  // }
+  // @include desktop {
+  //   padding: 1.1rem 0rem;
+  //   margin: 0rem 0rem 0rem 0rem;
+  //   // background-color: pink;
+
+  //   // flex-direction: row;
+  // }
+  // @include desktopL {
+  //   padding: 1.1rem 0rem;
+  //   margin: 0rem 0rem 0rem 0rem;
+  //   // background-color: pink;
+
+  //   // flex-direction: row;
+  // }
 }
 
 .show__main-label {
@@ -255,18 +345,25 @@
   padding-right: 1.5rem;
   width: 100%;
   // border: 1px solid red;
-  @include tabletS {
+  @include tablet-sprint2 {
     display: none;
   }
-  @include tablet {
+  @include desktop-sprint2 {
     display: none;
   }
-  @include desktop {
-    display: none;
-  }
-  @include desktopL {
-    display: none;
-  }
+
+  // @include tabletS {
+  //   display: none;
+  // }
+  // @include tablet {
+  //   display: none;
+  // }
+  // @include desktop {
+  //   display: none;
+  // }
+  // @include desktopL {
+  //   display: none;
+  // }
 }
 .show__main-value {
   font-size: 1.3rem;
@@ -276,15 +373,7 @@
   padding-right: 1.5rem;
   width: 100%;
   // border: 1px solid blue;
-  @include tabletS {
-    width: 26.5%;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem 0rem 1rem;
-    line-height: 4rem;
-
-    // border: 1px solid red;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     width: 26.5%;
     font-size: 1.3rem;
     padding: 0.5rem 1.5rem;
@@ -292,7 +381,7 @@
 
     // border: 1px solid red;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     width: 26.5%;
     font-size: 1.3rem;
     padding: 0.5rem 1.5rem;
@@ -300,14 +389,39 @@
 
     // border: 1px solid red;
   }
-  @include desktopL {
-    width: 26.5%;
-    font-size: 1.3rem;
-    padding: 0.5rem 1.5rem;
-    line-height: 4rem;
 
-    // border: 1px solid red;
-  }
+  // @include tabletS {
+  //   width: 26.5%;
+  //   font-size: 1.1rem;
+  //   padding: 0.5rem 1rem 0rem 1rem;
+  //   line-height: 4rem;
+
+  //   // border: 1px solid red;
+  // }
+  // @include tablet {
+  //   width: 26.5%;
+  //   font-size: 1.3rem;
+  //   padding: 0.5rem 1.5rem;
+  //   line-height: 4rem;
+
+  //   // border: 1px solid red;
+  // }
+  // @include desktop {
+  //   width: 26.5%;
+  //   font-size: 1.3rem;
+  //   padding: 0.5rem 1.5rem;
+  //   line-height: 4rem;
+
+  //   // border: 1px solid red;
+  // }
+  // @include desktopL {
+  //   width: 26.5%;
+  //   font-size: 1.3rem;
+  //   padding: 0.5rem 1.5rem;
+  //   line-height: 4rem;
+
+  //   // border: 1px solid red;
+  // }
 }
 
 .show__date-value {
@@ -315,42 +429,41 @@
 }
 
 .shows-group__labels {
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
   // width: 100%;
   margin: 0rem 1rem 0rem 1.5rem;
   // background-color: aqua;
-  @include mobileXS {
-    display: none;
-  }
-  @include mobileS {
-    display: none;
-  }
-  @include mobile {
-    display: none;
-  }
-  @include tablet {
+  display: none;
+  @include tablet-sprint2 {
     margin: 0rem;
+    display: flex;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     margin: 0rem;
+    display: flex;
   }
-  @include desktopL {
-    margin: 0rem;
-  }
+  // @include mobileXS {
+  //   display: none;
+  // }
+  // @include mobileS {
+  //   display: none;
+  // }
+  // @include mobile {
+  //   display: none;
+  // }
+  // @include tablet {
+  //   margin: 0rem;
+  // }
+  // @include desktop {
+  //   margin: 0rem;
+  // }
+  // @include desktopL {
+  //   margin: 0rem;
+  // }
 }
 .shows-group__label {
-  @include tabletS {
-    width: 26.5%;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $primary-two-color;
-    padding-top: 0.5rem;
-    padding-left: 1rem;
-    align-items: baseline;
-    // border: 1px solid red;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     width: 26.5%;
     font-size: 1.2rem;
     font-weight: 600;
@@ -360,7 +473,7 @@
     align-items: baseline;
     // border: 1px solid blue;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     width: 26.5%;
     font-size: 1.2rem;
     font-weight: 600;
@@ -371,17 +484,49 @@
     align-items: baseline;
     // border: 1px solid blue;
   }
-  @include desktopL {
-    width: 26.5%;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: $primary-two-color;
-    padding-top: 0rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    align-items: baseline;
-    // border: 1px solid blue;
-  }
+
+  // @include tabletS {
+  //   width: 26.5%;
+  //   font-size: 1rem;
+  //   font-weight: 600;
+  //   color: $primary-two-color;
+  //   padding-top: 0.5rem;
+  //   padding-left: 1rem;
+  //   align-items: baseline;
+  //   // border: 1px solid red;
+  // }
+  // @include tablet {
+  //   width: 26.5%;
+  //   font-size: 1.2rem;
+  //   font-weight: 600;
+  //   color: $primary-two-color;
+  //   padding-top: 0.5rem;
+  //   padding-left: 1.5rem;
+  //   align-items: baseline;
+  //   // border: 1px solid blue;
+  // }
+  // @include desktop {
+  //   width: 26.5%;
+  //   font-size: 1.2rem;
+  //   font-weight: 600;
+  //   color: $primary-two-color;
+  //   padding-top: 0rem;
+  //   padding-bottom: 2rem;
+  //   padding-left: 1.5rem;
+  //   align-items: baseline;
+  //   // border: 1px solid blue;
+  // }
+  // @include desktopL {
+  //   width: 26.5%;
+  //   font-size: 1.2rem;
+  //   font-weight: 600;
+  //   color: $primary-two-color;
+  //   padding-top: 0rem;
+  //   padding-bottom: 2rem;
+  //   padding-left: 1.5rem;
+  //   align-items: baseline;
+  //   // border: 1px solid blue;
+  // }
 }
 
 .buy-tckt {
@@ -390,33 +535,48 @@
   padding-right: 1.5rem;
   // padding: 0.5rem 0rem;
   // border: 1px solid violet;
-  @include tabletS {
-    width: 20%;
-    padding: 0rem;
-    padding-right: 1rem;
-    // border: 1px solid red;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     width: 20%;
     padding: 0rem;
     padding-right: 1rem;
     padding-top: 0.3rem;
     // background-color: yellow;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     width: 20%;
     padding: 0rem;
     padding-right: 1rem;
     padding-top: 0.3rem;
     // background-color: yellow;
   }
-  @include desktopL {
-    width: 20%;
-    padding: 0rem;
-    padding-right: 1rem;
-    padding-top: 0.3rem;
-    // background-color: yellow;
-  }
+
+  // @include tabletS {
+  //   width: 20%;
+  //   padding: 0rem;
+  //   padding-right: 1rem;
+  //   // border: 1px solid red;
+  // }
+  // @include tablet {
+  //   width: 20%;
+  //   padding: 0rem;
+  //   padding-right: 1rem;
+  //   padding-top: 0.3rem;
+  //   // background-color: yellow;
+  // }
+  // @include desktop {
+  //   width: 20%;
+  //   padding: 0rem;
+  //   padding-right: 1rem;
+  //   padding-top: 0.3rem;
+  //   // background-color: yellow;
+  // }
+  // @include desktopL {
+  //   width: 20%;
+  //   padding: 0rem;
+  //   padding-right: 1rem;
+  //   padding-top: 0.3rem;
+  //   // background-color: yellow;
+  // }
 }
 .buy-tckt__btn {
   width: 100%;
@@ -429,24 +589,35 @@
   color: $primary-three-color;
   background-color: $primary-one-color;
   // border: 1px solid green;
-  @include tabletS {
-    font-size: 1.1rem;
-    margin-top: 0rem;
-    // border: 1px solid red;
-  }
-  @include tablet {
+  @include tablet-sprint2 {
     font-size: 1.3rem;
     margin-top: 0rem;
     // border: 1px solid red;
   }
-  @include desktop {
+  @include desktop-sprint2 {
     font-size: 1.3rem;
     margin-top: 0rem;
     // border: 1px solid red;
   }
-  @include desktopL {
-    font-size: 1.3rem;
-    margin-top: 0rem;
-    // border: 1px solid red;
-  }
+
+  // @include tabletS {
+  //   font-size: 1.1rem;
+  //   margin-top: 0rem;
+  //   // border: 1px solid red;
+  // }
+  // @include tablet {
+  //   font-size: 1.3rem;
+  //   margin-top: 0rem;
+  //   // border: 1px solid red;
+  // }
+  // @include desktop {
+  //   font-size: 1.3rem;
+  //   margin-top: 0rem;
+  //   // border: 1px solid red;
+  // }
+  // @include desktopL {
+  //   font-size: 1.3rem;
+  //   margin-top: 0rem;
+  //   // border: 1px solid red;
+  // }
 }

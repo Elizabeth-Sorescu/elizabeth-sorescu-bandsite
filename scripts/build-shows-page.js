@@ -213,9 +213,42 @@ function clearHighlights(index) {
   }
 }
 
-// // Hovering state:
-// for (j = 0; j <= arrayShows.length; j++) {
-//   let divElement = document.getElementsByClassName("show")[j];
-//   let isHovered = false;
+// Another Solution 2:
+// for (let i = 0; i < arrayShows.length; i++) {
+//   let divElements = document.getElementsByClassName("show");
+//   let divElement = divElements[i];
 
+//   const test = document.getElementById("test");
+
+//   // This handler will be executed only once when the cursor
+//   // moves over the unordered list
+//   divElement.addEventListener(
+//     "mouseenter",
+//     (event) => {
+//       // highlight the mouseenter target
+//       event.target.style.background = "purple";
+
+//       // reset the color after a short delay
+//       setTimeout(() => {
+//         event.target.style.background = "";
+//       }, 500);
+//     },
+//     false
+//   );
+
+//   // This handler will be executed every time the cursor
+//   // is moved over a different list item
+//   divElement.addEventListener(
+//     "mouseover",
+//     (event) => {
+//       // highlight the mouseover target
+//       event.target.style.background = "orange";
+
+//       // reset the color after a short delay
+//       setTimeout(() => {
+//         event.target.style.background = "";
+//       }, 500);
+//     },
+//     false
+//   );
 // }
