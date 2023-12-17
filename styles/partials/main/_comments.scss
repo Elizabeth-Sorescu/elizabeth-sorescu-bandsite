@@ -1,0 +1,395 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+// COMMENTS SECTION
+.comments {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-top: 1.7rem;
+  height: 100%;
+  width: 100%;
+  @include tablet-sprint2 {
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+  }
+  @include desktop-sprint2 {
+    padding: 0rem 3.5rem;
+    padding-top: 0.2rem;
+  }
+
+  &__heading {
+    color: $primary-one-color;
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    @include mobileXS {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    @include tablet-sprint2 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    @include desktop-sprint2 {
+      padding-top: 5rem;
+      padding-bottom: 2.5rem;
+      padding-left: 1rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  // this is where the first border bottom  will be
+  &__form__inputing-grp {
+    width: 100%;
+    @include tabletS {
+      border-bottom: 2px solid $secondary-two-color;
+      margin-right: 2rem;
+      margin-left: 4rem;
+      padding-bottom: 2rem;
+    }
+    @include tablet {
+      border-bottom: 2px solid $secondary-two-color;
+      margin-right: 1rem;
+      margin-left: 2rem;
+      padding-bottom: 2rem;
+      width: 100%;
+    }
+    @include desktop {
+      border-bottom: 2px solid $secondary-two-color;
+      width: 65%;
+      margin-left: 13rem;
+      padding-bottom: 2rem;
+    }
+    @include desktopL {
+      border-bottom: 2px solid $secondary-two-color;
+      width: 70%;
+      margin-left: 11rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    width: 3.5rem;
+    height: 3.438rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 3.25rem;
+    @include tablet-sprint2 {
+      @include cmnts-img-largescrns;
+    }
+    @include desktop-sprint2 {
+      @include cmnts-img-largescrns;
+    }
+  }
+}
+
+#comments__form {
+  border-bottom: 2px solid $secondary-two-color;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.7rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  @include tabletS {
+    padding: 1.7rem 0rem 0rem 0rem;
+    @include cmnts-form-largescrns;
+  }
+  @include tablet {
+    padding: 1.7rem 5rem 0rem 5rem;
+    @include cmnts-form-largescrns;
+  }
+  @include desktop-sprint2 {
+    justify-content: center;
+    @include cmnts-form-largescrns;
+  }
+}
+
+.comment-post {
+  @include tablet-sprint2 {
+    padding: 0rem 2rem 1.5rem 4rem;
+  }
+  @include desktop-sprint2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.inputs {
+  width: 100%;
+  margin-left: 5rem;
+  height: 100%;
+  padding-bottom: 2rem;
+  @include tabletS {
+    @include cmnts-inputs-largescrns;
+    width: 85%;
+  }
+  @include tablet {
+    @include cmnts-inputs-largescrns;
+    width: 100%;
+  }
+  @include desktop {
+    @include cmnts-inputs-largescrns;
+    width: 88%;
+  }
+  @include desktopL {
+    @include cmnts-inputs-largescrns;
+    width: 92%;
+  }
+
+  &__name-label {
+    font-weight: bold;
+    color: $primary-two-color;
+  }
+
+  &__comment-label {
+    padding-top: 2rem;
+    font-weight: bold;
+    color: $primary-two-color;
+  }
+}
+
+#name {
+  width: 88%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Avenir";
+  border: 2px solid $secondary-two-color;
+  font-size: 1.3rem;
+  @include mobileXS {
+    width: 70%;
+    font-size: 1rem;
+  }
+  @include mobileS {
+    width: 80%;
+  }
+  @include tabletS {
+    width: 99%;
+    height: 4.1rem;
+  }
+  @include tablet {
+    width: 90.5%;
+    height: 4.1rem;
+  }
+  @include desktop {
+    width: 100%;
+    height: 4.1rem;
+  }
+  @include desktopL {
+    width: 97%;
+    height: 4.3rem;
+  }
+  &::placeholder {
+    color: $secondary-one-color;
+    width: 100%;
+    @include mobileXS {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+#comment {
+  width: 88%;
+  height: 8.5rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Avenir";
+  border: 2px solid $secondary-two-color;
+  font-size: 1.3rem;
+  @include mobileXS {
+    width: 70%;
+  }
+  @include mobileS {
+    width: 80%;
+  }
+  @include tabletS {
+    width: 99%;
+  }
+  @include tablet {
+    width: 90.5%;
+  }
+  @include desktop {
+    width: 100%;
+  }
+  @include desktopL {
+    width: 97%;
+    height: 9rem;
+  }
+  &::placeholder {
+    color: $secondary-one-color;
+    position: absolute;
+    top: 0rem;
+    width: 100%;
+    @include mobileXS {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+#comment-btn {
+  width: 88%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-three-color;
+  background-color: $primary-one-color;
+  @include mobileXS {
+    width: 70%;
+  }
+  @include mobileS {
+    width: 80%;
+  }
+  @include tabletS {
+    @include cmnt-btn-largescrns;
+    right: 0.125rem;
+  }
+  @include tablet {
+    @include cmnt-btn-largescrns;
+    right: 5.75rem;
+  }
+  @include desktop {
+    @include cmnt-btn-largescrns;
+    right: 0rem;
+  }
+  @include desktopL {
+    @include cmnt-btn-largescrns;
+    right: 1.5rem;
+  }
+
+  &:hover {
+    background-color: $secondary-one-color;
+  }
+}
+
+.comments-post {
+  height: 12rem;
+  width: 100%;
+  margin: 1rem 0rem;
+  position: relative;
+  border-bottom: 2px solid $secondary-two-color;
+  @include mobileXS {
+    height: 14rem;
+  }
+  @include tabletS {
+    padding-top: 1.5rem;
+    height: 13rem;
+  }
+  @include tablet {
+    padding-top: 1.5rem;
+    width: 90%;
+    height: 13rem;
+    margin-left: 3rem;
+  }
+  @include desktop-sprint2 {
+    justify-content: center;
+    padding-top: 2.1rem;
+    width: 70%;
+    height: 13rem;
+    margin-left: 11rem;
+    margin-right: 0rem;
+  }
+
+  &__grp1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 1rem;
+    margin-left: 5rem;
+    font-size: 1.2rem;
+    @include mobileXS {
+      font-size: 0.8rem;
+      padding-right: 4.5rem;
+    }
+    @include mobileS {
+      font-size: 0.8rem;
+      padding-right: 0rem;
+    }
+    @include tablet-sprint2 {
+      padding-right: 5.5rem;
+      @include cmnts-post-grp1;
+    }
+    @include desktop-sprint2 {
+      padding-right: 6rem;
+      @include cmnts-post-grp1;
+    }
+
+    &--name {
+      font-weight: bold;
+    }
+
+    &--date {
+      width: 10.5rem;
+      color: $secondary-two-color;
+      @include mobileXS {
+        font-size: 0.8rem;
+        width: 5rem;
+      }
+      @include tablet-sprint2 {
+        width: 7.5rem;
+      }
+      @include desktop-sprint2 {
+        width: 7rem;
+      }
+    }
+  }
+
+  &__grp2 {
+    margin-top: 1rem;
+    margin-left: 5.6rem;
+    width: 87.5%;
+    height: 70%;
+    font-size: 1.2rem;
+    @include mobileXS {
+      font-size: 1rem;
+      margin-left: 5rem;
+      width: 70.5%;
+      height: 80%;
+    }
+    @include mobileS {
+      width: 73%;
+      height: 78%;
+    }
+    @include tabletS {
+      width: 84%;
+      height: 75%;
+      @include comments-post-grp2;
+    }
+    @include tablet {
+      width: 92%;
+      @include comments-post-grp2;
+    }
+    @include desktop-sprint2 {
+      width: 88.5%;
+      @include comments-post-grp2;
+    }
+  }
+
+  &__box-img {
+    width: 3.5rem;
+    height: 3.438rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 0.063rem;
+    background-color: $secondary-two-color;
+    @include tablet-sprint2 {
+      width: 4.5rem;
+      height: 4.5rem;
+      top: 1.813rem;
+    }
+    @include desktop-sprint2 {
+      width: 4.5rem;
+      height: 4.5rem;
+      top: 1.813rem;
+    }
+  }
+}

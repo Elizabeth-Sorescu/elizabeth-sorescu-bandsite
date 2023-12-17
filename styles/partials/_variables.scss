@@ -5,6 +5,7 @@ $primary-three-color: #ffffff; //White
 $secondary-one-color: #000000; //BandSite-DarkBlack
 $secondary-two-color: #e1e1e1; //Mercury
 $secondary-three-color: #fafafa; //Alabaster
+$error-state-color: #d22d2d; //Error color for input box
 
 //BREAKPOINTS FOR MEDIA QUERIES (VIEW w/ 24" screen at 100%):
 $mobileXS-min-width: 0px; //320 Mobile XS -
@@ -20,6 +21,12 @@ $tablet-max-width: 1279px;
 $desktop-min-width: 1280px; //1280 Desktop -
 $desktop-max-width: 1299px;
 $desktopL-min-width: 1300px; //1300>= Desktop L without inspect
+
+// Breakpoints for SPRINT2 using Mobile-first principle:
+
+$tablet-min-width-sprint2: 768px;
+$tablet-max-width-sprint2: 1280px;
+$desktop-min-width-sprint2: 1280px; //1280 Desktop -
 
 //OTHERS:
 $grayscale-rate: 100%;

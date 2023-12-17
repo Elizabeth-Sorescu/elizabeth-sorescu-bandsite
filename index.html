@@ -6,6 +6,7 @@
     <title>Band Site - Home</title>
     <link rel="stylesheet" href="./styles/bio.css" />
     <link rel="stylesheet" href="./styles/partials/_global.scss" />
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION SECTION -->
@@ -38,6 +39,7 @@
     <section class="hero-img hero-img--overlay">
       <h2 class="hero-img__heading">The Bees Knees</h2>
     </section>
+    <!-- ABOUT SECTION -->
     <section class="about">
       <h2 class="about--heading">About the Musicians</h2>
       <div class="about--img"></div>
@@ -47,6 +49,7 @@
       </p>
       <p class="about--ref">- Bryan Teddy, lead vocalist of The Bees Knees</p>
     </section>
+    <!-- ARTICLE SECTION -->
     <article class="article">
       <h3 class="article--heading">The Bees Knees</h3>
       <div class="article-description">
@@ -73,6 +76,7 @@
         </div>
       </div>
     </article>
+    <!-- GALLERY SECTION -->
     <section class="gallery">
       <h4 class="gallery-heading">Photo Gallery</h4>
       <div class="gallery-img">
@@ -87,6 +91,57 @@
         <div class="gallery-img--9"></div>
       </div>
     </section>
+    <!-- COMMENTS SECTION -->
+    <section class="comments">
+      <div class="comments__heading"><h4>Join the Conversation</h4></div>
+      <form id="comments__form">
+        <div class="comments__form__inputing-grp">
+          <img
+            class="comments__img"
+            src="/assets/images/Mohan-muruge.jpg"
+            alt=""
+          />
+          <div class="inputs">
+            <div>
+              <div class="inputs__name-label">NAME</div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div>
+              <div class="inputs__comment-label">COMMENT</div>
+              <input
+                type="text"
+                id="comment"
+                name="comment"
+                placeholder="Add a new comment"
+                required
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                form="comments__form"
+                value="Comment"
+                id="comment-btn"
+              >
+                Comment
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- COMMENTS POSTED -->
+      <div class="comment-post" id="default-comments"></div>
+    </section>
+
+    <!-- FOOTER SECTION -->
     <footer class="footer">
       <section class="footer--group1">
         <h4 class="footer--heading">Get in Touch</h4>

@@ -20,12 +20,15 @@
   }
   @include tablet {
     @include gallery-large-screens;
+    padding-bottom: 2rem;
   }
   @include desktop {
     @include gallery-large-screens;
+    padding-bottom: 2rem;
   }
   @include desktopL {
     @include gallery-large-screens;
+    padding-bottom: 2rem;
   }
 }
 
@@ -47,8 +50,8 @@
     line-height: 2rem;
   }
   @include mobile {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 2.2rem;
+    line-height: 2.3rem;
   }
   @include tabletS {
     padding-top: 5rem;

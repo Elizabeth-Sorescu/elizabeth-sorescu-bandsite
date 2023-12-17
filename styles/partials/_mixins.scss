@@ -1,6 +1,18 @@
 @use "./variables" as *;
+// MEDIA QUERIES MIXINS FOR SPRINT 2:
+@mixin tablet-sprint2 {
+  @media (min-width: $tablet-min-width-sprint2) and (max-width: $tablet-max-width-sprint2) {
+    @content;
+  }
+}
 
-// MEDIA QUERIES MIXINS:
+@mixin desktop-sprint2 {
+  @media (min-width: $desktop-min-width-sprint2) {
+    @content;
+  }
+}
+
+// MEDIA QUERIES MIXINS FOR SPRINT 1:
 @mixin mobileXS {
   @media (min-width: $mobileXS-min-width) and (max-width: $mobileXS-max-width) {
     @content;
@@ -156,10 +168,59 @@
   filter: grayscale($grayscale-hover-rate);
 }
 
-// ARTICLE SECTION
+// ARTICLE SECTION MIXINS:
 
 //This is the layout that will create two columns of article description
 @mixin article-layout {
   display: flex;
   flex: 1;
+}
+
+// COMMENTS SECTION MIXINS
+
+@mixin cmnts-form-largescrns {
+  border: none;
+  padding-top: 4rem;
+}
+
+@mixin cmnts-img-largescrns {
+  width: 4.5rem;
+  height: 4.5rem;
+  top: 5.875rem;
+}
+
+@mixin cmnts-inputs-largescrns {
+  position: relative;
+  margin-left: 5.6rem;
+  height: 26rem;
+}
+
+@mixin cmnt-btn-largescrns {
+  width: 15rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+@mixin cmnts-post-grp1 {
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  margin-left: 5.6rem;
+}
+
+@mixin comments-post-grp2 {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+// SHOWS MIXINS:
+
+@mixin shows-heading-largescrns {
+  padding: 3.8rem 1.5rem 3.4rem 1.5rem;
+  font-size: 3.5rem;
+}
+
+@mixin show-largescrns {
+  padding: 1.1rem 0rem;
+  margin: 0rem;
 }

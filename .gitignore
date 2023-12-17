@@ -3,3 +3,4 @@
 *.css.map
 *.css
 *.vscode
+.vscode/settings.json
