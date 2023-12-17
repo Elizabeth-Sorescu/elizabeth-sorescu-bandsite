@@ -35,14 +35,15 @@ let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
 for (let comment of arrayComments) {
   generateComment(comment, mainCommentContainer);
 }
-// Here are the functions used:
+
+// This is a function that generates a container of each grouo of comments:
 function generateComment(comment, mainCommentContainer) {
   let commentPostBox = document.createElement("div");
-  commentPostBox.classList.add("comment-post__box");
+  commentPostBox.classList.add("comments-post");
   mainCommentContainer.appendChild(commentPostBox);
 
   let commentPostBoxImg = document.createElement("div");
-  commentPostBoxImg.classList.add("comment-post__box-img");
+  commentPostBoxImg.classList.add("comments-post__box-img");
   commentPostBox.appendChild(commentPostBoxImg);
 
   let commentPostGrp1 = document.createElement("div");
@@ -50,12 +51,12 @@ function generateComment(comment, mainCommentContainer) {
   commentPostBox.appendChild(commentPostGrp1);
 
   let commentPostGrp1Name = document.createElement("label");
-  commentPostGrp1Name.classList.add("comments-post__grp1-name");
+  commentPostGrp1Name.classList.add("comments-post__grp1--name");
   commentPostGrp1.appendChild(commentPostGrp1Name);
   commentPostGrp1Name.innerText = comment.userName;
 
   let commentPostGrp1Date = document.createElement("div");
-  commentPostGrp1Date.classList.add("comments-post__grp1-date");
+  commentPostGrp1Date.classList.add("comments-post__grp1--date");
   commentPostGrp1.appendChild(commentPostGrp1Date);
   commentPostGrp1Date.innerText = comment.timeStamp;
 
@@ -65,7 +66,7 @@ function generateComment(comment, mainCommentContainer) {
   commentPostGrp2.innerText = comment.userComment;
 }
 
-// Second Function
+// This is an event handler of button when invoked:
 let commentButton = document.getElementById("comment-btn");
 function clearBox(elementID) {
   document.getElementById(elementID).innerHTML = "";
@@ -73,25 +74,36 @@ function clearBox(elementID) {
 
 commentButton.addEventListener("click", function (e) {
   e.preventDefault();
-  //let target = e.target;
-  //if (target.id === "comment-btn") {
   let nameInput = userName.value;
   let commentDated = date.toLocaleDateString("en-US");
   let commentInput = userComment.value;
 
-  const comment = {
-    userName: nameInput,
-    timeStamp: commentDated,
-    userComment: commentInput,
-  };
-  userName.value = "";
-  userComment.value = "";
+  if (nameInput === "" || commentInput === "") {
+    if (nameInput === "") {
+      userName.setAttribute("style", "border-color:#D22D2D");
+    } else {
+      userName.setAttribute("style", "border-color:$secondary-two-color");
+    }
+    if (commentInput === "") {
+      userComment.setAttribute("style", "border-color:#D22D2D");
+    } else {
+      userComment.setAttribute("style", "border-color:$secondary-two-color");
+    }
+  } else {
+    const comment = {
+      userName: nameInput,
+      timeStamp: commentDated,
+      userComment: commentInput,
+    };
+    userName.value = "";
+    userComment.value = "";
+    userComment.setAttribute("style", "border-color:$secondary-two-color");
+    userName.setAttribute("style", "border-color:$secondary-two-color");
+    arrayComments.unshift(comment);
 
-  arrayComments.unshift(comment);
-
-  clearBox("default-comments");
-  for (let comment of arrayComments) {
-    generateComment(comment, mainCommentContainer);
+    clearBox("default-comments");
+    for (let comment of arrayComments) {
+      generateComment(comment, mainCommentContainer);
+    }
   }
-  //}
 });

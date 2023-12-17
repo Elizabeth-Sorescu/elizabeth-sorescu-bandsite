@@ -6,6 +6,7 @@
     <title>Band Site - Home</title>
     <link rel="stylesheet" href="./styles/bio.css" />
     <link rel="stylesheet" href="./styles/partials/_global.scss" />
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION SECTION -->
@@ -94,16 +95,15 @@
     <section class="comments">
       <div class="comments__heading"><h4>Join the Conversation</h4></div>
       <form id="comments__form">
-        <div class="inputing-grp">
+        <div class="comments__form__inputing-grp">
           <img
             class="comments__img"
             src="/assets/images/Mohan-muruge.jpg"
             alt=""
           />
-          <div class="comments__inputs">
-            <div class="input-box">
-              <div class="input-box__name-label">NAME</div>
-              <!-- <form type="text" class="username" placeholder="Enter your name">Enter your name</form> -->
+          <div class="inputs">
+            <div>
+              <div class="inputs__name-label">NAME</div>
               <input
                 type="text"
                 id="name"
@@ -113,8 +113,8 @@
               />
             </div>
 
-            <div class="input-box">
-              <div class="input-box__comment-label">COMMENT</div>
+            <div>
+              <div class="inputs__comment-label">COMMENT</div>
               <input
                 type="text"
                 id="comment"
@@ -138,46 +138,7 @@
       </form>
 
       <!-- COMMENTS POSTED -->
-
-      <div class="comment-post" id="default-comments">
-        <!-- <div class="comment-post__box comment-post__first">
-          <div class="comments-post__box-img"></div>
-          <div class="comments-post__grp1">
-            <label class="comments-post__grp1-name">Connor Walton</label>
-            <div class="comments-post__grp1-date">12/17/2021</div>
-          </div>
-          <p class="comments-post__grp2 comments-post__grp2-1">
-            This is art. This is inexplicable magic expressed in the purest way,
-            everything that makes up this majestic work deserves reverence. Let
-            us appreciate this for what it is and what it contains.
-          </p>
-        </div>
-        <div class="comment-post__box comment-post__second">
-          <div class="comments-post__box-img"></div>
-          <div class="comments-post__grp1">
-            <label class="comments-post__grp1-name">Emilie Beach</label>
-            <div class="comments-post__grp1-date">01/09/2021</div>
-          </div>
-          <p class="comments-post__grp2">
-            I feel blessed to have seen them in person. What a show! They were
-            just perfection. If there was one day of my life I could relive,
-            this would be it. What an incredible day.
-          </p>
-        </div>
-
-        <div class="comment-post__box comment-post__third">
-          <div class="comments-post__box-img"></div>
-          <div class="comments-post__grp1">
-            <label class="comments-post__grp1-name">Miles Acosta</label>
-            <div class="comments-post__grp1-date">12/20/2020</div>
-          </div>
-          <p class="comments-post__grp2">
-            I can't stop listening. Every time I hear one of their songs - the
-            vocals - it gives me goosebumps. Shivers straight down my spine.
-            What a beautiful expression of creativity. Can't get enough.
-          </p>
-        </div> -->
-      </div>
+      <div class="comment-post" id="default-comments"></div>
     </section>
 
     <!-- FOOTER SECTION -->
@@ -271,6 +232,5 @@
         <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
       </div>
     </footer>
-    <script src="./scripts/index-page.js"></script>
   </body>
 </html>

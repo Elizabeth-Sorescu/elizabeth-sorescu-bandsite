@@ -1,40 +1,3 @@
-// let show1 = {
-//   date: "Mon Sept 06 2021",
-//   venue: "Ronald Lane",
-//   location: "San Francisco, CA",
-// };
-// let show2 = {
-//   date: "Tue Sept 21 2021",
-//   venue: "Pier 3 East",
-//   location: "San Francisco, CA",
-// };
-// let show3 = {
-//   date: "Fri Oct 15 2021",
-//   venue: "View Lounge",
-//   location: "San Francisco, CA",
-// };
-// let show4 = {
-//   date: "Sat Nov 06 2021",
-//   venue: "Hyatt Agency",
-//   location: "San Francisco, CA",
-// };
-// let show5 = {
-//   date: "Fri Nov 26 2021",
-//   venue: "Moscow Center",
-//   location: "San Francisco, CA",
-// };
-// let show6 = {
-//   date: "Wed Dec 15 2021",
-//   venue: "Press Club",
-//   location: "San Francisco, CA",
-// };
-// let arrayShows = [];
-// arrayShows.push(show1);
-// arrayShows.push(show2);
-// arrayShows.push(show3);
-// arrayShows.push(show4);
-// arrayShows.push(show5);
-// arrayShows.push(show6);
 let arrayShows = [
   {
     date: "Mon Sept 06 2021",
@@ -93,7 +56,7 @@ heading.classList.add("shows__heading");
 commentsContainer.appendChild(heading);
 heading.innerText = "Shows";
 
-let divGroup = document.createElement("div");
+let divGroup = document.createElement("ul");
 divGroup.classList.add("shows__group");
 commentsContainer.appendChild(divGroup);
 
@@ -119,7 +82,7 @@ locationLabel.innerText = "LOCATION";
 
 // Event Function
 function generateDiv(show, divGroup) {
-  let divSubGroup = document.createElement("div");
+  let divSubGroup = document.createElement("li");
   divSubGroup.classList.add("show");
   divGroup.appendChild(divSubGroup);
 
@@ -179,27 +142,44 @@ for (let show of arrayShows) {
   generateDiv(show, divGroup);
 }
 
-// Click Event Handler
-
+// This is the click event handler and highlights function when mouse is hovered on each show:
+let arrayObjects = [];
+let allNonClicked = true;
 for (let i = 0; i < arrayShows.length; i++) {
   let divElements = document.getElementsByClassName("show");
   let divElement = divElements[i];
+  divElement.id = i;
+  arrayObjects.push({ divElementId: divElement.id, divClicked: false });
 
   divElement.addEventListener("click", function () {
-    divElement.setAttribute("style", "background-color:#e1e1e1");
-    clearHighlights(i);
+    arrayObjects.find((obj) => {
+      return obj.divElementId === this.id;
+    }).divClicked = true;
+    this.setAttribute("style", "background-color:#e1e1e1");
+    clearHighlights(Number(divElement.id));
   });
-  let isHovered = false;
+
   divElement.addEventListener("mouseover", function () {
-    isHovered = true;
-    if (divElement.hasAttribute("style", "background:none")) {
-      divElement.setAttribute("style", "background:#FFFF00");
+    if (
+      arrayObjects.find((obj) => {
+        return obj.divElementId === this.id;
+      }).divClicked
+    ) {
+      return;
     }
-    clearHighlights(i);
+
+    if (divElement.hasAttribute("style", "background:none")) {
+      this.setAttribute("style", "background:#FAFAFA");
+    }
   });
-  divElement.addEventListener("mouseout", function () {
-    if (!isClicked) {
-      divElement.removeAttribute("style");
+
+  divElement.addEventListener("mouseleave", function () {
+    if (
+      arrayObjects.find((obj) => {
+        return obj.divElementId === this.id;
+      }).divClicked === false
+    ) {
+      this.setAttribute("style", "background-color:none");
     }
   });
 }
@@ -208,47 +188,10 @@ function clearHighlights(index) {
   for (let i = 0; i <= arrayShows.length; i++) {
     let divElement = document.getElementsByClassName("show")[i];
     if (index !== i) {
+      arrayObjects.find((obj) => {
+        return obj.divElementId === divElement.id;
+      }).divClicked = false;
       divElement.setAttribute("style", "background-color:none");
     }
   }
 }
-
-// Another Solution 2:
-// for (let i = 0; i < arrayShows.length; i++) {
-//   let divElements = document.getElementsByClassName("show");
-//   let divElement = divElements[i];
-
-//   const test = document.getElementById("test");
-
-//   // This handler will be executed only once when the cursor
-//   // moves over the unordered list
-//   divElement.addEventListener(
-//     "mouseenter",
-//     (event) => {
-//       // highlight the mouseenter target
-//       event.target.style.background = "purple";
-
-//       // reset the color after a short delay
-//       setTimeout(() => {
-//         event.target.style.background = "";
-//       }, 500);
-//     },
-//     false
-//   );
-
-//   // This handler will be executed every time the cursor
-//   // is moved over a different list item
-//   divElement.addEventListener(
-//     "mouseover",
-//     (event) => {
-//       // highlight the mouseover target
-//       event.target.style.background = "orange";
-
-//       // reset the color after a short delay
-//       setTimeout(() => {
-//         event.target.style.background = "";
-//       }, 500);
-//     },
-//     false
-//   );
-// }
