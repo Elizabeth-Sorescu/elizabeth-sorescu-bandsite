@@ -60,7 +60,7 @@ let divGroup = document.createElement("ul");
 divGroup.classList.add("shows__group");
 commentsContainer.appendChild(divGroup);
 
-// Group of Labels for Large screens
+// This generates a group of labels for large screens
 let grpLabels = document.createElement("div");
 grpLabels.classList.add("shows-group__labels");
 divGroup.appendChild(grpLabels);
@@ -80,7 +80,7 @@ locationLabel.classList.add("shows-group__label");
 grpLabels.appendChild(locationLabel);
 locationLabel.innerText = "LOCATION";
 
-// Event Function
+// This function generates dynamic html on creating each show:
 function generateDiv(show, divGroup) {
   let divSubGroup = document.createElement("li");
   divSubGroup.classList.add("show");

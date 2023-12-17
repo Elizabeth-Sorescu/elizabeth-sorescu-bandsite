@@ -1,0 +1,91 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+// UPDATED HERO SECTION FOR SHOWS PAGE
+.hero-img {
+  background-image: url(../assets/images/hero-shows.jpg);
+  position: relative;
+  height: 26rem;
+  @include tablet-sprint2 {
+    height: 47rem;
+  }
+  @include desktop-sprint2 {
+    height: 60rem;
+  }
+
+  &__song-album {
+    color: $primary-three-color;
+    z-index: 3;
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: 600;
+    top: 3.188rem;
+    left: 1.563rem;
+    @include tablet-sprint2 {
+      font-size: 2.3rem;
+      top: 6.25rem;
+      left: 3.25rem;
+    }
+    @include desktop-sprint2 {
+      font-size: 2.3rem;
+      top: 20.063rem;
+      left: 6.375rem;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    left: 1.3rem;
+    top: 7.375rem;
+    width: 20rem;
+    @include tablet-sprint2 {
+      font-size: 5.3rem;
+      line-height: 6.5rem;
+      top: 10.625rem;
+      left: 3rem;
+      width: 50rem;
+    }
+    @include desktop-sprint2 {
+      font-size: 5.5rem;
+      line-height: 6.5rem;
+      top: 24.813rem;
+      left: 6.063rem;
+      width: 46rem;
+    }
+  }
+
+  &__media {
+    position: absolute;
+    left: 1.438rem;
+    top: 14.813rem;
+    height: 9rem;
+    width: 90%;
+    border-radius: 0.5rem;
+
+    @include tabletS {
+      left: 3rem;
+      top: 27.875rem;
+      height: 13.5rem;
+      width: 90%;
+    }
+    @include tablet {
+      left: 3.75rem;
+      top: 28.125rem;
+      height: 13rem;
+      width: 45%;
+    }
+    @include desktop {
+      left: 50.813rem;
+      top: 24.625rem;
+      height: 13rem;
+      width: 29%;
+    }
+    @include desktopL {
+      left: 67.188rem;
+      top: 24.063rem;
+      height: 13rem;
+      width: 33%;
+    }
+  }
+}
