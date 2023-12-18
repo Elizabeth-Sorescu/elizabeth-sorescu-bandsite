@@ -327,19 +327,18 @@
     }
 
     &--date {
-      width: 12.5rem;
+      width: 10.5rem;
       color: $secondary-two-color;
-      justify-content: right;
+
       @include mobileXS {
         font-size: 0.8rem;
-        width: 6rem;
+        width: 5rem;
       }
       @include tablet-sprint2 {
-        width: 9.5rem;
-        margin-left: auto;
+        width: 7.5rem;
       }
       @include desktop-sprint2 {
-        width: 9.5rem;
+        width: 7.5rem;
       }
     }
   }
