@@ -1,3 +1,4 @@
+// JS for comment section
 let userName = document.querySelector("#name");
 let userComment = document.querySelector("#comment");
 const date = new Date();
