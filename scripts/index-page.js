@@ -5,7 +5,7 @@ let mainCommentContainer = document.querySelector(".comment-post");
 
 const defaultComment1 = {
   userName: "Miles Acosta",
-  timeStamp: "12/20/2020",
+  timeStamp: timeSince(new Date("12/20/2020")),
   userComment:
     "I can't stop listening. Every time I hear one of their songs - the " +
     "vocals - it gives me goosebumps. Shivers straight down my spine. " +
@@ -14,7 +14,7 @@ const defaultComment1 = {
 
 const defaultComment2 = {
   userName: "Emilie Beach",
-  timeStamp: "01/09/2021",
+  timeStamp: timeSince(new Date("1/9/2021")),
   userComment:
     "I feel blessed to have seen them in person. What a show! They were " +
     "just perfection. If there was one day of my life I could relive, " +
@@ -23,7 +23,7 @@ const defaultComment2 = {
 
 const defaultComment3 = {
   userName: "Connor Walton",
-  timeStamp: "12/17/2021",
+  timeStamp: timeSince(new Date("12/17/2021")),
   userComment:
     "This is art. This is inexplicable magic expressed in the purest way, " +
     " everything that makes up this majestic work deserves reverence. Let " +
@@ -72,10 +72,39 @@ function clearBox(elementID) {
   document.getElementById(elementID).innerHTML = "";
 }
 
+// Time utility formatter for dates
+
+function timeSince(date) {
+  var seconds = Math.floor((new Date() - date) / 1000);
+
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " years ago";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months ago";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days ago";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hours ago";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " minutes ago";
+  }
+  return Math.floor(seconds) + " seconds ago";
+}
+
 commentButton.addEventListener("click", function (e) {
   e.preventDefault();
   let nameInput = userName.value;
-  let commentDated = date.toLocaleDateString("en-US");
+  let commentDated = timeSince(new Date(date.toLocaleString("en-us")));
   let commentInput = userComment.value;
 
   if (nameInput === "" || commentInput === "") {
