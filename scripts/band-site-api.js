@@ -5,40 +5,40 @@ class BandSiteApi {
     this.apiKey = apiKey;
     this.baseURL = "https://project-1-api.herokuapp.com/";
   }
-  postComment(comment) {
-    postCommentAsync(this.baseURL, this.apiKey, comment);
+  async postComment(comment) {
+    return createNewComment(this.baseURL, this.apiKey, comment);
   }
 
-  getComments() {
-    getCommentsAsync(this.baseURL, this.apiKey);
+  async getComments() {
+    return fetchComments(this.baseURL, this.apiKey);
   }
 }
 
-const postCommentAsync = async (url, apiKey, comment) => {
+const createNewComment = async (url, apiKey, comment) => {
+  let response = null;
   try {
-    const response = await axios.post(url + "?api_key=" + apiKey, comment);
-
-    console.log(response.data);
+    response = await axios.post(url + "comments?api_key=" + apiKey, comment);
   } catch (error) {
     console.log("this is postComments error: " + error);
   }
+  return response.data;
 };
 
-const getCommentsAsync = async (url, apiKey) => {
+const fetchComments = async (url, apiKey) => {
   let sortedComments = null;
   try {
-    const response = await axios.get(url + "?api_key=" + apiKey);
-    const comments = response.data.data;
+    const response = await axios.get(url + "comments?api_key=" + apiKey);
+
+    const comments = response.data;
     sortedComments = comments.sort((elem1, elem2) => {
-      return elem1.date - elem2.date;
+      return elem2.timestamp - elem1.timestamp;
     });
+    for (let comment of sortedComments) {
+      generateComment(comment, mainCommentContainer);
+    }
   } catch (error) {
-    // console.log("this is getComments error: " + error);
+    console.log("this is getComments error: " + error);
   }
   return sortedComments;
 };
-
 let bandSiteApi = new BandSiteApi(apiKey);
-// let comments = bandSiteApi.getComments(); //this is causing the error
-// console.table(comments);
-// bandSiteApi.postComment(comment);

@@ -4,39 +4,42 @@ let userComment = document.querySelector("#comment");
 const date = new Date();
 let mainCommentContainer = document.querySelector(".comment-post");
 
-const defaultComment1 = {
-  userName: "Miles Acosta",
-  timeStamp: "12/20/2020",
-  userComment:
-    "I can't stop listening. Every time I hear one of their songs - the " +
-    "vocals - it gives me goosebumps. Shivers straight down my spine. " +
-    " What a beautiful expression of creativity. Can't get enough.",
-};
+// const defaultComment1 = {
+//   userName: "Miles Acosta",
+//   timeStamp: "12/20/2020",
+//   userComment:
+//     "I can't stop listening. Every time I hear one of their songs - the " +
+//     "vocals - it gives me goosebumps. Shivers straight down my spine. " +
+//     " What a beautiful expression of creativity. Can't get enough.",
+// };
 
-const defaultComment2 = {
-  userName: "Emilie Beach",
-  timeStamp: "01/09/2021",
-  userComment:
-    "I feel blessed to have seen them in person. What a show! They were " +
-    "just perfection. If there was one day of my life I could relive, " +
-    " this would be it. What an incredible day.",
-};
+// const defaultComment2 = {
+//   userName: "Emilie Beach",
+//   timeStamp: "01/09/2021",
+//   userComment:
+//     "I feel blessed to have seen them in person. What a show! They were " +
+//     "just perfection. If there was one day of my life I could relive, " +
+//     " this would be it. What an incredible day.",
+// };
 
-const defaultComment3 = {
-  userName: "Connor Walton",
-  timeStamp: "12/17/2021",
-  userComment:
-    "This is art. This is inexplicable magic expressed in the purest way, " +
-    " everything that makes up this majestic work deserves reverence. Let " +
-    "  us appreciate this for what it is and what it contains.",
-};
+// const defaultComment3 = {
+//   userName: "Connor Walton",
+//   timeStamp: "12/17/2021",
+//   userComment:
+//     "This is art. This is inexplicable magic expressed in the purest way, " +
+//     " everything that makes up this majestic work deserves reverence. Let " +
+//     "  us appreciate this for what it is and what it contains.",
+// };
 
-let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
+// let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
 
-for (let comment of arrayComments) {
-  generateComment(comment, mainCommentContainer);
-}
-
+// for (let comment of arrayComments) {
+//   generateComment(comment, mainCommentContainer);
+// }
+let arrayComments = null;
+arrayComments = bandSiteApi.getComments().then((result) => {
+  arrayComments = result;
+});
 // This is a function that generates a container of each grouo of comments:
 function generateComment(comment, mainCommentContainer) {
   let commentPostBox = document.createElement("div");
@@ -54,17 +57,19 @@ function generateComment(comment, mainCommentContainer) {
   let commentPostGrp1Name = document.createElement("label");
   commentPostGrp1Name.classList.add("comments-post__grp1--name");
   commentPostGrp1.appendChild(commentPostGrp1Name);
-  commentPostGrp1Name.innerText = comment.userName;
+  commentPostGrp1Name.innerText = comment.name;
 
   let commentPostGrp1Date = document.createElement("div");
   commentPostGrp1Date.classList.add("comments-post__grp1--date");
   commentPostGrp1.appendChild(commentPostGrp1Date);
-  commentPostGrp1Date.innerText = comment.timeStamp;
+  commentPostGrp1Date.innerText = new Date(
+    comment.timestamp
+  ).toLocaleDateString("en-US");
 
   let commentPostGrp2 = document.createElement("p");
   commentPostGrp2.classList.add("comments-post__grp2");
   commentPostBox.appendChild(commentPostGrp2);
-  commentPostGrp2.innerText = comment.userComment;
+  commentPostGrp2.innerText = comment.comment;
 }
 
 // This is an event handler of button when invoked:
@@ -102,11 +107,17 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 
-commentButton.addEventListener("click", function (e) {
+commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
-  let nameInput = userName.value;
+  let comment = {
+    name: userName.value,
+    comment: userComment.value,
+  };
+
+  let result = await bandSiteApi.postComment(comment);
+  let nameInput = result.name; //userName.value;
   let commentDated = date.toLocaleDateString("en-US");
-  let commentInput = userComment.value;
+  let commentInput = result.comment; //userComment.value;
 
   if (nameInput === "" || commentInput === "") {
     if (nameInput === "") {
@@ -121,14 +132,15 @@ commentButton.addEventListener("click", function (e) {
     }
   } else {
     const comment = {
-      userName: nameInput,
-      timeStamp: commentDated,
-      userComment: commentInput,
+      name: nameInput,
+      timestamp: commentDated,
+      comment: commentInput,
     };
     userName.value = "";
     userComment.value = "";
     userComment.setAttribute("style", "border-color:$secondary-two-color");
     userName.setAttribute("style", "border-color:$secondary-two-color");
+
     arrayComments.unshift(comment);
 
     clearBox("default-comments");
