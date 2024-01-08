@@ -3,7 +3,8 @@ let userName = document.querySelector("#name");
 let userComment = document.querySelector("#comment");
 const date = new Date();
 let mainCommentContainer = document.querySelector(".comment-post");
-
+let nameLabel = document.querySelector(".name-req");
+let commentLabel = document.querySelector(".comment-req");
 // const defaultComment1 = {
 //   userName: "Miles Acosta",
 //   timeStamp: "12/20/2020",
@@ -36,10 +37,13 @@ let mainCommentContainer = document.querySelector(".comment-post");
 // for (let comment of arrayComments) {
 //   generateComment(comment, mainCommentContainer);
 // }
+
 let arrayComments = null;
+
 arrayComments = bandSiteApi.getComments().then((result) => {
   arrayComments = result;
 });
+
 // This is a function that generates a container of each grouo of comments:
 function generateComment(comment, mainCommentContainer) {
   let commentPostBox = document.createElement("div");
@@ -79,7 +83,6 @@ function clearBox(elementID) {
 }
 
 // Time utility formatter for dates
-
 function timeSince(date) {
   var seconds = Math.floor((new Date() - date) / 1000);
 
@@ -107,25 +110,29 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 
+// This is the Button EventListener
 commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
+  debugger;
   let comment = {
     name: userName.value,
     comment: userComment.value,
   };
 
   let result = await bandSiteApi.postComment(comment);
-  let nameInput = result.name; //userName.value;
+  let nameInput = result.name;
   let commentDated = date.toLocaleDateString("en-US");
-  let commentInput = result.comment; //userComment.value;
+  let commentInput = result.comment;
 
   if (nameInput === "" || commentInput === "") {
     if (nameInput === "") {
       userName.setAttribute("style", "border-color:#D22D2D");
+      nameLabel.innerText = "Name is required";
     } else {
       userName.setAttribute("style", "border-color:$secondary-two-color");
     }
     if (commentInput === "") {
+      commentLabel.innerText = "Comment is required";
       userComment.setAttribute("style", "border-color:#D22D2D");
     } else {
       userComment.setAttribute("style", "border-color:$secondary-two-color");
@@ -137,7 +144,9 @@ commentButton.addEventListener("click", async function (e) {
       comment: commentInput,
     };
     userName.value = "";
+    nameLabel.innerText = "";
     userComment.value = "";
+    commentLabel.innerText = "";
     userComment.setAttribute("style", "border-color:$secondary-two-color");
     userName.setAttribute("style", "border-color:$secondary-two-color");
 

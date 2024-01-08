@@ -1,35 +1,35 @@
-let arrayShows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+// let arrayShows = [
+//   {
+//     date: "Mon Sept 06 2021",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Tue Sept 21 2021",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Oct 15 2021",
+//     venue: "View Lounge",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Sat Nov 06 2021",
+//     venue: "Hyatt Agency",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Nov 26 2021",
+//     venue: "Moscow Center",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Wed Dec 15 2021",
+//     venue: "Press Club",
+//     location: "San Francisco, CA",
+//   },
+// ];
 
 let ref = document.getElementById("bnd-footer");
 let newElem = ref.insertAdjacentHTML(
@@ -97,7 +97,8 @@ function generateDiv(show, divGroup) {
   labelDateText.classList.add("show__main-value");
   labelDateText.classList.add("show__date-value");
   divSubGroup.appendChild(labelDateText);
-  labelDateText.innerText = show.date;
+  // labelDateText.innerText = show.date;
+  labelDateText.innerText = new Date(show.date).toLocaleDateString("en-US");
 
   // VENUE
   let labelVenueCaption = document.createElement("label");
@@ -110,7 +111,8 @@ function generateDiv(show, divGroup) {
   labelVenueText.classList.add("show__main-value");
   labelVenueText.classList.add("venue-value");
   divSubGroup.appendChild(labelVenueText);
-  labelVenueText.innerText = show.venue;
+  // labelVenueText.innerText = show.venue;
+  labelVenueText.innerText = show.place;
 
   // LOCATION
   let labelLocationCaption = document.createElement("label");
@@ -138,10 +140,15 @@ function generateDiv(show, divGroup) {
   button.innerText = "buy tickets";
 }
 
-for (let show of arrayShows) {
-  generateDiv(show, divGroup);
-}
-
+// for (let show of arrayShows) {
+//   generateDiv(show, divGroup);
+// }
+// Added----------------------------------------------
+let arrayShows = null;
+arrayShows = bandSiteApi.getShows().then((result) => {
+  arrayShows = result;
+});
+// ---------------------------------------------------
 // This is the click event handler and highlights function when mouse is hovered on each show:
 let arrayObjects = [];
 let allNonClicked = true;

@@ -232,6 +232,12 @@
   }
 }
 
+.alert-msg {
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  color: $error-state-color;
+}
+
 #comment-btn {
   width: 88%;
   height: 3.5rem;
