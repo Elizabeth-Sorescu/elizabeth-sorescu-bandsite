@@ -46,16 +46,14 @@ const fetchComments = async (url, apiKey) => {
 };
 
 const fetchShows = async (url, apiKey) => {
-  // debugger;
+  let shows = null;
   try {
     const response = await axios.get(url + "showdates?api_key=" + apiKey);
-    const shows = response.data;
-    for (let show of shows) {
-      generateDiv(show, divGroup);
-    }
+    shows = response.data;
   } catch (error) {
     console.log("The get shows has the error: " + error);
   }
+  return shows;
 };
 
 let bandSiteApi = new BandSiteApi(apiKey);

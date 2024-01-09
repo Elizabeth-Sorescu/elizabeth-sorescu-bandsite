@@ -39,7 +39,6 @@ const commentLabel = document.querySelector(".comment-req");
 // }
 
 let userComments = null;
-
 userComments = bandSiteApi.getComments().then((result) => {
   userComments = result;
 });

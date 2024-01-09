@@ -1,4 +1,4 @@
-// let arrayShows = [
+// let shows = [
 //   {
 //     date: "Mon Sept 06 2021",
 //     venue: "Ronald Lane",
@@ -30,7 +30,7 @@
 //     location: "San Francisco, CA",
 //   },
 // ];
-
+// console.table(arrayShows);
 // let ref = document.getElementById("bnd-footer");
 // let newElem = ref.insertAdjacentHTML(
 //   "beforebegin",
@@ -83,10 +83,11 @@ let divGroup = document.querySelector(".shows__group");
 // locationLabel.innerText = "LOCATION";
 
 // This function generates dynamic html on creating each show:
-function generateDiv(show, divGroup) {
+function generateDiv(show, showRow) {
+  debugger;
   let divSubGroup = document.createElement("li");
   divSubGroup.classList.add("show");
-  divGroup.appendChild(divSubGroup);
+  showRow.appendChild(divSubGroup);
 
   // DATE
   let labelDateCaption = document.createElement("label");
@@ -141,65 +142,62 @@ function generateDiv(show, divGroup) {
   button.innerText = "buy tickets";
 }
 
-// for (let show of arrayShows) {
-//   generateDiv(show, divGroup);
-// }
-// Added----------------------------------------------
-let shows = null;
-shows = bandSiteApi.getShows().then((result) => {
-  shows = result;
-});
-// ---------------------------------------------------
 // This is the click event handler and highlights function when mouse is hovered on each show:
-let arrayObjects = [];
-let allNonClicked = true;
-for (let i = 0; i < shows.length; i++) {
-  let divElements = document.getElementsByClassName("show");
-  let divElement = divElements[i];
-  divElement.id = i;
-  arrayObjects.push({ divElementId: divElement.id, divClicked: false });
+bandSiteApi.getShows().then((result) => {
+  const shows = result;
+  for (let show of shows) {
+    generateDiv(show, divGroup);
+  }
 
-  divElement.addEventListener("click", function () {
-    arrayObjects.find((obj) => {
-      return obj.divElementId === this.id;
-    }).divClicked = true;
-    this.setAttribute("style", "background-color:#e1e1e1");
-    clearHighlights(Number(divElement.id));
-  });
+  let items = [];
+  for (let i = 0; i < shows.length; i++) {
+    let divElements = document.getElementsByClassName("show");
+    let divElement = divElements[i];
+    divElement.id = i;
+    items.push({ divElementId: divElement.id, divClicked: false });
 
-  divElement.addEventListener("mouseover", function () {
-    if (
-      arrayObjects.find((obj) => {
+    divElement.addEventListener("click", function () {
+      items.find((obj) => {
         return obj.divElementId === this.id;
-      }).divClicked
-    ) {
-      return;
-    }
+      }).divClicked = true;
+      this.setAttribute("style", "background-color:yellow"); //#e1e1e1
+      clearHighlights(Number(divElement.id));
+    });
 
-    if (divElement.hasAttribute("style", "background:none")) {
-      this.setAttribute("style", "background:#FAFAFA");
-    }
-  });
+    divElement.addEventListener("mouseover", function () {
+      if (
+        items.find((obj) => {
+          return obj.divElementId === this.id;
+        }).divClicked
+      ) {
+        return;
+      }
 
-  divElement.addEventListener("mouseleave", function () {
-    if (
-      arrayObjects.find((obj) => {
-        return obj.divElementId === this.id;
-      }).divClicked === false
-    ) {
-      this.setAttribute("style", "background-color:none");
-    }
-  });
-}
+      if (divElement.hasAttribute("style", "background:none")) {
+        this.setAttribute("style", "background:pink"); //#FAFAFA
+      }
+    });
 
-function clearHighlights(index) {
-  for (let i = 0; i <= shows.length; i++) {
-    let divElement = document.getElementsByClassName("show")[i];
-    if (index !== i) {
-      arrayObjects.find((obj) => {
-        return obj.divElementId === divElement.id;
-      }).divClicked = false;
-      divElement.setAttribute("style", "background-color:none");
+    divElement.addEventListener("mouseleave", function () {
+      if (
+        items.find((obj) => {
+          return obj.divElementId === this.id;
+        }).divClicked === false
+      ) {
+        this.setAttribute("style", "background-color:none");
+      }
+    });
+  }
+
+  function clearHighlights(index) {
+    for (let i = 0; i <= shows.length; i++) {
+      let divElement = document.getElementsByClassName("show")[i];
+      if (index !== i) {
+        items.find((obj) => {
+          return obj.divElementId === divElement.id;
+        }).divClicked = false;
+        divElement.setAttribute("style", "background-color:none");
+      }
     }
   }
-}
+});
