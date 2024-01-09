@@ -32,16 +32,16 @@ let commentLabel = document.querySelector(".comment-req");
 //     "  us appreciate this for what it is and what it contains.",
 // };
 
-// let arrayComments = [defaultComment1, defaultComment2, defaultComment3];
+// let userComments = [defaultComment1, defaultComment2, defaultComment3];
 
-// for (let comment of arrayComments) {
+// for (let comment of userComments) {
 //   generateComment(comment, mainCommentContainer);
 // }
 
-let arrayComments = null;
+let userComments = null;
 
-arrayComments = bandSiteApi.getComments().then((result) => {
-  arrayComments = result;
+userComments = bandSiteApi.getComments().then((result) => {
+  userComments = result;
 });
 
 // This is a function that generates a container of each grouo of comments:
@@ -150,10 +150,10 @@ commentButton.addEventListener("click", async function (e) {
     userComment.setAttribute("style", "border-color:$secondary-two-color");
     userName.setAttribute("style", "border-color:$secondary-two-color");
 
-    arrayComments.unshift(comment);
+    userComments.unshift(comment);
 
     clearBox("default-comments");
-    for (let comment of arrayComments) {
+    for (let comment of userComments) {
       generateComment(comment, mainCommentContainer);
     }
   }
