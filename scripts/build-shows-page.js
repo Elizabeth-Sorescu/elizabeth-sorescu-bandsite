@@ -31,18 +31,19 @@
 //   },
 // ];
 
-let ref = document.getElementById("bnd-footer");
-let newElem = ref.insertAdjacentHTML(
-  "beforebegin",
-  "<section class=shows></section>"
-);
-ref.insertAdjacentHTML("beforebegin", "<!-- FOOTER SECTION -->");
+// let ref = document.getElementById("bnd-footer");
+// let newElem = ref.insertAdjacentHTML(
+//   "beforebegin",
+//   "<section class=shows></section>"
+// );
+// ref.insertAdjacentHTML("beforebegin", "<!-- FOOTER SECTION -->");
 
 let commentsContainer = document.querySelector(".shows");
-commentsContainer.insertAdjacentHTML(
-  "beforebegin",
-  "<!-- COMMENTS SECTION -->"
-);
+// let commentsContainer = document.querySelector(".shows");
+// commentsContainer.insertAdjacentHTML(
+//   "beforebegin",
+//   "<!-- COMMENTS SECTION -->"
+// );
 
 let heroBackgroundImg = document.querySelector(".hero-img");
 
@@ -51,34 +52,35 @@ songAlbum.classList.add("hero-img__song-album");
 heroBackgroundImg.appendChild(songAlbum);
 songAlbum.innerText = "Moonlight Soul Album";
 
-let heading = document.createElement("h2");
-heading.classList.add("shows__heading");
-commentsContainer.appendChild(heading);
-heading.innerText = "Shows";
+// let heading = document.createElement("h2");
+// heading.classList.add("shows__heading");
+// commentsContainer.appendChild(heading);
+// heading.innerText = "Shows";
 
-let divGroup = document.createElement("ul");
-divGroup.classList.add("shows__group");
-commentsContainer.appendChild(divGroup);
+let divGroup = document.querySelector(".shows__group");
+// let divGroup = document.createElement("ul");
+// divGroup.classList.add("shows__group");
+// commentsContainer.appendChild(divGroup);
 
 // This generates a group of labels for large screens
-let grpLabels = document.createElement("div");
-grpLabels.classList.add("shows-group__labels");
-divGroup.appendChild(grpLabels);
+// let grpLabels = document.createElement("div");
+// grpLabels.classList.add("shows-group__labels");
+// divGroup.appendChild(grpLabels);
 
-let dateLabel = document.createElement("label");
-dateLabel.classList.add("shows-group__label");
-grpLabels.appendChild(dateLabel);
-dateLabel.innerText = "DATE";
+// let dateLabel = document.createElement("label");
+// dateLabel.classList.add("shows-group__label");
+// grpLabels.appendChild(dateLabel);
+// dateLabel.innerText = "DATE";
 
-let venueLabel = document.createElement("label");
-venueLabel.classList.add("shows-group__label");
-grpLabels.appendChild(venueLabel);
-venueLabel.innerText = "VENUE";
+// let venueLabel = document.createElement("label");
+// venueLabel.classList.add("shows-group__label");
+// grpLabels.appendChild(venueLabel);
+// venueLabel.innerText = "VENUE";
 
-let locationLabel = document.createElement("label");
-locationLabel.classList.add("shows-group__label");
-grpLabels.appendChild(locationLabel);
-locationLabel.innerText = "LOCATION";
+// let locationLabel = document.createElement("label");
+// locationLabel.classList.add("shows-group__label");
+// grpLabels.appendChild(locationLabel);
+// locationLabel.innerText = "LOCATION";
 
 // This function generates dynamic html on creating each show:
 function generateDiv(show, divGroup) {
@@ -109,9 +111,8 @@ function generateDiv(show, divGroup) {
 
   let labelVenueText = document.createElement("label");
   labelVenueText.classList.add("show__main-value");
-  labelVenueText.classList.add("venue-value");
+  // labelVenueText.classList.add("show__venue-value");
   divSubGroup.appendChild(labelVenueText);
-  // labelVenueText.innerText = show.venue;
   labelVenueText.innerText = show.place;
 
   // LOCATION
@@ -123,7 +124,7 @@ function generateDiv(show, divGroup) {
 
   let labelLocationText = document.createElement("label");
   labelLocationText.classList.add("show__main-value");
-  labelLocationText.classList.add("location-value");
+  // labelLocationText.classList.add("show__location-value");
   divSubGroup.appendChild(labelLocationText);
   labelLocationText.innerText = show.location;
 

@@ -43,7 +43,7 @@
   @include desktop-sprint2 {
     @include show-largescrns;
   }
-
+  // SMALL SCREENS
   &__main-label {
     padding-top: 0.7rem;
     color: $primary-two-color;
@@ -92,7 +92,7 @@
     font-size: 0.9rem;
   }
 }
-
+// STYLE FOR LARGE SCREENS -div
 .shows-group__labels {
   flex-wrap: wrap;
   margin: 0rem 1rem 0rem 1.5rem;
@@ -106,7 +106,7 @@
     display: flex;
   }
 }
-
+// STYLE FOR LARGE SCREENS -label
 .shows-group__label {
   @include tablet-sprint2 {
     width: 26.5%;
