@@ -1,10 +1,10 @@
 // JS for comment section
-let userName = document.querySelector("#name");
-let userComment = document.querySelector("#comment");
+const userName = document.querySelector("#name");
+const userComment = document.querySelector("#comment");
 const date = new Date();
-let mainCommentContainer = document.querySelector(".comment-post");
-let nameLabel = document.querySelector(".name-req");
-let commentLabel = document.querySelector(".comment-req");
+const mainCommentContainer = document.querySelector(".comment-post");
+const nameLabel = document.querySelector(".name-req");
+const commentLabel = document.querySelector(".comment-req");
 // const defaultComment1 = {
 //   userName: "Miles Acosta",
 //   timeStamp: "12/20/2020",
