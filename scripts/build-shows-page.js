@@ -144,15 +144,15 @@ function generateDiv(show, divGroup) {
 //   generateDiv(show, divGroup);
 // }
 // Added----------------------------------------------
-let arrayShows = null;
-arrayShows = bandSiteApi.getShows().then((result) => {
-  arrayShows = result;
+let shows = null;
+shows = bandSiteApi.getShows().then((result) => {
+  shows = result;
 });
 // ---------------------------------------------------
 // This is the click event handler and highlights function when mouse is hovered on each show:
 let arrayObjects = [];
 let allNonClicked = true;
-for (let i = 0; i < arrayShows.length; i++) {
+for (let i = 0; i < shows.length; i++) {
   let divElements = document.getElementsByClassName("show");
   let divElement = divElements[i];
   divElement.id = i;
@@ -192,7 +192,7 @@ for (let i = 0; i < arrayShows.length; i++) {
 }
 
 function clearHighlights(index) {
-  for (let i = 0; i <= arrayShows.length; i++) {
+  for (let i = 0; i <= shows.length; i++) {
     let divElement = document.getElementsByClassName("show")[i];
     if (index !== i) {
       arrayObjects.find((obj) => {
