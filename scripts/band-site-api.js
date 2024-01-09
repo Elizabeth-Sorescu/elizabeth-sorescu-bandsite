@@ -46,7 +46,7 @@ const fetchComments = async (url, apiKey) => {
 };
 
 const fetchShows = async (url, apiKey) => {
-  debugger;
+  // debugger;
   try {
     const response = await axios.get(url + "showdates?api_key=" + apiKey);
     const shows = response.data;

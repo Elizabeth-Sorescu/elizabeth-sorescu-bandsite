@@ -113,7 +113,7 @@ function timeSince(date) {
 // This is the Button EventListener
 commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
-  debugger;
+  // debugger;
   let comment = {
     name: userName.value,
     comment: userComment.value,
