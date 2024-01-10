@@ -82,37 +82,36 @@ function clearBox(elementID) {
 }
 
 // Time utility formatter for dates
-function timeSince(date) {
-  var seconds = Math.floor((new Date() - date) / 1000);
+// function timeSince(date) {
+//   var seconds = Math.floor((new Date() - date) / 1000);
 
-  let interval = seconds / 31536000;
+//   let interval = seconds / 31536000;
 
-  if (interval > 1) {
-    return Math.floor(interval) + " years ago";
-  }
-  interval = seconds / 2592000;
-  if (interval > 1) {
-    return Math.floor(interval) + " months ago";
-  }
-  interval = seconds / 86400;
-  if (interval > 1) {
-    return Math.floor(interval) + " days ago";
-  }
-  interval = seconds / 3600;
-  if (interval > 1) {
-    return Math.floor(interval) + " hours ago";
-  }
-  interval = seconds / 60;
-  if (interval > 1) {
-    return Math.floor(interval) + " minutes ago";
-  }
-  return Math.floor(seconds) + " seconds ago";
-}
+//   if (interval > 1) {
+//     return Math.floor(interval) + " years ago";
+//   }
+//   interval = seconds / 2592000;
+//   if (interval > 1) {
+//     return Math.floor(interval) + " months ago";
+//   }
+//   interval = seconds / 86400;
+//   if (interval > 1) {
+//     return Math.floor(interval) + " days ago";
+//   }
+//   interval = seconds / 3600;
+//   if (interval > 1) {
+//     return Math.floor(interval) + " hours ago";
+//   }
+//   interval = seconds / 60;
+//   if (interval > 1) {
+//     return Math.floor(interval) + " minutes ago";
+//   }
+//   return Math.floor(seconds) + " seconds ago";
+// }
 
 // This is the Button EventListener
 commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
-  // debugger;
   let comment = {
     name: userName.value,
     comment: userComment.value,

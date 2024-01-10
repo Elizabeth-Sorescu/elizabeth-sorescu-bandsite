@@ -83,8 +83,7 @@ let divGroup = document.querySelector(".shows__group");
 // locationLabel.innerText = "LOCATION";
 
 // This function generates dynamic html on creating each show:
-function generateDiv(show, showRow) {
-  debugger;
+function generateShow(show, showRow) {
   let divSubGroup = document.createElement("li");
   divSubGroup.classList.add("show");
   showRow.appendChild(divSubGroup);
@@ -100,8 +99,8 @@ function generateDiv(show, showRow) {
   labelDateText.classList.add("show__main-value");
   labelDateText.classList.add("show__date-value");
   divSubGroup.appendChild(labelDateText);
-  // labelDateText.innerText = show.date;
-  labelDateText.innerText = new Date(show.date).toLocaleDateString("en-US");
+  labelDateText.innerText = new Date(show.date).toDateString();
+  // labelDateText.innerText = new Date(show.date).toLocaleDateString("en-US");
 
   // VENUE
   let labelVenueCaption = document.createElement("label");
@@ -112,7 +111,6 @@ function generateDiv(show, showRow) {
 
   let labelVenueText = document.createElement("label");
   labelVenueText.classList.add("show__main-value");
-  // labelVenueText.classList.add("show__venue-value");
   divSubGroup.appendChild(labelVenueText);
   labelVenueText.innerText = show.place;
 
@@ -125,7 +123,6 @@ function generateDiv(show, showRow) {
 
   let labelLocationText = document.createElement("label");
   labelLocationText.classList.add("show__main-value");
-  // labelLocationText.classList.add("show__location-value");
   divSubGroup.appendChild(labelLocationText);
   labelLocationText.innerText = show.location;
 
@@ -146,7 +143,7 @@ function generateDiv(show, showRow) {
 bandSiteApi.getShows().then((result) => {
   const shows = result;
   for (let show of shows) {
-    generateDiv(show, divGroup);
+    generateShow(show, divGroup);
   }
 
   let items = [];

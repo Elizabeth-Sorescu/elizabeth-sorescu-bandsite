@@ -22,8 +22,8 @@ const createNewComment = async (url, apiKey, comment) => {
   let response = null;
   try {
     response = await axios.post(url + "comments?api_key=" + apiKey, comment);
-  } catch (error) {
-    console.log("The post new comments has the error: " + error);
+  } catch (err) {
+    console.error(err);
   }
   return response.data;
 };
@@ -39,8 +39,8 @@ const fetchComments = async (url, apiKey) => {
     for (let comment of sortedComments) {
       generateComment(comment, mainCommentContainer);
     }
-  } catch (error) {
-    console.log("The get comments has the error: " + error);
+  } catch (err) {
+    console.error(err);
   }
   return sortedComments;
 };
@@ -50,8 +50,8 @@ const fetchShows = async (url, apiKey) => {
   try {
     const response = await axios.get(url + "showdates?api_key=" + apiKey);
     shows = response.data;
-  } catch (error) {
-    console.log("The get shows has the error: " + error);
+  } catch (err) {
+    console.error(err);
   }
   return shows;
 };
