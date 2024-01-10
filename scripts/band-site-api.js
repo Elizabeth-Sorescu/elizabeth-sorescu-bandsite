@@ -4,15 +4,12 @@ class BandSiteApi {
     this.apiKey = apiKey;
     this.baseURL = "https://project-1-api.herokuapp.com/";
   }
-
   async postComment(comment) {
     return createNewComment(this.baseURL, this.apiKey, comment);
   }
-
   async getComments() {
     return fetchComments(this.baseURL, this.apiKey);
   }
-
   async getShows() {
     return fetchShows(this.baseURL, this.apiKey);
   }

@@ -5,38 +5,6 @@ const date = new Date();
 const mainCommentContainer = document.querySelector(".comment-post");
 const nameLabel = document.querySelector(".name-req");
 const commentLabel = document.querySelector(".comment-req");
-// const defaultComment1 = {
-//   userName: "Miles Acosta",
-//   timeStamp: "12/20/2020",
-//   userComment:
-//     "I can't stop listening. Every time I hear one of their songs - the " +
-//     "vocals - it gives me goosebumps. Shivers straight down my spine. " +
-//     " What a beautiful expression of creativity. Can't get enough.",
-// };
-
-// const defaultComment2 = {
-//   userName: "Emilie Beach",
-//   timeStamp: "01/09/2021",
-//   userComment:
-//     "I feel blessed to have seen them in person. What a show! They were " +
-//     "just perfection. If there was one day of my life I could relive, " +
-//     " this would be it. What an incredible day.",
-// };
-
-// const defaultComment3 = {
-//   userName: "Connor Walton",
-//   timeStamp: "12/17/2021",
-//   userComment:
-//     "This is art. This is inexplicable magic expressed in the purest way, " +
-//     " everything that makes up this majestic work deserves reverence. Let " +
-//     "  us appreciate this for what it is and what it contains.",
-// };
-
-// let userComments = [defaultComment1, defaultComment2, defaultComment3];
-
-// for (let comment of userComments) {
-//   generateComment(comment, mainCommentContainer);
-// }
 
 let userComments = null;
 userComments = bandSiteApi.getComments().then((result) => {
@@ -81,34 +49,6 @@ function clearBox(elementID) {
   document.getElementById(elementID).innerHTML = "";
 }
 
-// Time utility formatter for dates
-// function timeSince(date) {
-//   var seconds = Math.floor((new Date() - date) / 1000);
-
-//   let interval = seconds / 31536000;
-
-//   if (interval > 1) {
-//     return Math.floor(interval) + " years ago";
-//   }
-//   interval = seconds / 2592000;
-//   if (interval > 1) {
-//     return Math.floor(interval) + " months ago";
-//   }
-//   interval = seconds / 86400;
-//   if (interval > 1) {
-//     return Math.floor(interval) + " days ago";
-//   }
-//   interval = seconds / 3600;
-//   if (interval > 1) {
-//     return Math.floor(interval) + " hours ago";
-//   }
-//   interval = seconds / 60;
-//   if (interval > 1) {
-//     return Math.floor(interval) + " minutes ago";
-//   }
-//   return Math.floor(seconds) + " seconds ago";
-// }
-
 // This is the Button EventListener
 commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
@@ -116,7 +56,6 @@ commentButton.addEventListener("click", async function (e) {
     name: userName.value,
     comment: userComment.value,
   };
-
   let result = await bandSiteApi.postComment(comment);
   let nameInput = result.name;
   let commentDated = date.toLocaleDateString("en-US");
@@ -147,9 +86,7 @@ commentButton.addEventListener("click", async function (e) {
     commentLabel.innerText = "";
     userComment.setAttribute("style", "border-color:$secondary-two-color");
     userName.setAttribute("style", "border-color:$secondary-two-color");
-
     userComments.unshift(comment);
-
     clearBox("default-comments");
     for (let comment of userComments) {
       generateComment(comment, mainCommentContainer);
