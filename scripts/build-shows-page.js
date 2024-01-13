@@ -81,7 +81,7 @@ bandSiteApi.getShows().then((result) => {
       items.find((obj) => {
         return obj.divElementId === this.id;
       }).divClicked = true;
-      this.setAttribute("style", "background-color:yellow"); //#e1e1e1
+      this.setAttribute("style", "background-color:#e1e1e1");
       clearHighlights(Number(divElement.id));
     });
 
@@ -95,7 +95,7 @@ bandSiteApi.getShows().then((result) => {
       }
 
       if (divElement.hasAttribute("style", "background:none")) {
-        this.setAttribute("style", "background:pink"); //#FAFAFA
+        this.setAttribute("style", "background:#FAFAFA");
       }
     });
 
