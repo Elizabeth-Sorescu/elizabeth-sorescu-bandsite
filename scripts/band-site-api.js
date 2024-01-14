@@ -16,6 +16,10 @@ class BandSiteApi {
   async getShows() {
     return fetchShows(this.baseURL, this.apiKey);
   }
+
+  async deleteComment(id) {
+    return deleteAComment(this.baseURL, this.apiKey, id);
+  }
 }
 
 const createNewComment = async (url, apiKey, comment) => {
@@ -37,7 +41,7 @@ const fetchComments = async (url, apiKey) => {
       return elem2.timestamp - elem1.timestamp;
     });
     for (let comment of sortedComments) {
-      generateComment(comment, mainCommentContainer);
+      await generateComment(comment, mainCommentContainer);
     }
   } catch (err) {
     console.error(err);
@@ -54,6 +58,18 @@ const fetchShows = async (url, apiKey) => {
     console.error(err);
   }
   return shows;
+};
+
+const deleteAComment = async (url, apiKey, id) => {
+  let response = null;
+  try {
+    response = await axios.delete(
+      url + "comments/" + id + "?api_key=" + apiKey
+    );
+  } catch (err) {
+    console.error(err);
+  }
+  return response;
 };
 
 let bandSiteApi = new BandSiteApi(apiKey);

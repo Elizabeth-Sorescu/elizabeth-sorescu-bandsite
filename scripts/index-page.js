@@ -11,8 +11,18 @@ userComments = bandSiteApi.getComments().then((result) => {
   userComments = result;
 });
 
+async function delComment(id) {
+  let response = await bandSiteApi.deleteComment(id);
+  if (response) {
+    let result = await bandSiteApi.getComments();
+    if (result) {
+      location.reload();
+    }
+  }
+}
+
 // This is a function that generates a container of each grouo of comments:
-function generateComment(comment, mainCommentContainer) {
+async function generateComment(comment, mainCommentContainer) {
   let commentPostBox = document.createElement("div");
   commentPostBox.classList.add("comments-post");
   mainCommentContainer.appendChild(commentPostBox);
@@ -41,6 +51,17 @@ function generateComment(comment, mainCommentContainer) {
   commentPostGrp2.classList.add("comments-post__grp2");
   commentPostBox.appendChild(commentPostGrp2);
   commentPostGrp2.innerText = comment.comment;
+
+  let deleteButton = document.createElement("button"); //new
+  deleteButton.classList.add("delete-btn");
+  deleteButton.innerText = "DELETE";
+  commentPostBox.appendChild(deleteButton); //up to here new
+
+  //This is the delete button event listener
+  deleteButton.addEventListener("click", async function (e) {
+    e.preventDefault();
+    await delComment(comment.id);
+  });
 }
 
 // This is an event handler of button when invoked:
@@ -57,6 +78,7 @@ commentButton.addEventListener("click", async function (e) {
     comment: userComment.value,
   };
   let result = await bandSiteApi.postComment(comment);
+
   let nameInput = result.name;
   let commentDated = date.toLocaleDateString("en-US");
   let commentInput = result.comment;
@@ -89,7 +111,8 @@ commentButton.addEventListener("click", async function (e) {
     userComments.unshift(comment);
     clearBox("default-comments");
     for (let comment of userComments) {
-      generateComment(comment, mainCommentContainer);
+      await generateComment(comment, mainCommentContainer);
     }
+    location.reload();
   }
 });

@@ -277,29 +277,29 @@
 }
 
 .comments-post {
-  height: 12rem;
+  height: 15.5rem;
   width: 100%;
   margin: 1rem 0rem;
   position: relative;
   border-bottom: 2px solid $secondary-two-color;
   @include mobileXS {
-    height: 14rem;
+    height: 17rem;
   }
   @include tabletS {
     padding-top: 1.5rem;
-    height: 13rem;
+    height: 17.5rem;
   }
   @include tablet {
     padding-top: 1.5rem;
     width: 90%;
-    height: 13rem;
+    height: 15rem;
     margin-left: 3rem;
   }
   @include desktop-sprint2 {
     justify-content: center;
     padding-top: 2.1rem;
     width: 70%;
-    height: 13rem;
+    height: 16rem;
     margin-left: 11rem;
     margin-right: 0rem;
   }
@@ -399,4 +399,15 @@
       top: 1.813rem;
     }
   }
+}
+
+.delete-btn {
+  position: relative;
+  bottom: 3rem;
+  border-radius: 0.3rem;
+  font-size: 0.6;
+  font-weight: 400;
+  width: 4rem;
+  color: $primary-three-color;
+  background-color: $primary-one-color;
 }
