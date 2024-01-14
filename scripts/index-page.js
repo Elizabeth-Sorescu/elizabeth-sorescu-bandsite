@@ -7,6 +7,7 @@ const nameLabel = document.querySelector(".name-req");
 const commentLabel = document.querySelector(".comment-req");
 
 let userComments = null;
+
 userComments = bandSiteApi.getComments().then((result) => {
   userComments = result;
 });
@@ -23,6 +24,9 @@ async function delComment(id) {
 
 // This is a function that generates a container of each grouo of comments:
 async function generateComment(comment, mainCommentContainer) {
+  if (comment.name === "" || comment.comment === "") {
+    return;
+  }
   let commentPostBox = document.createElement("div");
   commentPostBox.classList.add("comments-post");
   mainCommentContainer.appendChild(commentPostBox);
@@ -52,10 +56,10 @@ async function generateComment(comment, mainCommentContainer) {
   commentPostBox.appendChild(commentPostGrp2);
   commentPostGrp2.innerText = comment.comment;
 
-  let deleteButton = document.createElement("button"); //new
+  let deleteButton = document.createElement("button");
   deleteButton.classList.add("delete-btn");
   deleteButton.innerText = "DELETE";
-  commentPostBox.appendChild(deleteButton); //up to here new
+  commentPostBox.appendChild(deleteButton);
 
   //This is the delete button event listener
   deleteButton.addEventListener("click", async function (e) {
@@ -91,8 +95,8 @@ commentButton.addEventListener("click", async function (e) {
       userName.setAttribute("style", "border-color:$secondary-two-color");
     }
     if (commentInput === "") {
-      commentLabel.innerText = "Comment is required";
       userComment.setAttribute("style", "border-color:#D22D2D");
+      commentLabel.innerText = "Comment is required";
     } else {
       userComment.setAttribute("style", "border-color:$secondary-two-color");
     }
@@ -102,10 +106,7 @@ commentButton.addEventListener("click", async function (e) {
       timestamp: commentDated,
       comment: commentInput,
     };
-    userName.value = "";
-    nameLabel.innerText = "";
-    userComment.value = "";
-    commentLabel.innerText = "";
+
     userComment.setAttribute("style", "border-color:$secondary-two-color");
     userName.setAttribute("style", "border-color:$secondary-two-color");
     userComments.unshift(comment);
@@ -113,6 +114,10 @@ commentButton.addEventListener("click", async function (e) {
     for (let comment of userComments) {
       await generateComment(comment, mainCommentContainer);
     }
+    userName.value = "";
+    nameLabel.innerText = "";
+    userComment.value = "";
+    commentLabel.innerText = "";
     location.reload();
   }
 });
