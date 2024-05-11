@@ -1,6 +1,6 @@
 #ignore the following files:
-*.DS_store
+# *.DS_store
 # *.css.map
 # *.css
-*.vscode
-.vscode/settings.json
+# *.vscode
+# .vscode/settings.json
