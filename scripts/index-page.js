@@ -1,4 +1,3 @@
-// JS for comment section
 const userName = document.querySelector("#name");
 const userComment = document.querySelector("#comment");
 const date = new Date();
@@ -22,7 +21,6 @@ async function delComment(id) {
   }
 }
 
-// This is a function that generates a container of each grouo of comments:
 async function generateComment(comment, mainCommentContainer) {
   if (comment.name === "" || comment.comment === "") {
     return;
@@ -61,20 +59,17 @@ async function generateComment(comment, mainCommentContainer) {
   deleteButton.innerText = "DELETE";
   commentPostBox.appendChild(deleteButton);
 
-  //This is the delete button event listener
   deleteButton.addEventListener("click", async function (e) {
     e.preventDefault();
     await delComment(comment.id);
   });
 }
 
-// This is an event handler of button when invoked:
 let commentButton = document.getElementById("comment-btn");
 function clearBox(elementID) {
   document.getElementById(elementID).innerHTML = "";
 }
 
-// This is the Button EventListener
 commentButton.addEventListener("click", async function (e) {
   e.preventDefault();
   let comment = {
